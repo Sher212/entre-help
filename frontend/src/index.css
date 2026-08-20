@@ -50,8 +50,10 @@
 
 html, body {
   width: 100%;
-  min-height: 100%;
-  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* App container controls viewport scrolling */
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: var(--bg-main);
   color: var(--text-main);
@@ -60,13 +62,19 @@ html, body {
   -webkit-tap-highlight-color: transparent;
 }
 
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
@@ -76,68 +84,71 @@ html, body {
   background: #94a3b8;
 }
 
-/* App Layout Grid */
+/* ==========================================================================
+   DESKTOP TWO-COLUMN APPLICATION SHELL
+   ========================================================================== */
 .app-container {
   display: flex;
-  min-height: 100vh;
   width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   background: var(--bg-main);
-  overflow-x: hidden;
 }
 
+/* 1. Sidebar Panel (Fixed, Stable, Full Viewport Height) */
 .sidebar {
   width: 260px;
+  min-width: 260px;
+  max-width: 260px;
+  height: 100vh;
   background: #0f172a;
   color: #f8fafc;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  position: sticky;
-  top: 0;
-  height: 100vh;
   z-index: 40;
   border-right: 1px solid #1e293b;
-  transition: all 0.2s ease;
+  overflow: hidden;
 }
 
-.main-content {
+.sidebar-header {
+  padding: 18px 18px 12px;
+  border-bottom: 1px solid #1e293b;
+  flex-shrink: 0;
+  background: #0f172a;
+}
+
+.sidebar-nav {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  width: 100%;
+  padding: 10px 0;
   overflow-y: auto;
   overflow-x: hidden;
+  min-height: 0; /* Crucial for flex child to scroll properly */
 }
 
-.main-viewport {
-  flex: 1;
-  width: 100%;
+.sidebar-footer {
+  padding: 14px 18px;
+  border-top: 1px solid #1e293b;
+  background: #0b1329;
+  flex-shrink: 0;
 }
 
-.page-wrapper {
-  padding: 28px 32px;
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  overflow-x: hidden;
-}
-
-/* Navigation Items (Desktop Sidebar) */
+/* Nav Item */
 .nav-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 16px;
-  margin: 2px 12px;
+  gap: 10px;
+  padding: 8px 14px;
+  margin: 2px 10px;
   border-radius: var(--radius-md);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   color: #94a3b8;
   cursor: pointer;
   transition: all 0.15s ease;
   text-decoration: none;
-  min-height: 44px;
+  min-height: 40px;
 }
 
 .nav-item:hover {
@@ -148,25 +159,51 @@ html, body {
 .nav-item.active {
   color: #ffffff;
   background: linear-gradient(135deg, #059669 0%, #047857 100%);
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+  box-shadow: 0 4px 10px rgba(5, 150, 105, 0.25);
   font-weight: 600;
 }
 
-/* Header / Navbar */
+/* 2. Main Content Area (Independent Vertical Scrolling) */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--bg-main);
+}
+
 .top-navbar {
+  flex-shrink: 0;
   background: #ffffff;
   border-bottom: 1px solid var(--border-light);
-  padding: 12px 32px;
+  padding: 12px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
   z-index: 30;
   box-shadow: var(--shadow-sm);
   width: 100%;
 }
 
+.main-viewport {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0; /* Crucial for child scroll container */
+}
+
+.page-wrapper {
+  padding: 24px 28px 48px;
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+/* Top Navbar Elements */
 .mobile-hamburger-btn {
   display: none;
   background: transparent;
@@ -207,7 +244,7 @@ html, body {
   color: #166534;
   font-weight: 600;
   cursor: pointer;
-  margin-left: 12px;
+  margin-left: 8px;
 }
 
 /* Cards & Containers */
@@ -449,9 +486,9 @@ html, body {
 .chat-container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 220px);
+  height: calc(100vh - 200px);
   min-height: 480px;
-  max-height: 700px;
+  max-height: 750px;
   background: #ffffff;
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-light);
@@ -1023,11 +1060,38 @@ html, body {
 
 /* Tablet & Smaller (< 1024px) */
 @media (max-width: 1024px) {
+  html, body, #root {
+    overflow-y: auto; /* Allow natural mobile scrolling */
+  }
+
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    max-height: none;
+    overflow: visible;
+  }
+
   .sidebar {
     display: none !important;
   }
 
+  .main-content {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .main-viewport {
+    height: auto;
+    overflow: visible;
+    padding-bottom: 74px; /* Space for sticky bottom navigation */
+  }
+
   .top-navbar {
+    position: sticky;
+    top: 0;
     padding: 10px 16px;
   }
 
@@ -1045,10 +1109,6 @@ html, body {
 
   .bottom-nav-container {
     display: block;
-  }
-
-  .main-viewport {
-    padding-bottom: 74px; /* Space for sticky bottom navigation */
   }
 
   .page-wrapper {

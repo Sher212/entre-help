@@ -32,16 +32,43 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="sidebar">
-      {/* Sidebar Header */}
-      <div style={{ padding: "20px 20px 14px", borderBottom: "1px solid #1e293b" }}>
-        <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.08em", color: "#64748b", textTransform: "uppercase" }}>
-          Platform Navigation
+    <aside className="sidebar" aria-label="Desktop Sidebar Navigation">
+      {/* Sidebar Header with Brand */}
+      <div className="sidebar-header">
+        <div 
+          onClick={() => setActiveTab("landing")}
+          style={{ display: "flex", alignItems: "center", gap: "10px", cursor: "pointer", marginBottom: "6px" }}
+        >
+          <div style={{
+            width: "32px",
+            height: "32px",
+            borderRadius: "8px",
+            background: "linear-gradient(135deg, #059669 0%, #047857 100%)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#fff",
+            boxShadow: "0 4px 10px rgba(5, 150, 105, 0.3)",
+            flexShrink: 0
+          }}>
+            <Sprout size={18} />
+          </div>
+          <div>
+            <div style={{ fontWeight: 800, fontSize: "15px", letterSpacing: "-0.02em", color: "#ffffff", lineHeight: 1.1 }}>
+              KrishiKalyan <span style={{ color: "#10b981" }}>AI</span>
+            </div>
+            <div style={{ fontSize: "10px", color: "#94a3b8", fontWeight: 500 }}>
+              Kisan AI Sahayata Desk
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Nav List */}
-      <nav style={{ flex: 1, padding: "12px 0", overflowY: "auto" }}>
+      {/* Nav List (Independently Scrollable if items exceed viewport) */}
+      <nav className="sidebar-nav">
+        <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", color: "#64748b", textTransform: "uppercase", padding: "4px 16px 8px" }}>
+          Platform Navigation
+        </div>
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeTab === item.id;
@@ -51,16 +78,19 @@ export default function Sidebar() {
               className={`nav-item ${isActive ? "active" : ""}`}
               onClick={() => setActiveTab(item.id)}
             >
-              <Icon size={18} />
-              <span style={{ flex: 1 }}>{item.label}</span>
+              <Icon size={17} style={{ flexShrink: 0 }} />
+              <span style={{ flex: 1, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                {item.label}
+              </span>
               {item.badge && (
                 <span style={{
-                  fontSize: "10px",
+                  fontSize: "9px",
                   padding: "2px 6px",
                   borderRadius: "4px",
                   fontWeight: 700,
-                  background: isActive ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.1)",
-                  color: isActive ? "#ffffff" : "#94a3b8"
+                  background: isActive ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.08)",
+                  color: isActive ? "#ffffff" : "#94a3b8",
+                  flexShrink: 0
                 }}>
                   {item.badge}
                 </span>
@@ -70,11 +100,11 @@ export default function Sidebar() {
         })}
       </nav>
 
-      {/* Footer Info */}
-      <div style={{ padding: "16px 20px", borderTop: "1px solid #1e293b", background: "#0b1329" }}>
+      {/* Fixed Status Footer */}
+      <div className="sidebar-footer">
         <div style={{ fontSize: "11px", color: "#94a3b8", marginBottom: "4px", display: "flex", alignItems: "center", gap: "6px" }}>
-          <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#10b981", display: "inline-block" }}></span>
-          Backend API: Online (8/8)
+          <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#10b981", display: "inline-block", flexShrink: 0 }}></span>
+          <span>Backend API: Online (8/8)</span>
         </div>
         <div style={{ fontSize: "10px", color: "#64748b" }}>
           5 Kaggle Datasets Integrated
