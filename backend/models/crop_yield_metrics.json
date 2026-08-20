@@ -1,0 +1,72 @@
+{
+  "algorithm_comparison": {
+    "Random Forest Regressor": {
+      "MAE": 1.6687,
+      "RMSE": 3.5096,
+      "R2_Score": 0.9857
+    },
+    "Gradient Boosting Regressor": {
+      "MAE": 1.5842,
+      "RMSE": 3.3515,
+      "R2_Score": 0.987
+    },
+    "Ridge Regression": {
+      "MAE": 2.7633,
+      "RMSE": 4.6272,
+      "R2_Score": 0.9752
+    }
+  },
+  "selected_model": "Gradient Boosting Regressor",
+  "selected_model_r2": 0.987,
+  "selected_model_mae": 1.5842,
+  "selected_model_rmse": 3.3515,
+  "feature_importances": {
+    "Area": 0.0012,
+    "Annual_Rainfall": 0.01,
+    "Fertilizer": 0.0055,
+    "Pesticide": 0.0011,
+    "Crop": 0.9747,
+    "Season": 0.0005,
+    "State": 0.007
+  },
+  "crops": [
+    "Arhar/Tur",
+    "Banana",
+    "Cotton(lint)",
+    "Gram",
+    "Groundnut",
+    "Maize",
+    "Moong(Green Gram)",
+    "Onion",
+    "Potato",
+    "Rapeseed &Mustard",
+    "Rice",
+    "Soybean",
+    "Sugarcane",
+    "Tomato",
+    "Wheat"
+  ],
+  "states": [
+    "Andhra Pradesh",
+    "Assam",
+    "Bihar",
+    "Gujarat",
+    "Haryana",
+    "Karnataka",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Odisha",
+    "Punjab",
+    "Rajasthan",
+    "Tamil Nadu",
+    "Telangana",
+    "Uttar Pradesh",
+    "West Bengal"
+  ],
+  "seasons": [
+    "Kharif",
+    "Rabi",
+    "Summer",
+    "Whole Year"
+  ]
+}
