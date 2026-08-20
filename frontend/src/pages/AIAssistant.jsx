@@ -9,11 +9,21 @@ import {
   Wrench,
   HelpCircle,
   CornerDownLeft,
-  RefreshCw
+  RefreshCw,
+  Camera,
+  Bug,
+  CheckCircle2,
+  AlertTriangle
 } from "lucide-react";
 
 export default function AIAssistant() {
-  const { profile } = useFarmer();
+  const { 
+    profile, 
+    pendingAiContext, 
+    setPendingAiContext, 
+    setShowCameraScanner 
+  } = useFarmer();
+
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([
     {
@@ -39,6 +49,26 @@ export default function AIAssistant() {
   useEffect(() => {
     scrollToBottom();
   }, [messages, loading]);
+
+  // Handle cross-module pending context (e.g. from Plant Disease Scanner)
+  useEffect(() => {
+    if (pendingAiContext && pendingAiContext.type === "disease") {
+      const d = pendingAiContext;
+      const diseaseSummaryMsg = {
+        role: "assistant",
+        content: `🔍 **Diagnosis Context Received from Plant Disease Scanner**:\n\n• **Detected Crop:** ${d.crop}\n• **Identified Condition:** **${d.condition}** (${d.confidence} confidence)\n• **Severity:** ${d.severity} • **Pathogen:** ${d.status === "Healthy" ? "None (Plant is healthy)" : "Fungal / Bacterial lesion"}\n\n**Immediate Treatment Advice:**\n• **Organic Cure:** ${d.organicTreatment}\n• **Chemical Fungicide:** ${d.chemicalTreatment}\n• **Cultural Prevention:** ${d.prevention}\n\nHow can I assist further with this diagnosis?`,
+        tools: ["PlantVillage Vision Model", "ICAR Treatment Database"],
+        followups: [
+          `What is the exact water dilution for ${d.chemicalTreatment?.split(" ")[0] || "spray"}?`,
+          "Will upcoming rain wash away the spray?",
+          "How can I prevent this disease next season?",
+          "Are there any subsidized bio-pesticides under PKVY?"
+        ]
+      };
+      setMessages((prev) => [...prev, diseaseSummaryMsg]);
+      setPendingAiContext(null); // Clear context once injected
+    }
+  }, [pendingAiContext]);
 
   const handleSend = async (queryText) => {
     const textToSend = queryText || input;
@@ -76,7 +106,6 @@ export default function AIAssistant() {
     }
   };
 
-  // Convert markdown bold and links to simple HTML elements
   const formatMarkdown = (text) => {
     if (!text) return "";
     return text
@@ -89,20 +118,20 @@ export default function AIAssistant() {
   return (
     <div className="page-wrapper">
       {/* Header */}
-      <div style={{ marginBottom: "20px" }}>
+      <div style={{ marginBottom: "16px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
           <span className="badge badge-green">Central GenAI Assistant</span>
           <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Multi-Tool Intent Orchestration</span>
         </div>
-        <h1 style={{ fontSize: "28px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em" }}>
+        <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
           AI Farmer Assistant
         </h1>
-        <p style={{ fontSize: "14px", color: "#64748b" }}>
-          Ask natural-language questions in English or Hindi. Grounded with live weather, models, and real datasets.
+        <p style={{ fontSize: "13px", color: "#64748b", marginTop: "2px" }}>
+          Ask natural-language questions in English or Hindi. Grounded in weather, crop models, mandi prices, and government schemes.
         </p>
       </div>
 
-      {/* Chat Window */}
+      {/* Chat Container */}
       <div className="chat-container">
         {/* Messages Body */}
         <div className="chat-messages">
@@ -112,7 +141,7 @@ export default function AIAssistant() {
               className={msg.role === "user" ? "chat-bubble-user" : "chat-bubble-bot"}
             >
               {msg.role === "assistant" && msg.tools && msg.tools.length > 0 && (
-                <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "10px" }}>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "8px" }}>
                   {msg.tools.map((tool, ti) => (
                     <span
                       key={ti}
@@ -136,12 +165,12 @@ export default function AIAssistant() {
               )}
 
               <div
-                style={{ lineHeight: 1.6 }}
+                style={{ lineHeight: 1.55, fontSize: "13px" }}
                 dangerouslySetInnerHTML={{ __html: formatMarkdown(msg.content) }}
               />
 
               {msg.followups && msg.followups.length > 0 && (
-                <div style={{ marginTop: "14px", borderTop: "1px solid #f1f5f9", paddingTop: "10px" }}>
+                <div style={{ marginTop: "12px", borderTop: "1px solid #f1f5f9", paddingTop: "8px" }}>
                   <div style={{ fontSize: "11px", color: "#64748b", fontWeight: 700, textTransform: "uppercase", marginBottom: "6px" }}>
                     Suggested Questions:
                   </div>
@@ -154,12 +183,13 @@ export default function AIAssistant() {
                           background: "#f1f5f9",
                           border: "1px solid #e2e8f0",
                           borderRadius: "9999px",
-                          padding: "5px 12px",
-                          fontSize: "12px",
+                          padding: "5px 10px",
+                          fontSize: "11px",
                           color: "#334155",
                           cursor: "pointer",
                           fontWeight: 500,
-                          transition: "all 0.15s ease"
+                          transition: "all 0.15s ease",
+                          textAlign: "left"
                         }}
                       >
                         {f}
@@ -185,31 +215,44 @@ export default function AIAssistant() {
           <div ref={messagesEndRef} />
         </div>
 
-        {/* Input Bar */}
-        <div style={{ padding: "16px 20px", background: "#ffffff", borderTop: "1px solid #e2e8f0" }}>
+        {/* Chat Input Bar with Quick Camera Scanner Button */}
+        <div style={{ padding: "12px 14px", background: "#ffffff", borderTop: "1px solid #e2e8f0" }}>
           <form
             onSubmit={(e) => {
               e.preventDefault();
               handleSend();
             }}
-            style={{ display: "flex", gap: "10px", alignItems: "center" }}
+            style={{ display: "flex", gap: "8px", alignItems: "center" }}
           >
+            {/* Quick Camera Scan Button */}
+            <button
+              type="button"
+              onClick={() => setShowCameraScanner(true)}
+              className="btn btn-secondary"
+              style={{ padding: "10px", borderRadius: "10px", flexShrink: 0 }}
+              title="Scan Plant Disease Leaf"
+              aria-label="Scan Plant Leaf"
+            >
+              <Camera size={18} color="#059669" />
+            </button>
+
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask anything (e.g. Which crop should I grow? What is the mandi rate in Nashik?)..."
+              placeholder="Ask anything (e.g. spray timing, mandi rate, crop advice)..."
               className="form-input"
-              style={{ padding: "12px 16px", fontSize: "14px" }}
+              style={{ padding: "10px 14px", fontSize: "13px", margin: 0 }}
             />
+
             <button
               type="submit"
               disabled={loading || !input.trim()}
               className="btn btn-primary"
-              style={{ padding: "12px 20px" }}
+              style={{ padding: "10px 16px", flexShrink: 0 }}
+              aria-label="Send Message"
             >
               <Send size={16} />
-              <span>Send</span>
             </button>
           </form>
         </div>

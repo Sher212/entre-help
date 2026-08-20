@@ -1,0 +1,17 @@
+{
+  "short_name": "KrishiKalyan AI",
+  "name": "KrishiKalyan AI - Farmer Decision Support Platform",
+  "description": "Production-quality AI agricultural platform for Indian farmers: Crop advisory, disease detection, weather-aware recommendations, market intelligence, and government schemes.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#f8fafc",
+  "theme_color": "#059669",
+  "display": "standalone",
+  "orientation": "portrait"
+}

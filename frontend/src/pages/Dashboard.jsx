@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useFarmer } from "../context/FarmerContext";
 import {
   predictCrop,
@@ -20,17 +20,32 @@ import {
   CheckCircle2,
   Calendar,
   Activity,
-  FileText
+  FileText,
+  Camera,
+  Image as ImageIcon,
+  Plus
 } from "lucide-react";
 
 export default function Dashboard() {
-  const { profile, weather, setActiveTab, refreshActionPlan, setShowActionPlanModal } = useFarmer();
+  const { 
+    profile, 
+    weather, 
+    setActiveTab, 
+    refreshActionPlan, 
+    setShowActionPlanModal,
+    setShowCameraScanner,
+    fieldPhotos,
+    addFieldPhoto
+  } = useFarmer();
+
   const [topCropRec, setTopCropRec] = useState(null);
   const [yieldData, setYieldData] = useState(null);
   const [marketData, setMarketData] = useState(null);
   const [bestMandi, setBestMandi] = useState(null);
   const [topSchemes, setTopSchemes] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const fieldPhotoInputRef = useRef(null);
 
   useEffect(() => {
     async function loadDashboardData() {
@@ -88,39 +103,37 @@ export default function Dashboard() {
     setShowActionPlanModal(true);
   };
 
+  const handleFieldPhotoUpload = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      addFieldPhoto(event.target.result);
+    };
+    reader.readAsDataURL(file);
+  };
+
   return (
     <div className="page-wrapper">
-      {/* Welcome Banner */}
-      <div style={{
-        background: "linear-gradient(135deg, #065f46 0%, #047857 60%, #059669 100%)",
-        color: "#ffffff",
-        borderRadius: "20px",
-        padding: "28px 32px",
-        marginBottom: "28px",
-        boxShadow: "0 10px 20px -5px rgba(5, 150, 105, 0.3)",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        flexWrap: "wrap",
-        gap: "16px"
-      }}>
+      {/* 1. Top Farmer Welcome Banner */}
+      <div className="dashboard-welcome-banner">
         <div>
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#a7f3d0", fontWeight: 600, marginBottom: "4px" }}>
-            <Sparkles size={15} /> Good Morning • Kisan Sahayata Desk
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "12px", color: "#a7f3d0", fontWeight: 600, marginBottom: "4px" }}>
+            <Sparkles size={14} /> Kisan AI Sahayata Desk
           </div>
-          <h1 style={{ fontSize: "28px", fontWeight: 800, letterSpacing: "-0.02em", margin: 0 }}>
+          <h1 style={{ fontSize: "24px", fontWeight: 800, letterSpacing: "-0.02em", margin: 0 }}>
             Namaste, {profile.name}!
           </h1>
-          <div style={{ fontSize: "14px", color: "#d1fae5", marginTop: "4px" }}>
-            Farm: {profile.land_size_acres} Acres • {profile.village}, {profile.district} ({profile.state}) • Season: {profile.farming_season}
+          <div style={{ fontSize: "13px", color: "#d1fae5", marginTop: "4px" }}>
+            {profile.land_size_acres} Acres • {profile.district}, {profile.state} ({profile.farming_season})
           </div>
         </div>
 
-        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
           {weather && (
-            <div style={{ background: "rgba(255,255,255,0.15)", padding: "10px 18px", borderRadius: "12px", textAlign: "right", backdropFilter: "blur(6px)" }}>
-              <div style={{ fontSize: "12px", color: "#d1fae5" }}>Current Weather</div>
-              <div style={{ fontSize: "18px", fontWeight: 800 }}>
+            <div style={{ background: "rgba(255,255,255,0.18)", padding: "8px 14px", borderRadius: "10px", backdropFilter: "blur(6px)" }}>
+              <div style={{ fontSize: "11px", color: "#d1fae5" }}>Current Weather</div>
+              <div style={{ fontSize: "16px", fontWeight: 800 }}>
                 {weather.current.temperature.toFixed(1)}°C {weather.current.condition_text.split(" ")[0]}
               </div>
             </div>
@@ -128,206 +141,265 @@ export default function Dashboard() {
           <button 
             onClick={handleOpenActionPlan}
             className="btn btn-amber"
-            style={{ padding: "10px 20px" }}
+            style={{ padding: "8px 14px", fontSize: "13px" }}
           >
-            <FileText size={16} /> View Farm Action Plan
+            <FileText size={15} /> Action Plan
           </button>
         </div>
       </div>
 
-      {/* Critical Alert Bar */}
+      {/* 2. Mobile-First Primary Actions: Plant Scanner & Field Photo */}
+      <div className="dashboard-scanner-cta-card">
+        <div style={{ display: "flex", alignItems: "center", gap: "14px", flex: 1 }}>
+          <div className="scanner-cta-icon-box">
+            <Camera size={26} color="#ffffff" />
+          </div>
+          <div>
+            <div style={{ fontSize: "16px", fontWeight: 800, color: "#065f46" }}>
+              Plant Disease Scanner
+            </div>
+            <div style={{ fontSize: "12px", color: "#047857", marginTop: "2px" }}>
+              Scan or capture leaf photo for instant AI diagnosis & cure
+            </div>
+          </div>
+        </div>
+
+        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", width: "100%", justifyContent: "flex-end" }}>
+          {/* Hidden Field Photo Input */}
+          <input
+            type="file"
+            ref={fieldPhotoInputRef}
+            accept="image/*"
+            capture="environment"
+            onChange={handleFieldPhotoUpload}
+            style={{ display: "none" }}
+          />
+
+          <button
+            onClick={() => fieldPhotoInputRef.current?.click()}
+            className="btn btn-secondary"
+            style={{ fontSize: "13px", padding: "10px 14px", flex: 1, minWidth: "130px", justifyContent: "center" }}
+          >
+            <ImageIcon size={16} /> Field Photo
+          </button>
+
+          <button
+            onClick={() => setShowCameraScanner(true)}
+            className="btn btn-primary"
+            style={{ fontSize: "13px", padding: "10px 18px", flex: 1.5, minWidth: "160px", justifyContent: "center", background: "linear-gradient(135deg, #059669 0%, #047857 100%)" }}
+          >
+            <Camera size={16} /> <strong>📷 Scan Plant</strong>
+          </button>
+        </div>
+      </div>
+
+      {/* 3. Agro-Meteorological Critical Alert Bar */}
       {weather && weather.advisory && (
         <div style={{
           background: weather.advisory.irrigation_advice.status.includes("SKIP") ? "#fef3c7" : "#ecfdf5",
           border: `1px solid ${weather.advisory.irrigation_advice.status.includes("SKIP") ? "#fde68a" : "#a7f3d0"}`,
-          borderRadius: "14px",
-          padding: "14px 20px",
-          marginBottom: "24px",
+          borderRadius: "12px",
+          padding: "12px 16px",
+          marginBottom: "20px",
           display: "flex",
           alignItems: "center",
-          gap: "14px"
+          gap: "12px"
         }}>
-          <AlertTriangle size={20} color={weather.advisory.irrigation_advice.status.includes("SKIP") ? "#b45309" : "#059669"} />
-          <div style={{ flex: 1, fontSize: "13px", color: "#1e293b" }}>
-            <strong>Agro-Weather Advisory:</strong> {weather.advisory.irrigation_advice.action} (Spraying Window: <strong>{weather.advisory.spraying_window.status}</strong>)
+          <AlertTriangle size={18} color={weather.advisory.irrigation_advice.status.includes("SKIP") ? "#b45309" : "#059669"} style={{ flexShrink: 0 }} />
+          <div style={{ flex: 1, fontSize: "12px", color: "#1e293b", lineHeight: 1.4 }}>
+            <strong>Advisory:</strong> {weather.advisory.irrigation_advice.action} (Spraying: <strong>{weather.advisory.spraying_window.status}</strong>)
           </div>
           <button 
             onClick={() => setActiveTab("weather")}
-            style={{ background: "transparent", border: "none", color: "#059669", fontWeight: 700, fontSize: "13px", cursor: "pointer", display: "flex", alignItems: "center", gap: "4px" }}
+            style={{ background: "transparent", border: "none", color: "#059669", fontWeight: 700, fontSize: "12px", cursor: "pointer", display: "flex", alignItems: "center", gap: "2px", flexShrink: 0 }}
           >
-            Details <ArrowRight size={14} />
+            View <ArrowRight size={13} />
           </button>
         </div>
       )}
 
-      {/* Dashboard KPI Grid (4 Cards) */}
-      <div className="grid-4" style={{ marginBottom: "28px" }}>
+      {/* 4. Dashboard KPI Grid (4 Stackable Cards) */}
+      <div className="grid-4" style={{ marginBottom: "24px" }}>
         {/* Card 1: Soil & Recommended Crop */}
-        <div className="card card-gradient">
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
-            <span style={{ fontSize: "12px", fontWeight: 700, color: "#065f46", textTransform: "uppercase" }}>Recommended Crop</span>
-            <div style={{ background: "#d1fae5", padding: "6px", borderRadius: "8px", color: "#059669" }}>
-              <Sprout size={18} />
+        <div className="card card-gradient" onClick={() => setActiveTab("crop-advisor")} style={{ cursor: "pointer" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
+            <span style={{ fontSize: "11px", fontWeight: 700, color: "#065f46", textTransform: "uppercase" }}>Recommended Crop</span>
+            <div style={{ background: "#d1fae5", padding: "5px", borderRadius: "6px", color: "#059669" }}>
+              <Sprout size={16} />
             </div>
           </div>
-          <div style={{ fontSize: "22px", fontWeight: 800, color: "#065f46", marginBottom: "2px" }}>
+          <div style={{ fontSize: "20px", fontWeight: 800, color: "#065f46", marginBottom: "2px" }}>
             {topCropRec ? topCropRec.crop : "Loading..."}
           </div>
-          <div style={{ fontSize: "12px", color: "#047857", fontWeight: 600, marginBottom: "10px" }}>
+          <div style={{ fontSize: "12px", color: "#047857", fontWeight: 600, marginBottom: "8px" }}>
             {topCropRec ? `${topCropRec.percentage} Soil Match` : "98.8% Accuracy"}
           </div>
-          <div 
-            onClick={() => setActiveTab("crop-advisor")}
-            style={{ fontSize: "12px", color: "#059669", fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", gap: "4px" }}
-          >
-            Explore Crop Advisory <ArrowRight size={13} />
+          <div style={{ fontSize: "11px", color: "#059669", fontWeight: 700, display: "flex", alignItems: "center", gap: "4px" }}>
+            Explore Advisory <ArrowRight size={12} />
           </div>
         </div>
 
         {/* Card 2: Expected Yield */}
-        <div className="card card-amber-gradient">
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
-            <span style={{ fontSize: "12px", fontWeight: 700, color: "#92400e", textTransform: "uppercase" }}>Expected Yield</span>
-            <div style={{ background: "#fef3c7", padding: "6px", borderRadius: "8px", color: "#d97706" }}>
-              <TrendingUp size={18} />
+        <div className="card card-amber-gradient" onClick={() => setActiveTab("yield-predictor")} style={{ cursor: "pointer" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
+            <span style={{ fontSize: "11px", fontWeight: 700, color: "#92400e", textTransform: "uppercase" }}>Expected Yield</span>
+            <div style={{ background: "#fef3c7", padding: "5px", borderRadius: "6px", color: "#d97706" }}>
+              <TrendingUp size={16} />
             </div>
           </div>
-          <div style={{ fontSize: "22px", fontWeight: 800, color: "#92400e", marginBottom: "2px" }}>
-            {yieldData ? `${yieldData.predicted_yield_quintals_per_acre} Qtl/Acre` : "Estimating..."}
+          <div style={{ fontSize: "20px", fontWeight: 800, color: "#92400e", marginBottom: "2px" }}>
+            {yieldData ? `${yieldData.predicted_yield_quintals_per_acre} Qtl/Ac` : "Estimating..."}
           </div>
-          <div style={{ fontSize: "12px", color: "#b45309", fontWeight: 600, marginBottom: "10px" }}>
+          <div style={{ fontSize: "12px", color: "#b45309", fontWeight: 600, marginBottom: "8px" }}>
             {yieldData ? `${yieldData.total_expected_production_tons} Tons Total` : "R² = 0.987"}
           </div>
-          <div 
-            onClick={() => setActiveTab("yield-predictor")}
-            style={{ fontSize: "12px", color: "#d97706", fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", gap: "4px" }}
-          >
-            Yield Optimization <ArrowRight size={13} />
+          <div style={{ fontSize: "11px", color: "#d97706", fontWeight: 700, display: "flex", alignItems: "center", gap: "4px" }}>
+            Yield Analysis <ArrowRight size={12} />
           </div>
         </div>
 
         {/* Card 3: Mandi Price Snapshot */}
-        <div className="card card-blue-gradient">
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
-            <span style={{ fontSize: "12px", fontWeight: 700, color: "#0369a1", textTransform: "uppercase" }}>Mandi Price</span>
-            <div style={{ background: "#e0f2fe", padding: "6px", borderRadius: "8px", color: "#0284c7" }}>
-              <Store size={18} />
+        <div className="card card-blue-gradient" onClick={() => setActiveTab("market")} style={{ cursor: "pointer" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
+            <span style={{ fontSize: "11px", fontWeight: 700, color: "#0369a1", textTransform: "uppercase" }}>Mandi Price</span>
+            <div style={{ background: "#e0f2fe", padding: "5px", borderRadius: "6px", color: "#0284c7" }}>
+              <Store size={16} />
             </div>
           </div>
-          <div style={{ fontSize: "22px", fontWeight: 800, color: "#0369a1", marginBottom: "2px" }}>
-            {marketData ? `₹${marketData.latest_modal_price}` : "Loading..."} <span style={{ fontSize: "12px", fontWeight: 500 }}>/Qtl</span>
+          <div style={{ fontSize: "20px", fontWeight: 800, color: "#0369a1", marginBottom: "2px" }}>
+            {marketData ? `₹${marketData.latest_modal_price}` : "Loading..."} <span style={{ fontSize: "11px", fontWeight: 500 }}>/Qtl</span>
           </div>
-          <div style={{ fontSize: "12px", color: "#0284c7", fontWeight: 600, marginBottom: "10px" }}>
+          <div style={{ fontSize: "12px", color: "#0284c7", fontWeight: 600, marginBottom: "8px" }}>
             {marketData ? marketData.trend_direction : "57,000+ Records"}
           </div>
-          <div 
-            onClick={() => setActiveTab("market")}
-            style={{ fontSize: "12px", color: "#0284c7", fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", gap: "4px" }}
-          >
-            Where to Sell <ArrowRight size={13} />
+          <div style={{ fontSize: "11px", color: "#0284c7", fontWeight: 700, display: "flex", alignItems: "center", gap: "4px" }}>
+            Where to Sell <ArrowRight size={12} />
           </div>
         </div>
 
         {/* Card 4: Government Support */}
-        <div className="card" style={{ background: "linear-gradient(135deg, #ffffff 0%, #faf5ff 100%)", border: "1px solid #e9d5ff" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
-            <span style={{ fontSize: "12px", fontWeight: 700, color: "#6b21a8", textTransform: "uppercase" }}>Govt Subsidy</span>
-            <div style={{ background: "#f3e8ff", padding: "6px", borderRadius: "8px", color: "#7c3aed" }}>
-              <Landmark size={18} />
+        <div className="card" onClick={() => setActiveTab("schemes")} style={{ background: "linear-gradient(135deg, #ffffff 0%, #faf5ff 100%)", border: "1px solid #e9d5ff", cursor: "pointer" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
+            <span style={{ fontSize: "11px", fontWeight: 700, color: "#6b21a8", textTransform: "uppercase" }}>Govt Subsidy</span>
+            <div style={{ background: "#f3e8ff", padding: "5px", borderRadius: "6px", color: "#7c3aed" }}>
+              <Landmark size={16} />
             </div>
           </div>
-          <div style={{ fontSize: "18px", fontWeight: 800, color: "#6b21a8", marginBottom: "2px" }}>
+          <div style={{ fontSize: "17px", fontWeight: 800, color: "#6b21a8", marginBottom: "2px", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
             {topSchemes.length > 0 ? topSchemes[0].short_name : "PM-KISAN"}
           </div>
-          <div style={{ fontSize: "12px", color: "#7c3aed", fontWeight: 600, marginBottom: "10px" }}>
+          <div style={{ fontSize: "12px", color: "#7c3aed", fontWeight: 600, marginBottom: "8px" }}>
             {topSchemes.length > 0 ? `${(topSchemes[0].match_score * 100).toFixed(0)}% Profile Match` : "Central Scheme"}
           </div>
-          <div 
-            onClick={() => setActiveTab("schemes")}
-            style={{ fontSize: "12px", color: "#7c3aed", fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", gap: "4px" }}
-          >
-            View Top Schemes <ArrowRight size={13} />
+          <div style={{ fontSize: "11px", color: "#7c3aed", fontWeight: 700, display: "flex", alignItems: "center", gap: "4px" }}>
+            View Schemes <ArrowRight size={12} />
           </div>
         </div>
       </div>
 
-      {/* Main 2-Column Dashboard Sections */}
-      <div className="grid-2" style={{ marginBottom: "28px" }}>
-        {/* Left Column: Farm Health & Soil Status */}
-        <div className="card">
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-            <h3 style={{ fontSize: "16px", fontWeight: 800, color: "#0f172a" }}>
-              🌾 Farm Health & Soil Fertility
-            </h3>
-            <span className="badge badge-green">N-P-K Calibrated</span>
+      {/* 5. Field Photos History (If any captured) */}
+      {fieldPhotos.length > 0 && (
+        <div className="card" style={{ marginBottom: "24px" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+              <ImageIcon size={16} color="#059669" />
+              <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
+                Field Photos & Crop Observations
+              </h3>
+            </div>
+            <span style={{ fontSize: "11px", color: "#64748b" }}>{fieldPhotos.length} Photo{fieldPhotos.length > 1 ? "s" : ""}</span>
           </div>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "18px" }}>
-            <div>
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: "13px", fontWeight: 600, marginBottom: "4px" }}>
-                <span>Nitrogen (N: {profile.nitrogen} kg/ha)</span>
-                <span style={{ color: "#059669" }}>Optimal (Tillering)</span>
+          <div style={{ display: "flex", gap: "10px", overflowX: "auto", paddingBottom: "6px" }}>
+            {fieldPhotos.map((photo) => (
+              <div key={photo.id} style={{ flexShrink: 0, width: "100px", borderRadius: "8px", overflow: "hidden", border: "1px solid #e2e8f0" }}>
+                <img src={photo.url} alt="Field" style={{ width: "100%", height: "80px", objectFit: "cover" }} />
+                <div style={{ padding: "4px", fontSize: "10px", textAlign: "center", background: "#f8fafc", color: "#64748b" }}>
+                  {photo.time || photo.date}
+                </div>
               </div>
-              <div style={{ width: "100%", height: "8px", background: "#f1f5f9", borderRadius: "4px", overflow: "hidden" }}>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 6. Main 2-Column Dashboard Sections */}
+      <div className="grid-2" style={{ marginBottom: "24px" }}>
+        {/* Left Column: Farm Health & Soil Status */}
+        <div className="card">
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "14px" }}>
+            <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
+              🌾 Farm Health & Soil Nutrients
+            </h3>
+            <span className="badge badge-green">N-P-K</span>
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "14px" }}>
+            <div>
+              <div style={{ display: "flex", justifyContent: "space-between", fontSize: "12px", fontWeight: 600, marginBottom: "4px" }}>
+                <span>Nitrogen (N: {profile.nitrogen} kg/ha)</span>
+                <span style={{ color: "#059669" }}>Optimal</span>
+              </div>
+              <div style={{ width: "100%", height: "7px", background: "#f1f5f9", borderRadius: "4px", overflow: "hidden" }}>
                 <div style={{ width: `${Math.min(100, (profile.nitrogen / 140) * 100)}%`, height: "100%", background: "#10b981" }} />
               </div>
             </div>
 
             <div>
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: "13px", fontWeight: 600, marginBottom: "4px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", fontSize: "12px", fontWeight: 600, marginBottom: "4px" }}>
                 <span>Phosphorus (P: {profile.phosphorus} kg/ha)</span>
-                <span style={{ color: "#0284c7" }}>Good (Root development)</span>
+                <span style={{ color: "#0284c7" }}>Good</span>
               </div>
-              <div style={{ width: "100%", height: "8px", background: "#f1f5f9", borderRadius: "4px", overflow: "hidden" }}>
+              <div style={{ width: "100%", height: "7px", background: "#f1f5f9", borderRadius: "4px", overflow: "hidden" }}>
                 <div style={{ width: `${Math.min(100, (profile.phosphorus / 100) * 100)}%`, height: "100%", background: "#0284c7" }} />
               </div>
             </div>
 
             <div>
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: "13px", fontWeight: 600, marginBottom: "4px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", fontSize: "12px", fontWeight: 600, marginBottom: "4px" }}>
                 <span>Potassium (K: {profile.potassium} kg/ha)</span>
-                <span style={{ color: "#d97706" }}>Balanced (Pest resistance)</span>
+                <span style={{ color: "#d97706" }}>Balanced</span>
               </div>
-              <div style={{ width: "100%", height: "8px", background: "#f1f5f9", borderRadius: "4px", overflow: "hidden" }}>
+              <div style={{ width: "100%", height: "7px", background: "#f1f5f9", borderRadius: "4px", overflow: "hidden" }}>
                 <div style={{ width: `${Math.min(100, (profile.potassium / 80) * 100)}%`, height: "100%", background: "#f59e0b" }} />
               </div>
             </div>
           </div>
 
-          <div style={{ background: "#f8fafc", padding: "12px 16px", borderRadius: "10px", fontSize: "13px", color: "#475569" }}>
-            <strong>Soil Type:</strong> {profile.soil_type} • <strong>pH:</strong> {profile.soil_ph} (Near Neutral) • <strong>Irrigation:</strong> {profile.irrigation_source}
+          <div style={{ background: "#f8fafc", padding: "10px 14px", borderRadius: "8px", fontSize: "12px", color: "#475569" }}>
+            <strong>Soil:</strong> {profile.soil_type} • <strong>pH:</strong> {profile.soil_ph} • <strong>Irrigation:</strong> {profile.irrigation_source}
           </div>
         </div>
 
         {/* Right Column: Mandi Intelligence Snapshot */}
         <div className="card">
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-            <h3 style={{ fontSize: "16px", fontWeight: 800, color: "#0f172a" }}>
-              📈 Best Historical Mandi Realization
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "14px" }}>
+            <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
+              📈 Top Mandi Realization
             </h3>
             <span className="badge badge-blue">Dataset 4</span>
           </div>
 
           {bestMandi ? (
             <div>
-              <div style={{ background: "#f0f9ff", border: "1px solid #bae6fd", borderRadius: "12px", padding: "16px", marginBottom: "14px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                  <span style={{ fontSize: "16px", fontWeight: 800, color: "#0369a1" }}>{bestMandi.market}</span>
+              <div style={{ background: "#f0f9ff", border: "1px solid #bae6fd", borderRadius: "10px", padding: "12px 14px", marginBottom: "12px" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "4px" }}>
+                  <span style={{ fontSize: "15px", fontWeight: 800, color: "#0369a1" }}>{bestMandi.market}</span>
                   <span className="badge badge-amber">{bestMandi.recommendation_badge}</span>
                 </div>
-                <div style={{ fontSize: "13px", color: "#1e293b" }}>
-                  District: <strong>{bestMandi.district}</strong> • State: <strong>{bestMandi.state}</strong>
+                <div style={{ fontSize: "12px", color: "#1e293b" }}>
+                  District: <strong>{bestMandi.district}</strong> ({bestMandi.state})
                 </div>
-                <div style={{ marginTop: "8px", fontSize: "18px", fontWeight: 800, color: "#0f172a" }}>
-                  ₹{bestMandi.avg_modal_price} <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 500 }}>avg modal / Quintal (Peak ₹{bestMandi.max_price_recorded})</span>
+                <div style={{ marginTop: "6px", fontSize: "16px", fontWeight: 800, color: "#0f172a" }}>
+                  ₹{bestMandi.avg_modal_price} <span style={{ fontSize: "11px", color: "#64748b", fontWeight: 500 }}>avg modal / Qtl (Peak ₹{bestMandi.max_price_recorded})</span>
                 </div>
               </div>
-              <p style={{ fontSize: "13px", color: "#475569", margin: 0 }}>
-                Selling in <strong>{bestMandi.market}</strong> provides optimal price spread over local village traders.
+              <p style={{ fontSize: "12px", color: "#475569", margin: 0 }}>
+                Selling in <strong>{bestMandi.market}</strong> provides optimal price realization over village intermediaries.
               </p>
             </div>
           ) : (
-            <div style={{ padding: "20px", textAlign: "center", color: "#64748b" }}>
+            <div style={{ padding: "14px", textAlign: "center", color: "#64748b", fontSize: "13px" }}>
               Loading Mandi analytics...
             </div>
           )}
@@ -335,47 +407,11 @@ export default function Dashboard() {
           <button 
             onClick={() => setActiveTab("market")}
             className="btn btn-secondary"
-            style={{ width: "100%", marginTop: "16px", fontSize: "13px" }}
+            style={{ width: "100%", marginTop: "12px", fontSize: "12px" }}
           >
-            Compare All Mandis in {profile.state}
+            Compare Mandis in {profile.state}
           </button>
         </div>
-      </div>
-
-      {/* Disease Detection Fast Action Banner */}
-      <div style={{
-        background: "#ffffff",
-        border: "1px solid #e2e8f0",
-        borderRadius: "16px",
-        padding: "20px 28px",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        flexWrap: "wrap",
-        gap: "16px"
-      }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-          <div style={{ width: "48px", height: "48px", borderRadius: "12px", background: "#fdf2f8", color: "#db2777", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Activity size={24} />
-          </div>
-          <div>
-            <h4 style={{ fontSize: "16px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
-              Suspect Leaf Disease or Pest Infection?
-            </h4>
-            <div style={{ fontSize: "13px", color: "#64748b", marginTop: "2px" }}>
-              Upload a clear leaf photo for instant AI vision classification & recommended biological/chemical treatments.
-            </div>
-          </div>
-        </div>
-
-        <button 
-          onClick={() => setActiveTab("disease-detection")}
-          className="btn btn-primary"
-          style={{ padding: "9px 18px", fontSize: "13px" }}
-        >
-          <span>Diagnose Leaf Now</span>
-          <ArrowRight size={15} />
-        </button>
       </div>
     </div>
   );

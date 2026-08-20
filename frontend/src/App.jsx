@@ -2,6 +2,9 @@ import React from "react";
 import { FarmerProvider, useFarmer } from "./context/FarmerContext";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import BottomNav from "./components/BottomNav";
+import MobileDrawer from "./components/MobileDrawer";
+import PlantCameraScanner from "./components/PlantCameraScanner";
 import DemoTourModal from "./components/DemoTourModal";
 import ActionPlanModal from "./components/ActionPlanModal";
 
@@ -52,16 +55,25 @@ function MainApp() {
 
   return (
     <div className="app-container">
-      {/* Responsive Sidebar */}
+      {/* Desktop Sidebar */}
       <Sidebar />
 
-      {/* Main Content Area */}
+      {/* Main Responsive Content Area */}
       <div className="main-content">
         <Navbar />
-        <main>{renderActivePage()}</main>
+        <main className="main-viewport">{renderActivePage()}</main>
       </div>
 
-      {/* Modals */}
+      {/* Mobile-Only Bottom Navigation */}
+      <BottomNav />
+
+      {/* Mobile Slide-out Drawer */}
+      <MobileDrawer />
+
+      {/* Camera Leaf Scanner Modal */}
+      <PlantCameraScanner />
+
+      {/* Global Modals */}
       <DemoTourModal />
       <ActionPlanModal />
     </div>

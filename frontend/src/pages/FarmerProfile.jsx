@@ -65,29 +65,29 @@ export default function FarmerProfile() {
   return (
     <div className="page-wrapper">
       {/* Header */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "24px", flexWrap: "wrap", gap: "12px" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "20px", flexWrap: "wrap", gap: "12px" }}>
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
-            <span className="badge badge-green">Personalized Context Hub</span>
+            <span className="badge badge-green">Personalized Context</span>
           </div>
-          <h1 style={{ fontSize: "28px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em" }}>
+          <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
             Farmer Profile & Farm Context
           </h1>
-          <p style={{ fontSize: "14px", color: "#64748b" }}>
-            Your personal farm details dynamically customize crop recommendations, yield calculations, weather alerts, and government subsidy matching.
+          <p style={{ fontSize: "13px", color: "#64748b", marginTop: "2px" }}>
+            Farm details dynamically customize crop recommendations, yield calculations, weather alerts, and subsidies.
           </p>
         </div>
       </div>
 
-      {/* Preset Archetype Switcher */}
-      <div className="card" style={{ marginBottom: "24px", background: "linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%)", border: "1px solid #bbf7d0" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "12px" }}>
-          <Sparkles size={18} color="#059669" />
-          <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#065f46" }}>
+      {/* Preset Archetype Switcher (Responsive Grid) */}
+      <div className="card" style={{ marginBottom: "20px", background: "linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%)", border: "1px solid #bbf7d0" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
+          <Sparkles size={16} color="#059669" />
+          <h3 style={{ fontSize: "14px", fontWeight: 800, color: "#065f46", margin: 0 }}>
             Quick Demo Farmer Presets (1-Click Switch)
           </h3>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: "10px" }}>
           {presets.map((p) => (
             <button
               key={p.preset_id}
@@ -96,7 +96,7 @@ export default function FarmerProfile() {
               style={{
                 textAlign: "left",
                 justifyContent: "flex-start",
-                padding: "10px 14px",
+                padding: "8px 12px",
                 fontSize: "12px",
                 background: profile.name === p.profile.name ? "#dcfce7" : "#ffffff",
                 borderColor: profile.name === p.profile.name ? "#86efac" : "#e2e8f0",
@@ -105,7 +105,7 @@ export default function FarmerProfile() {
             >
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <strong>{p.profile.name}</strong>
-                <span style={{ fontSize: "11px", color: "#64748b" }}>{p.profile.district}, {p.profile.state} ({p.profile.current_crop})</span>
+                <span style={{ fontSize: "10px", color: "#64748b" }}>{p.profile.district} ({p.profile.current_crop})</span>
               </div>
             </button>
           ))}
@@ -114,14 +114,14 @@ export default function FarmerProfile() {
 
       {/* Edit Form */}
       <form onSubmit={handleSave}>
-        <div className="grid-2" style={{ marginBottom: "24px" }}>
+        <div className="grid-2" style={{ marginBottom: "20px" }}>
           {/* Personal & Geographic Details */}
           <div className="card">
-            <h3 style={{ fontSize: "16px", fontWeight: 800, color: "#0f172a", marginBottom: "16px", borderBottom: "1px solid #f1f5f9", paddingBottom: "10px" }}>
+            <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", marginBottom: "14px", borderBottom: "1px solid #f1f5f9", paddingBottom: "8px", margin: 0 }}>
               📍 Location & Farmer Identity
             </h3>
 
-            <div className="form-group">
+            <div className="form-group" style={{ marginTop: "12px" }}>
               <label className="form-label">Farmer Full Name</label>
               <input
                 type="text"
@@ -131,7 +131,7 @@ export default function FarmerProfile() {
               />
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "10px" }}>
               <div className="form-group">
                 <label className="form-label">State</label>
                 <input
@@ -153,7 +153,7 @@ export default function FarmerProfile() {
               </div>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "10px" }}>
               <div className="form-group">
                 <label className="form-label">Village / Taluka</label>
                 <input
@@ -194,11 +194,11 @@ export default function FarmerProfile() {
 
           {/* Soil & Agricultural Context */}
           <div className="card">
-            <h3 style={{ fontSize: "16px", fontWeight: 800, color: "#0f172a", marginBottom: "16px", borderBottom: "1px solid #f1f5f9", paddingBottom: "10px" }}>
+            <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", marginBottom: "14px", borderBottom: "1px solid #f1f5f9", paddingBottom: "8px", margin: 0 }}>
               🌱 Soil Test Readings & Cropping
             </h3>
 
-            <div className="form-group">
+            <div className="form-group" style={{ marginTop: "12px" }}>
               <label className="form-label">Soil Classification</label>
               <select
                 value={formData.soil_type}
@@ -211,9 +211,9 @@ export default function FarmerProfile() {
               </select>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "8px" }}>
               <div className="form-group">
-                <label className="form-label">Nitrogen (N)</label>
+                <label className="form-label" style={{ fontSize: "11px" }}>N (kg/ha)</label>
                 <input
                   type="number"
                   value={formData.nitrogen}
@@ -223,7 +223,7 @@ export default function FarmerProfile() {
               </div>
 
               <div className="form-group">
-                <label className="form-label">Phosphorus (P)</label>
+                <label className="form-label" style={{ fontSize: "11px" }}>P (kg/ha)</label>
                 <input
                   type="number"
                   value={formData.phosphorus}
@@ -233,7 +233,7 @@ export default function FarmerProfile() {
               </div>
 
               <div className="form-group">
-                <label className="form-label">Potassium (K)</label>
+                <label className="form-label" style={{ fontSize: "11px" }}>K (kg/ha)</label>
                 <input
                   type="number"
                   value={formData.potassium}
@@ -243,9 +243,9 @@ export default function FarmerProfile() {
               </div>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "10px" }}>
               <div className="form-group">
-                <label className="form-label">Soil pH Level</label>
+                <label className="form-label">Soil pH</label>
                 <input
                   type="number"
                   step="0.1"
@@ -284,17 +284,17 @@ export default function FarmerProfile() {
         </div>
 
         {/* Action Button */}
-        <div style={{ display: "flex", justifyContent: "flex-end", gap: "14px", alignItems: "center" }}>
+        <div style={{ display: "flex", justifyContent: "flex-end", gap: "12px", alignItems: "center", flexWrap: "wrap" }}>
           {savedSuccess && (
-            <div style={{ display: "flex", alignItems: "center", gap: "6px", color: "#059669", fontWeight: 700, fontSize: "14px" }}>
-              <CheckCircle size={18} /> Profile updated and synced across all modules!
+            <div style={{ display: "flex", alignItems: "center", gap: "6px", color: "#059669", fontWeight: 700, fontSize: "13px" }}>
+              <CheckCircle size={16} /> Profile updated and synced!
             </div>
           )}
           <button
             type="submit"
             disabled={loading}
             className="btn btn-primary"
-            style={{ padding: "12px 28px", fontSize: "15px" }}
+            style={{ padding: "12px 24px", fontSize: "14px" }}
           >
             <Save size={16} />
             <span>{loading ? "Saving..." : "Save Farmer Profile"}</span>

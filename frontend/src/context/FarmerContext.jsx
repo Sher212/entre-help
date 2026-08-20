@@ -1,10 +1,17 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { getFarmerProfile, updateFarmerProfile, getProfilePresets, loadProfilePreset, getWeatherAdvisory, getFarmActionPlan } from "../services/api";
+import { 
+  getFarmerProfile, 
+  updateFarmerProfile, 
+  getProfilePresets, 
+  loadProfilePreset, 
+  getWeatherAdvisory, 
+  getFarmActionPlan 
+} from "../services/api";
 
 const FarmerContext = createContext();
 
 export function FarmerProvider({ children }) {
-  const [activeTab, setActiveTab] = useState("landing");
+  const [activeTab, setActiveTab] = useState("dashboard");
   const [profile, setProfile] = useState({
     name: "Ramesh Patil",
     state: "Maharashtra",
@@ -26,8 +33,18 @@ export function FarmerProvider({ children }) {
   const [weather, setWeather] = useState(null);
   const [actionPlan, setActionPlan] = useState(null);
   const [loading, setLoading] = useState(false);
+  
+  // Navigation & Modal States
   const [showDemoTour, setShowDemoTour] = useState(false);
   const [showActionPlanModal, setShowActionPlanModal] = useState(false);
+  const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const [showCameraScanner, setShowCameraScanner] = useState(false);
+  
+  // Cross-module Context Bridge for AI Assistant
+  const [pendingAiContext, setPendingAiContext] = useState(null);
+  
+  // Field Photos (Visual Context History)
+  const [fieldPhotos, setFieldPhotos] = useState([]);
 
   // Fetch initial profile, presets, weather, action plan
   useEffect(() => {
@@ -87,6 +104,35 @@ export function FarmerProvider({ children }) {
     }
   };
 
+  // Bridge disease or field photo into AI Assistant
+  const askAiAboutDisease = (diseaseResult, imagePreviewUrl) => {
+    setPendingAiContext({
+      type: "disease",
+      crop: diseaseResult.detected_crop,
+      condition: diseaseResult.condition,
+      status: diseaseResult.status,
+      confidence: diseaseResult.confidence_percentage,
+      severity: diseaseResult.severity,
+      symptoms: diseaseResult.symptoms,
+      organicTreatment: diseaseResult.organic_treatment,
+      chemicalTreatment: diseaseResult.chemical_treatment,
+      prevention: diseaseResult.prevention_measures,
+      imageUrl: imagePreviewUrl
+    });
+    setActiveTab("assistant");
+  };
+
+  const addFieldPhoto = (photoDataUrl) => {
+    const newPhoto = {
+      id: Date.now(),
+      url: photoDataUrl,
+      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      date: new Date().toLocaleDateString([], { month: 'short', day: 'numeric' })
+    };
+    setFieldPhotos((prev) => [newPhoto, ...prev]);
+    return newPhoto;
+  };
+
   return (
     <FarmerContext.Provider
       value={{
@@ -105,6 +151,15 @@ export function FarmerProvider({ children }) {
         setShowDemoTour,
         showActionPlanModal,
         setShowActionPlanModal,
+        mobileDrawerOpen,
+        setMobileDrawerOpen,
+        showCameraScanner,
+        setShowCameraScanner,
+        pendingAiContext,
+        setPendingAiContext,
+        askAiAboutDisease,
+        fieldPhotos,
+        addFieldPhoto
       }}
     >
       {children}

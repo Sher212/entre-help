@@ -89,24 +89,24 @@ export default function MarketIntelligence() {
   return (
     <div className="page-wrapper">
       {/* Header */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "24px", flexWrap: "wrap", gap: "12px" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "20px", flexWrap: "wrap", gap: "12px" }}>
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
             <span className="badge badge-blue">Dataset 4 • 57,330 Records</span>
-            <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Agmarknet India Mandi Wholesale Prices</span>
+            <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Agmarknet Wholesale Mandi Rates</span>
           </div>
-          <h1 style={{ fontSize: "28px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em" }}>
+          <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
             India Mandi Market Intelligence
           </h1>
-          <p style={{ fontSize: "14px", color: "#64748b" }}>
-            Analyze historical wholesale price movements, price spreads, and compare top-performing APMC mandis.
+          <p style={{ fontSize: "13px", color: "#64748b", marginTop: "2px" }}>
+            Analyze wholesale price movements, price spreads, and compare top-performing APMC mandis.
           </p>
         </div>
       </div>
 
-      {/* Cascading Filter Bar */}
-      <div className="card" style={{ marginBottom: "24px" }}>
-        <form onSubmit={handleApplyFilters} style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "12px", alignItems: "flex-end" }}>
+      {/* Responsive Cascading Filter Bar */}
+      <div className="card" style={{ marginBottom: "20px" }}>
+        <form onSubmit={handleApplyFilters} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "12px", alignItems: "flex-end" }}>
           <div className="form-group" style={{ margin: 0 }}>
             <label className="form-label">Commodity / Crop</label>
             <select
@@ -172,9 +172,9 @@ export default function MarketIntelligence() {
             type="submit"
             disabled={loading}
             className="btn btn-primary"
-            style={{ height: "42px" }}
+            style={{ height: "44px", minWidth: "140px" }}
           >
-            <Search size={16} /> Filter Market Data
+            <Search size={16} /> Filter Rates
           </button>
         </form>
       </div>
@@ -193,83 +193,83 @@ export default function MarketIntelligence() {
       {!loading && trends && (
         <>
           {/* Market KPIs */}
-          <div className="grid-4" style={{ marginBottom: "24px" }}>
+          <div className="grid-4" style={{ marginBottom: "20px" }}>
             <div className="card card-blue-gradient">
-              <div style={{ fontSize: "12px", fontWeight: 700, color: "#0369a1", textTransform: "uppercase" }}>
+              <div style={{ fontSize: "11px", fontWeight: 700, color: "#0369a1", textTransform: "uppercase" }}>
                 Latest Modal Price
               </div>
-              <div style={{ fontSize: "28px", fontWeight: 800, color: "#0369a1", margin: "4px 0" }}>
+              <div style={{ fontSize: "24px", fontWeight: 800, color: "#0369a1", margin: "4px 0" }}>
                 ₹{trends.latest_modal_price}
               </div>
-              <div style={{ fontSize: "12px", color: "#0284c7" }}>
+              <div style={{ fontSize: "11px", color: "#0284c7" }}>
                 per Quintal (100 kg)
               </div>
             </div>
 
             <div className="card">
-              <div style={{ fontSize: "12px", fontWeight: 700, color: "#64748b", textTransform: "uppercase" }}>
+              <div style={{ fontSize: "11px", fontWeight: 700, color: "#64748b", textTransform: "uppercase" }}>
                 Price Trend Movement
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "8px", margin: "4px 0" }}>
-                <span style={{ fontSize: "22px", fontWeight: 800, color: trends.trend_direction.includes("Rising") ? "#059669" : trends.trend_direction.includes("Falling") ? "#dc2626" : "#64748b" }}>
+                <span style={{ fontSize: "20px", fontWeight: 800, color: trends.trend_direction.includes("Rising") ? "#059669" : trends.trend_direction.includes("Falling") ? "#dc2626" : "#64748b" }}>
                   {trends.price_change_percentage > 0 ? `+${trends.price_change_percentage}%` : `${trends.price_change_percentage}%`}
                 </span>
-                {trends.trend_direction.includes("Rising") ? <TrendingUp size={20} color="#059669" /> : <TrendingDown size={20} color="#dc2626" />}
+                {trends.trend_direction.includes("Rising") ? <TrendingUp size={18} color="#059669" /> : <TrendingDown size={18} color="#dc2626" />}
               </div>
-              <div style={{ fontSize: "12px", color: "#64748b" }}>
+              <div style={{ fontSize: "11px", color: "#64748b" }}>
                 {trends.trend_direction}
               </div>
             </div>
 
             <div className="card">
-              <div style={{ fontSize: "12px", fontWeight: 700, color: "#64748b", textTransform: "uppercase" }}>
+              <div style={{ fontSize: "11px", fontWeight: 700, color: "#64748b", textTransform: "uppercase" }}>
                 Price Range (Min - Max)
               </div>
-              <div style={{ fontSize: "22px", fontWeight: 800, color: "#0f172a", margin: "4px 0" }}>
+              <div style={{ fontSize: "20px", fontWeight: 800, color: "#0f172a", margin: "4px 0" }}>
                 ₹{trends.min_price} - ₹{trends.max_price}
               </div>
-              <div style={{ fontSize: "12px", color: "#64748b" }}>
+              <div style={{ fontSize: "11px", color: "#64748b" }}>
                 Avg: ₹{trends.average_price} / Qtl
               </div>
             </div>
 
             <div className="card">
-              <div style={{ fontSize: "12px", fontWeight: 700, color: "#64748b", textTransform: "uppercase" }}>
+              <div style={{ fontSize: "11px", fontWeight: 700, color: "#64748b", textTransform: "uppercase" }}>
                 Price Volatility
               </div>
-              <div style={{ fontSize: "22px", fontWeight: 800, color: "#0f172a", margin: "4px 0" }}>
+              <div style={{ fontSize: "20px", fontWeight: 800, color: "#0f172a", margin: "4px 0" }}>
                 {trends.volatility_rating}
               </div>
-              <div style={{ fontSize: "12px", color: "#64748b" }}>
-                Historical standard deviation
+              <div style={{ fontSize: "11px", color: "#64748b" }}>
+                Historical deviation index
               </div>
             </div>
           </div>
 
           {/* Historical Price Chart */}
-          <div className="card" style={{ marginBottom: "28px" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
+          <div className="card" style={{ marginBottom: "20px" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "14px", flexWrap: "wrap", gap: "8px" }}>
               <div>
-                <h3 style={{ fontSize: "16px", fontWeight: 800, color: "#0f172a" }}>
-                  Historical Wholesale Price Trend — {selectedCommodity} ({selectedState})
+                <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
+                  Wholesale Price Trend — {selectedCommodity} ({selectedState})
                 </h3>
-                <span style={{ fontSize: "12px", color: "#64748b" }}>
+                <span style={{ fontSize: "11px", color: "#64748b" }}>
                   Modal Price vs Min/Max Band (INR per Quintal)
                 </span>
               </div>
               <span className="badge badge-green">Historical Data</span>
             </div>
 
-            <div style={{ height: "260px", width: "100%" }}>
+            <div style={{ height: "220px", width: "100%" }}>
               <ResponsiveContainer width="100%" height="100%">
-                <ComposedChart data={chartData} margin={{ top: 10, right: 20, bottom: 0, left: 0 }}>
-                  <XAxis dataKey="date" tick={{ fontSize: 11 }} />
-                  <YAxis domain={['auto', 'auto']} unit="₹" tick={{ fontSize: 11 }} />
+                <ComposedChart data={chartData} margin={{ top: 10, right: 10, bottom: 0, left: 0 }}>
+                  <XAxis dataKey="date" tick={{ fontSize: 10 }} />
+                  <YAxis domain={['auto', 'auto']} unit="₹" tick={{ fontSize: 10 }} width={45} />
                   <Tooltip formatter={(val) => [`₹${val}`, ""]} />
-                  <Legend />
+                  <Legend wrapperStyle={{ fontSize: "11px" }} />
                   <Area type="monotone" dataKey="max" name="Max Price" fill="#e0f2fe" stroke="#7dd3fc" strokeDasharray="3 3" />
                   <Area type="monotone" dataKey="min" name="Min Price" fill="#f8fafc" stroke="#cbd5e1" strokeDasharray="3 3" />
-                  <Line type="monotone" dataKey="modal" name="Modal Price" stroke="#0284c7" strokeWidth={3} dot={{ r: 3 }} />
+                  <Line type="monotone" dataKey="modal" name="Modal Price" stroke="#0284c7" strokeWidth={2.5} dot={{ r: 2 }} />
                 </ComposedChart>
               </ResponsiveContainer>
             </div>
@@ -277,53 +277,53 @@ export default function MarketIntelligence() {
 
           {/* "Where Should I Sell?" Market Ranking Table */}
           {whereToSell && (
-            <div className="card" style={{ marginBottom: "24px" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "16px" }}>
+            <div className="card" style={{ marginBottom: "20px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "14px" }}>
                 <div>
                   <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
                     <Award size={18} color="#d97706" />
-                    <h3 style={{ fontSize: "17px", fontWeight: 800, color: "#0f172a" }}>
-                      Where Should I Sell? — Top Mandi Realizations in {selectedState}
+                    <h3 style={{ fontSize: "16px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
+                      Where Should I Sell? — Top Mandis in {selectedState}
                     </h3>
                   </div>
-                  <p style={{ fontSize: "13px", color: "#475569", margin: 0 }}>
+                  <p style={{ fontSize: "12px", color: "#475569", margin: 0 }}>
                     {whereToSell.price_spread_analysis}
                   </p>
                 </div>
               </div>
 
-              <div style={{ overflowX: "auto" }}>
-                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "13px", textAlign: "left" }}>
+              <div style={{ overflowX: "auto", width: "100%" }}>
+                <table style={{ width: "100%", minWidth: "500px", borderCollapse: "collapse", fontSize: "12px", textAlign: "left" }}>
                   <thead>
                     <tr style={{ background: "#f8fafc", borderBottom: "2px solid #e2e8f0" }}>
-                      <th style={{ padding: "12px 14px", fontWeight: 700, color: "#334155" }}>Rank</th>
-                      <th style={{ padding: "12px 14px", fontWeight: 700, color: "#334155" }}>Mandi / APMC</th>
-                      <th style={{ padding: "12px 14px", fontWeight: 700, color: "#334155" }}>District</th>
-                      <th style={{ padding: "12px 14px", fontWeight: 700, color: "#334155" }}>Avg Modal Price</th>
-                      <th style={{ padding: "12px 14px", fontWeight: 700, color: "#334155" }}>Peak Price</th>
-                      <th style={{ padding: "12px 14px", fontWeight: 700, color: "#334155" }}>Recommendation</th>
+                      <th style={{ padding: "10px 12px", fontWeight: 700, color: "#334155" }}>Rank</th>
+                      <th style={{ padding: "10px 12px", fontWeight: 700, color: "#334155" }}>Mandi / APMC</th>
+                      <th style={{ padding: "10px 12px", fontWeight: 700, color: "#334155" }}>District</th>
+                      <th style={{ padding: "10px 12px", fontWeight: 700, color: "#334155" }}>Avg Modal</th>
+                      <th style={{ padding: "10px 12px", fontWeight: 700, color: "#334155" }}>Peak</th>
+                      <th style={{ padding: "10px 12px", fontWeight: 700, color: "#334155" }}>Badge</th>
                     </tr>
                   </thead>
                   <tbody>
                     {whereToSell.best_mandis.map((m) => (
                       <tr key={m.rank} style={{ borderBottom: "1px solid #f1f5f9", background: m.rank === 1 ? "#f0fdf4" : "#ffffff" }}>
-                        <td style={{ padding: "12px 14px", fontWeight: 700, color: m.rank === 1 ? "#059669" : "#64748b" }}>
+                        <td style={{ padding: "10px 12px", fontWeight: 700, color: m.rank === 1 ? "#059669" : "#64748b" }}>
                           #{m.rank}
                         </td>
-                        <td style={{ padding: "12px 14px", fontWeight: 700, color: "#0f172a" }}>
+                        <td style={{ padding: "10px 12px", fontWeight: 700, color: "#0f172a" }}>
                           {m.market}
                         </td>
-                        <td style={{ padding: "12px 14px", color: "#475569" }}>
+                        <td style={{ padding: "10px 12px", color: "#475569" }}>
                           {m.district}
                         </td>
-                        <td style={{ padding: "12px 14px", fontWeight: 800, color: "#059669" }}>
-                          ₹{m.avg_modal_price} / Qtl
+                        <td style={{ padding: "10px 12px", fontWeight: 800, color: "#059669" }}>
+                          ₹{m.avg_modal_price}
                         </td>
-                        <td style={{ padding: "12px 14px", color: "#64748b" }}>
+                        <td style={{ padding: "10px 12px", color: "#64748b" }}>
                           ₹{m.max_price_recorded}
                         </td>
-                        <td style={{ padding: "12px 14px" }}>
-                          <span className={`badge ${m.rank === 1 ? "badge-green" : "badge-amber"}`}>
+                        <td style={{ padding: "10px 12px" }}>
+                          <span className={`badge ${m.rank === 1 ? "badge-green" : "badge-amber"}`} style={{ fontSize: "11px", padding: "2px 8px" }}>
                             {m.recommendation_badge}
                           </span>
                         </td>
@@ -333,14 +333,14 @@ export default function MarketIntelligence() {
                 </table>
               </div>
 
-              <div style={{ marginTop: "14px", background: "#f8fafc", padding: "12px 16px", borderRadius: "10px", fontSize: "12px", color: "#475569" }}>
+              <div style={{ marginTop: "12px", background: "#f8fafc", padding: "10px 14px", borderRadius: "8px", fontSize: "12px", color: "#475569" }}>
                 💡 <strong>Selling Advice:</strong> {whereToSell.market_advice}
               </div>
             </div>
           )}
 
           {/* Historical Data Notice */}
-          <div style={{ background: "#fffbeb", border: "1px solid #fde68a", borderRadius: "12px", padding: "14px 18px", fontSize: "12px", color: "#92400e" }}>
+          <div style={{ background: "#fffbeb", border: "1px solid #fde68a", borderRadius: "10px", padding: "12px 14px", fontSize: "11px", color: "#92400e" }}>
             📌 <strong>Dataset Notice:</strong> {trends.data_attribution}
           </div>
         </>
