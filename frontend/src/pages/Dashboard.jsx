@@ -232,7 +232,7 @@ export default function Dashboard() {
             {topCropRec ? topCropRec.crop : "Loading..."}
           </div>
           <div style={{ fontSize: "12px", color: "#047857", fontWeight: 600, marginBottom: "8px" }}>
-            {topCropRec ? `${topCropRec.percentage} Soil Match` : "98.8% Accuracy"}
+            {topCropRec ? `${topCropRec.percentage} Soil Match` : "Recommended"}
           </div>
           <div style={{ fontSize: "11px", color: "#059669", fontWeight: 700, display: "flex", alignItems: "center", gap: "4px" }}>
             Explore Advisory <ArrowRight size={12} />
@@ -251,7 +251,7 @@ export default function Dashboard() {
             {yieldData ? `${yieldData.predicted_yield_quintals_per_acre} Qtl/Ac` : "Estimating..."}
           </div>
           <div style={{ fontSize: "12px", color: "#b45309", fontWeight: 600, marginBottom: "8px" }}>
-            {yieldData ? `${yieldData.total_expected_production_tons} Tons Total` : "R² = 0.987"}
+            {yieldData ? `${yieldData.total_expected_production_tons} Tons Total` : "Acreage Projection"}
           </div>
           <div style={{ fontSize: "11px", color: "#d97706", fontWeight: 700, display: "flex", alignItems: "center", gap: "4px" }}>
             Yield Analysis <ArrowRight size={12} />
@@ -270,7 +270,7 @@ export default function Dashboard() {
             {marketData ? `₹${marketData.latest_modal_price}` : "Loading..."} <span style={{ fontSize: "11px", fontWeight: 500 }}>/Qtl</span>
           </div>
           <div style={{ fontSize: "12px", color: "#0284c7", fontWeight: 600, marginBottom: "8px" }}>
-            {marketData ? marketData.trend_direction : "57,000+ Records"}
+            {marketData ? marketData.trend_direction : "Live Price Trends"}
           </div>
           <div style={{ fontSize: "11px", color: "#0284c7", fontWeight: 700, display: "flex", alignItems: "center", gap: "4px" }}>
             Where to Sell <ArrowRight size={12} />
@@ -289,7 +289,7 @@ export default function Dashboard() {
             {topSchemes.length > 0 ? topSchemes[0].short_name : "PM-KISAN"}
           </div>
           <div style={{ fontSize: "12px", color: "#7c3aed", fontWeight: 600, marginBottom: "8px" }}>
-            {topSchemes.length > 0 ? `${(topSchemes[0].match_score * 100).toFixed(0)}% Profile Match` : "Central Scheme"}
+            {topSchemes.length > 0 ? `${(topSchemes[0].match_score * 100).toFixed(0)}% Profile Match` : "Eligible Subsidy"}
           </div>
           <div style={{ fontSize: "11px", color: "#7c3aed", fontWeight: 700, display: "flex", alignItems: "center", gap: "4px" }}>
             View Schemes <ArrowRight size={12} />
@@ -331,7 +331,7 @@ export default function Dashboard() {
             <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
               🌾 Farm Health & Soil Nutrients
             </h3>
-            <span className="badge badge-green">N-P-K</span>
+            <span className="badge badge-green">N-P-K Status</span>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "14px" }}>
@@ -377,15 +377,15 @@ export default function Dashboard() {
             <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
               📈 Top Mandi Realization
             </h3>
-            <span className="badge badge-blue">Dataset 4</span>
+            <span className="badge badge-blue">Mandi Rates</span>
           </div>
 
           {bestMandi ? (
             <div>
-              <div style={{ background: "#f0f9ff", border: "1px solid #bae6fd", borderRadius: "10px", padding: "12px 14px", marginBottom: "12px" }}>
+              <div style={{ background: "#f0fdf4", border: "1px solid #bbf7d0", borderRadius: "10px", padding: "12px 14px", marginBottom: "12px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "4px" }}>
-                  <span style={{ fontSize: "15px", fontWeight: 800, color: "#0369a1" }}>{bestMandi.market}</span>
-                  <span className="badge badge-amber">{bestMandi.recommendation_badge}</span>
+                  <span style={{ fontSize: "15px", fontWeight: 800, color: "#065f46" }}>{bestMandi.market}</span>
+                  <span className="badge badge-green">{bestMandi.recommendation_badge}</span>
                 </div>
                 <div style={{ fontSize: "12px", color: "#1e293b" }}>
                   District: <strong>{bestMandi.district}</strong> ({bestMandi.state})
@@ -395,7 +395,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <p style={{ fontSize: "12px", color: "#475569", margin: 0 }}>
-                Selling in <strong>{bestMandi.market}</strong> provides optimal price realization over village intermediaries.
+                Selling in <strong>{bestMandi.market}</strong> provides optimal price realization over local intermediaries.
               </p>
             </div>
           ) : (

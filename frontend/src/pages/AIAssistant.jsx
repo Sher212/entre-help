@@ -28,8 +28,8 @@ export default function AIAssistant() {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      content: `Namaste ${profile.name}! 🙏 I am your **AI Farmer Assistant (KrishiKalyan AI)**.\n\nI combine real-time weather, trained machine learning models, soil datasets, Indian mandi prices, and government schemes to assist your farm decisions.\n\nHow can I help your farm today?`,
-      tools: ["Agricultural Intelligence Hub", "Profile Context Engine"],
+      content: `Namaste ${profile.name}! 🙏 I am your **AI Farmer Assistant (KrishiKalyan AI)**.\n\nI combine real-time weather, agronomic intelligence, soil health data, mandi prices, and government schemes to assist your farm decisions.\n\nHow can I help your farm today?`,
+      tools: ["Agricultural Intelligence Hub", "Farm Profile Context"],
       followups: [
         "Which crop should I grow in my soil?",
         "Is the weather suitable for spraying today?",
@@ -56,8 +56,8 @@ export default function AIAssistant() {
       const d = pendingAiContext;
       const diseaseSummaryMsg = {
         role: "assistant",
-        content: `🔍 **Diagnosis Context Received from Plant Disease Scanner**:\n\n• **Detected Crop:** ${d.crop}\n• **Identified Condition:** **${d.condition}** (${d.confidence} confidence)\n• **Severity:** ${d.severity} • **Pathogen:** ${d.status === "Healthy" ? "None (Plant is healthy)" : "Fungal / Bacterial lesion"}\n\n**Immediate Treatment Advice:**\n• **Organic Cure:** ${d.organicTreatment}\n• **Chemical Fungicide:** ${d.chemicalTreatment}\n• **Cultural Prevention:** ${d.prevention}\n\nHow can I assist further with this diagnosis?`,
-        tools: ["PlantVillage Vision Model", "ICAR Treatment Database"],
+        content: `🔍 **Diagnosis Context Received from Plant Disease Scanner**:\n\n• **Detected Crop:** ${d.crop}\n• **Identified Condition:** **${d.condition}** (${d.confidence} match)\n• **Severity:** ${d.severity} • **Pathogen:** ${d.status === "Healthy" ? "None (Plant is healthy)" : "Fungal / Bacterial lesion"}\n\n**Immediate Treatment Advice:**\n• **Organic Cure:** ${d.organicTreatment}\n• **Chemical Fungicide:** ${d.chemicalTreatment}\n• **Cultural Prevention:** ${d.prevention}\n\nHow can I assist further with this diagnosis?`,
+        tools: ["Plant Disease Vision", "Agronomic Treatment Guide"],
         followups: [
           `What is the exact water dilution for ${d.chemicalTreatment?.split(" ")[0] || "spray"}?`,
           "Will upcoming rain wash away the spray?",
@@ -97,8 +97,8 @@ export default function AIAssistant() {
         ...prev,
         {
           role: "assistant",
-          content: "I apologize, but I encountered an error connecting to the decision engine. Please try asking again.",
-          tools: ["Error Recovery"]
+          content: "We're having trouble connecting right now. Please try again.",
+          tools: ["Service Assistant"]
         }
       ]);
     } finally {
@@ -120,14 +120,14 @@ export default function AIAssistant() {
       {/* Header */}
       <div style={{ marginBottom: "16px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
-          <span className="badge badge-green">Central GenAI Assistant</span>
-          <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Multi-Tool Intent Orchestration</span>
+          <span className="badge badge-green">AI Farmer Assistant</span>
+          <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Multi-Tool Agricultural Decision Support</span>
         </div>
         <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
           AI Farmer Assistant
         </h1>
         <p style={{ fontSize: "13px", color: "#64748b", marginTop: "2px" }}>
-          Ask natural-language questions in English or Hindi. Grounded in weather, crop models, mandi prices, and government schemes.
+          Ask natural-language questions in English or Hindi. Grounded in weather, crop advisories, mandi prices, and government schemes.
         </p>
       </div>
 
@@ -207,7 +207,7 @@ export default function AIAssistant() {
                 <RefreshCw size={16} color="#059669" />
               </div>
               <span style={{ fontSize: "13px", color: "#64748b" }}>
-                Consulting agricultural datasets and ML models...
+                Analyzing agronomic insights & advice...
               </span>
             </div>
           )}

@@ -10,7 +10,8 @@ import {
   BarChart3,
   CheckCircle2,
   AlertTriangle,
-  RefreshCw
+  RefreshCw,
+  Info
 } from "lucide-react";
 
 export default function ModelEvaluationInfo() {
@@ -27,7 +28,7 @@ export default function ModelEvaluationInfo() {
         <div style={{ display: "inline-block", animation: "spin 1s infinite linear" }}>
           <RefreshCw size={32} color="#059669" />
         </div>
-        <div style={{ marginTop: "12px", color: "#64748b" }}>Loading model benchmarks and dataset provenance...</div>
+        <div style={{ marginTop: "12px", color: "#64748b" }}>Loading technology documentation & model transparency...</div>
       </div>
     );
   }
@@ -40,20 +41,21 @@ export default function ModelEvaluationInfo() {
       {/* Header */}
       <div style={{ marginBottom: "20px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
-          <span className="badge badge-green">Transparency & Governance</span>
+          <span className="badge badge-green">Technical Transparency</span>
+          <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Architecture & Benchmarks</span>
         </div>
         <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
-          Datasets Provenance & Model Evaluation
+          About the AI & Data Architecture
         </h1>
         <p style={{ fontSize: "13px", color: "#64748b", marginTop: "2px" }}>
-          Complete documentation of all 5 Kaggle datasets, model architectures, validation metrics, and safety guidelines.
+          Complete documentation of agricultural datasets, machine learning architectures, evaluation benchmarks, and ethical guidelines.
         </p>
       </div>
 
-      {/* 5 Datasets Full Table */}
+      {/* Datasets Provenance Section */}
       <div className="card" style={{ marginBottom: "24px" }}>
         <h2 style={{ fontSize: "16px", fontWeight: 800, color: "#0f172a", marginBottom: "14px" }}>
-          📚 5 Required Kaggle Datasets Provenance
+          📚 Agricultural Datasets Provenance & Sources
         </h2>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
@@ -69,9 +71,8 @@ export default function ModelEvaluationInfo() {
             >
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "6px", flexWrap: "wrap", gap: "8px" }}>
                 <div>
-                  <span className="badge badge-green" style={{ marginBottom: "4px", fontSize: "11px" }}>{d.name.split("—")[0].trim()}</span>
                   <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", margin: "2px 0" }}>
-                    {d.name.split("—")[1]?.trim() || d.name}
+                    {d.name}
                   </h3>
                 </div>
 
@@ -82,7 +83,7 @@ export default function ModelEvaluationInfo() {
                   className="btn btn-secondary"
                   style={{ padding: "5px 10px", fontSize: "11px", minHeight: "32px" }}
                 >
-                  <span>Kaggle Dataset</span>
+                  <span>Dataset Source Reference</span>
                   <ExternalLink size={11} />
                 </a>
               </div>
@@ -99,7 +100,7 @@ export default function ModelEvaluationInfo() {
                   <strong>Trained Model:</strong> {d.model_trained}
                 </div>
                 <div>
-                  <strong>Performance:</strong> <span style={{ color: "#059669", fontWeight: 700 }}>{d.performance}</span>
+                  <strong>Validation Metric:</strong> <span style={{ color: "#059669", fontWeight: 700 }}>{d.performance}</span>
                 </div>
               </div>
 
@@ -117,9 +118,9 @@ export default function ModelEvaluationInfo() {
         <div className="card">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
             <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
-              🌱 Crop Recommendation Classifiers
+              🌱 Crop Recommendation Benchmark
             </h3>
-            <span className="badge badge-green" style={{ fontSize: "10px" }}>5-Fold CV</span>
+            <span className="badge badge-green" style={{ fontSize: "10px" }}>5-Fold Cross Validation</span>
           </div>
 
           <div style={{ overflowX: "auto" }}>
@@ -127,7 +128,7 @@ export default function ModelEvaluationInfo() {
               <thead>
                 <tr style={{ background: "#f8fafc", borderBottom: "2px solid #e2e8f0" }}>
                   <th style={{ padding: "8px" }}>Algorithm</th>
-                  <th style={{ padding: "8px" }}>Test Acc</th>
+                  <th style={{ padding: "8px" }}>Test Accuracy</th>
                   <th style={{ padding: "8px" }}>F1 Score</th>
                   <th style={{ padding: "8px" }}>CV Mean</th>
                 </tr>
@@ -136,7 +137,7 @@ export default function ModelEvaluationInfo() {
                 {Object.entries(cropAlgos).map(([name, m]) => (
                   <tr key={name} style={{ borderBottom: "1px solid #f1f5f9", background: name === "Random Forest" ? "#f0fdf4" : "#ffffff" }}>
                     <td style={{ padding: "8px", fontWeight: 700, color: name === "Random Forest" ? "#059669" : "#1e293b" }}>
-                      {name} {name === "Random Forest" && "🏆"}
+                      {name} {name === "Random Forest" && "🏆 (Deployed)"}
                     </td>
                     <td style={{ padding: "8px", fontWeight: 700 }}>{(m.test_accuracy * 100).toFixed(1)}%</td>
                     <td style={{ padding: "8px" }}>{(m.f1_weighted * 100).toFixed(1)}%</td>
@@ -152,7 +153,7 @@ export default function ModelEvaluationInfo() {
         <div className="card">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
             <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
-              📈 Crop Yield Regressors
+              📈 Crop Yield Regressor Benchmark
             </h3>
             <span className="badge badge-amber" style={{ fontSize: "10px" }}>R² / MAE</span>
           </div>
@@ -171,7 +172,7 @@ export default function ModelEvaluationInfo() {
                 {Object.entries(yieldAlgos).map(([name, m]) => (
                   <tr key={name} style={{ borderBottom: "1px solid #f1f5f9", background: name.includes("Gradient") ? "#fffbeb" : "#ffffff" }}>
                     <td style={{ padding: "8px", fontWeight: 700, color: name.includes("Gradient") ? "#d97706" : "#1e293b" }}>
-                      {name} {name.includes("Gradient") && "🏆"}
+                      {name} {name.includes("Gradient") && "🏆 (Deployed)"}
                     </td>
                     <td style={{ padding: "8px", fontWeight: 700 }}>{m.R2_Score?.toFixed(4)}</td>
                     <td style={{ padding: "8px" }}>{m.MAE?.toFixed(2)}</td>
@@ -184,7 +185,7 @@ export default function ModelEvaluationInfo() {
         </div>
       </div>
 
-      {/* AI Safety and Responsibility Guidelines */}
+      {/* AI Safety and Ethical Advisory Safeguards */}
       <div className="card" style={{ background: "#f8fafc", borderLeft: "4px solid #059669" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
           <ShieldCheck size={18} color="#059669" />

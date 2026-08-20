@@ -91,19 +91,14 @@ export default function DiseaseDetection() {
     }
   };
 
-  const handleAddToPlan = async () => {
-    await refreshActionPlan();
-    setShowActionPlanModal(true);
-  };
-
   return (
     <div className="page-wrapper">
       {/* Header */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "20px", flexWrap: "wrap", gap: "12px" }}>
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
-            <span className="badge badge-purple">Dataset 2 • PlantVillage</span>
-            <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>27 Classes • Vision AI</span>
+            <span className="badge badge-purple">AI Disease Detection</span>
+            <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Computer Vision Leaf Diagnosis</span>
           </div>
           <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
             Plant Leaf Disease Detection & Cure
@@ -176,7 +171,7 @@ export default function DiseaseDetection() {
           <div className="card">
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
               <h3 style={{ fontSize: "14px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
-                Instant Test Gallery (PlantVillage Samples)
+                Instant Test Gallery (Sample Leaves)
               </h3>
               <span style={{ fontSize: "11px", color: "#64748b" }}>Tap to test</span>
             </div>
@@ -239,10 +234,10 @@ export default function DiseaseDetection() {
                 <RefreshCw size={30} color="#059669" />
               </div>
               <div style={{ marginTop: "14px", fontSize: "15px", fontWeight: 700, color: "#0f172a" }}>
-                Extracting Spatial & Chlorophyll Features...
+                Analyzing leaf features & pathology...
               </div>
               <div style={{ fontSize: "12px", color: "#64748b", marginTop: "4px" }}>
-                Running Multi-Scale Vision Classifier over 27 PlantVillage classes
+                Diagnosing potential fungal, bacterial & pest conditions
               </div>
             </div>
           )}
@@ -273,7 +268,7 @@ export default function DiseaseDetection() {
                     Detected Crop: {result.detected_crop}
                   </span>
                   <span style={{ background: "rgba(255,255,255,0.2)", padding: "3px 10px", borderRadius: "9999px", fontSize: "12px", fontWeight: 700 }}>
-                    {result.confidence_percentage} Confidence
+                    {result.confidence_percentage} Match
                   </span>
                 </div>
 
@@ -337,7 +332,7 @@ export default function DiseaseDetection() {
                 </div>
 
                 <div className="card" style={{ background: "#fff7ed", border: "1px solid #fed7aa" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "6px", color: "#9a3412", fontWeight: 700, fontSize: "13px", marginBottom: "6px" }}>
+                  <div style={{ display: "center", alignItems: "center", gap: "6px", color: "#9a3412", fontWeight: 700, fontSize: "13px", marginBottom: "6px", display: "flex" }}>
                     <FlaskConical size={15} /> Chemical Spray / Dosage
                   </div>
                   <div style={{ fontSize: "12px", color: "#1e293b", lineHeight: 1.5 }}>

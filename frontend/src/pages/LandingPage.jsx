@@ -12,26 +12,46 @@ import {
   ArrowRight,
   ShieldCheck,
   CheckCircle2,
-  Database,
   Layers,
   BarChart3,
-  Award
+  Award,
+  Camera,
+  Activity
 } from "lucide-react";
 
 export default function LandingPage() {
   const { setActiveTab, setShowDemoTour } = useFarmer();
 
-  const datasets = [
-    { num: "Dataset 1", name: "Crop Recommendation", count: "2,200 records", model: "Random Forest (98.8% Acc)", link: "arkabhowmik/crop-recommendation" },
-    { num: "Dataset 2", name: "Plant Village Disease", count: "27 classes & Leaf images", model: "Multi-Scale Vision Classifier", link: "tushar5harma/plant-village-dataset-updated" },
-    { num: "Dataset 3", name: "Crop Yield Analytics", count: "8,550 records", model: "Gradient Boosting (R² = 0.987)", link: "aarongebremariam/crop-yield" },
-    { num: "Dataset 4", name: "India Mandi Prices", count: "57,330 daily records", model: "Mandi Price Trend Engine", link: "ishankat/daily-wholesale-commodity-prices-india-mandis" },
-    { num: "Dataset 5", name: "Indian Govt Schemes", count: "Central & State Schemes", model: "Semantic Profile Matcher", link: "jainamgada45/indian-government-schemes" },
+  const workflowSteps = [
+    {
+      num: "01",
+      title: "Soil & Agro-Climate Matching",
+      desc: "Analyze your farm's N-P-K nutrient profile, pH, and rainfall to discover the most profitable and high-yielding crops.",
+      tab: "crop-advisor"
+    },
+    {
+      num: "02",
+      title: "Harvest & Yield Forecasting",
+      desc: "Calculate expected acreage production, tons per hectare, and customized fertilization strategies before sowing.",
+      tab: "yield-predictor"
+    },
+    {
+      num: "03",
+      title: "AI Camera Plant Health Scanner",
+      desc: "Instantly scan crop leaves using your smartphone camera for rapid detection of fungal and bacterial infections with bio-cures.",
+      tab: "disease-detection"
+    },
+    {
+      num: "04",
+      title: "Mandi Price Intelligence & Schemes",
+      desc: "Compare wholesale APMC mandi rates across districts to know where to sell, and discover matching central/state subsidies.",
+      tab: "market"
+    }
   ];
 
   const features = [
     { icon: Sprout, title: "AI Crop Advisor", desc: "Scientific crop selection matching soil N-P-K, pH, temperature, humidity, and rainfall parameters.", tab: "crop-advisor" },
-    { icon: TrendingUp, title: "Yield Prediction", desc: "Multi-factor regression calculating expected tons per hectare and productivity optimization tips.", tab: "yield-predictor" },
+    { icon: TrendingUp, title: "Yield Prediction", desc: "Multi-factor forecasting calculating expected tons per hectare and productivity optimization tips.", tab: "yield-predictor" },
     { icon: Bug, title: "Leaf Disease Detection", desc: "Computer vision diagnosis of 27 plant conditions with biological, organic, and chemical remedies.", tab: "disease-detection" },
     { icon: CloudSun, title: "Weather Agro-Advisory", desc: "Actionable meteorological rules: irrigation schedules, spray safety windows, and frost/heat alerts.", tab: "weather" },
     { icon: Store, title: "Mandi Market Intelligence", desc: "Real-time historical trends, price volatility indices, and 'Where Should I Sell?' market rankings.", tab: "market" },
@@ -54,7 +74,7 @@ export default function LandingPage() {
         <div style={{ position: "relative", zIndex: 2, maxWidth: "800px" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.25)", padding: "6px 14px", borderRadius: "9999px", fontSize: "13px", fontWeight: 600, marginBottom: "20px", backdropFilter: "blur(8px)" }}>
             <Sparkles size={14} color="#fde047" />
-            <span>Unified Agricultural Decision Support Engine</span>
+            <span>Unified Agricultural Decision Support Platform</span>
           </div>
 
           <h1 style={{ fontSize: "40px", fontWeight: 800, lineHeight: 1.15, letterSpacing: "-0.03em", marginBottom: "16px" }}>
@@ -62,7 +82,7 @@ export default function LandingPage() {
           </h1>
 
           <p style={{ fontSize: "16px", color: "#d1fae5", lineHeight: 1.6, marginBottom: "28px", maxWidth: "680px" }}>
-            Combining <strong>Soil Nutrients + Weather Intelligence + Machine Learning Models + Plant Disease Vision + Mandi Market Prices + Government Schemes</strong> into one seamless, actionable platform.
+            Connecting <strong>Soil Nutrients • Live Weather • Crop Advisory • Plant Leaf Health • Mandi Prices • Government Subsidies</strong> into one simple, actionable assistant for your farm.
           </p>
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: "14px" }}>
@@ -71,7 +91,7 @@ export default function LandingPage() {
               className="btn btn-amber"
               style={{ padding: "12px 24px", fontSize: "15px", fontWeight: 700 }}
             >
-              <span>Get Started • Open Dashboard</span>
+              <span>Open Farmer Dashboard</span>
               <ArrowRight size={18} />
             </button>
 
@@ -81,7 +101,7 @@ export default function LandingPage() {
               style={{ background: "rgba(255,255,255,0.15)", color: "#ffffff", border: "1px solid rgba(255,255,255,0.3)", padding: "12px 20px", fontSize: "15px" }}
             >
               <BotMessageSquare size={18} />
-              <span>Talk to AI Farmer Assistant</span>
+              <span>Talk to AI Assistant</span>
             </button>
 
             <button
@@ -90,61 +110,67 @@ export default function LandingPage() {
               style={{ background: "#ffffff", color: "#065f46", padding: "12px 20px", fontSize: "15px", fontWeight: 700 }}
             >
               <Award size={18} color="#d97706" />
-              <span>Launch 9-Step Demo Tour</span>
+              <span>Interactive Platform Tour</span>
             </button>
           </div>
         </div>
       </section>
 
-      {/* Dataset Verification Grid */}
+      {/* 4-Step Smart Farming Decision Journey */}
       <section style={{ marginBottom: "40px" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-          <div>
-            <h2 style={{ fontSize: "20px", fontWeight: 800, color: "#0f172a" }}>
-              5 Required Kaggle Datasets Integrated
-            </h2>
-            <p style={{ fontSize: "13px", color: "#64748b" }}>
-              All 5 specified datasets were downloaded, cleaned, preprocessed, trained, and served via active APIs.
-            </p>
-          </div>
-          <button 
-            onClick={() => setActiveTab("models-info")}
-            className="btn btn-secondary"
-            style={{ fontSize: "13px", padding: "6px 14px" }}
-          >
-            <Database size={14} /> View Model Metrics
-          </button>
+        <div style={{ marginBottom: "20px" }}>
+          <h2 style={{ fontSize: "22px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
+            How KrishiKalyan AI Empowers Your Farm
+          </h2>
+          <p style={{ fontSize: "13px", color: "#64748b", marginTop: "4px" }}>
+            A complete decision workflow from soil preparation to market realization.
+          </p>
         </div>
 
-        <div className="grid-3">
-          {datasets.map((d, i) => (
-            <div key={i} className="card" style={{ borderLeft: "4px solid #059669" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
-                <span className="badge badge-green">{d.num}</span>
-                <span style={{ fontSize: "11px", color: "#64748b", fontWeight: 600 }}>{d.count}</span>
+        <div className="grid-4">
+          {workflowSteps.map((s, i) => (
+            <div
+              key={i}
+              className="card"
+              onClick={() => setActiveTab(s.tab)}
+              style={{
+                cursor: "pointer",
+                borderTop: "4px solid #059669",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                padding: "20px"
+              }}
+            >
+              <div>
+                <span style={{ fontSize: "12px", fontWeight: 800, color: "#059669", letterSpacing: "0.05em" }}>
+                  STEP {s.num}
+                </span>
+                <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", margin: "6px 0 8px 0" }}>
+                  {s.title}
+                </h3>
+                <p style={{ fontSize: "12px", color: "#475569", lineHeight: 1.5, margin: 0 }}>
+                  {s.desc}
+                </p>
               </div>
-              <h3 style={{ fontSize: "15px", fontWeight: 700, color: "#0f172a", marginBottom: "4px" }}>
-                {d.name}
-              </h3>
-              <div style={{ fontSize: "12px", color: "#059669", fontWeight: 600, marginBottom: "8px" }}>
-                {d.model}
-              </div>
-              <div style={{ fontSize: "11px", color: "#94a3b8", fontFamily: "monospace" }}>
-                kaggle.com/datasets/{d.link}
+
+              <div style={{ marginTop: "14px", display: "flex", alignItems: "center", gap: "4px", fontSize: "12px", fontWeight: 700, color: "#059669" }}>
+                <span>Try Feature</span>
+                <ArrowRight size={12} />
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Core Capabilities */}
+      {/* Core Capabilities Grid */}
       <section style={{ marginBottom: "40px" }}>
         <div style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto 28px" }}>
           <h2 style={{ fontSize: "26px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em" }}>
-            Comprehensive Multi-Module AI Capabilities
+            Comprehensive Multi-Module AI Tools
           </h2>
           <p style={{ fontSize: "14px", color: "#64748b" }}>
-            Built specifically to solve real-world agricultural challenges faced by Indian farmers with scientific rigor and simplicity.
+            Designed specifically to solve real-world agricultural challenges with precision and simplicity.
           </p>
         </div>
 
@@ -180,7 +206,7 @@ export default function LandingPage() {
                   </p>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "13px", fontWeight: 600, color: "#059669" }}>
-                  <span>Launch Tool</span>
+                  <span>Open Tool</span>
                   <ArrowRight size={14} />
                 </div>
               </div>
@@ -189,7 +215,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Safety and Verification Banner */}
+      {/* Safety and Ethical Advisory Safeguards */}
       <section style={{
         background: "#f8fafc",
         border: "1px solid #e2e8f0",
@@ -199,7 +225,7 @@ export default function LandingPage() {
         alignItems: "center",
         gap: "20px"
       }}>
-        <div style={{ background: "#e0f2fe", color: "#0369a1", padding: "12px", borderRadius: "12px" }}>
+        <div style={{ background: "#e0f2fe", color: "#0369a1", padding: "12px", borderRadius: "12px", flexShrink: 0 }}>
           <ShieldCheck size={28} />
         </div>
         <div>
@@ -207,7 +233,7 @@ export default function LandingPage() {
             Production Reliability & Ethical AI Safeguards
           </h4>
           <p style={{ fontSize: "13px", color: "#64748b", margin: 0, lineHeight: 1.5 }}>
-            Our platform provides decision support with transparent confidence metrics and feature importances. We never make unsubstantiated guarantee claims regarding crop yields, disease cures, or government eligibility. Farmers are provided direct verified links to official portals (MyScheme.gov.in) and local Krishi Vigyan Kendra contacts.
+            Our platform provides decision support with transparent confidence metrics and feature analysis. We never make unsubstantiated guarantee claims regarding crop yields, disease cures, or government eligibility. Farmers are provided direct verified links to official portals (MyScheme.gov.in) and local Krishi Vigyan Kendra contacts.
           </p>
         </div>
       </section>

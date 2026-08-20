@@ -93,8 +93,8 @@ export default function YieldPredictor() {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "20px", flexWrap: "wrap", gap: "12px" }}>
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
-            <span className="badge badge-amber">Dataset 3 • 8,550 Records</span>
-            <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Gradient Boosting Regressor (R² = 0.987)</span>
+            <span className="badge badge-amber">AI Yield Prediction</span>
+            <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Productivity & Acreage Forecasting</span>
           </div>
           <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
             Crop Yield Prediction Engine

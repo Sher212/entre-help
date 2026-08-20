@@ -92,8 +92,8 @@ export default function MarketIntelligence() {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "20px", flexWrap: "wrap", gap: "12px" }}>
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
-            <span className="badge badge-blue">Dataset 4 • 57,330 Records</span>
-            <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Agmarknet Wholesale Mandi Rates</span>
+            <span className="badge badge-blue">Real-time Mandi Rates</span>
+            <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>APMC Mandi Price Trends & Spread</span>
           </div>
           <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
             India Mandi Market Intelligence
@@ -185,7 +185,7 @@ export default function MarketIntelligence() {
             <RefreshCw size={28} color="#059669" />
           </div>
           <div style={{ marginTop: "10px", fontSize: "14px", color: "#64748b" }}>
-            Aggregating historical wholesale prices and price spreads...
+            Aggregating wholesale prices and price spreads...
           </div>
         </div>
       )}
@@ -241,7 +241,7 @@ export default function MarketIntelligence() {
                 {trends.volatility_rating}
               </div>
               <div style={{ fontSize: "11px", color: "#64748b" }}>
-                Historical deviation index
+                Market stability index
               </div>
             </div>
           </div>
@@ -257,7 +257,7 @@ export default function MarketIntelligence() {
                   Modal Price vs Min/Max Band (INR per Quintal)
                 </span>
               </div>
-              <span className="badge badge-green">Historical Data</span>
+              <span className="badge badge-green">Price History</span>
             </div>
 
             <div style={{ height: "220px", width: "100%" }}>
@@ -341,7 +341,7 @@ export default function MarketIntelligence() {
 
           {/* Historical Data Notice */}
           <div style={{ background: "#fffbeb", border: "1px solid #fde68a", borderRadius: "10px", padding: "12px 14px", fontSize: "11px", color: "#92400e" }}>
-            📌 <strong>Dataset Notice:</strong> {trends.data_attribution}
+            📌 <strong>Market Notice:</strong> {trends.data_attribution}
           </div>
         </>
       )}

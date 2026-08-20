@@ -10,7 +10,7 @@ import {
   Landmark,
   BotMessageSquare,
   UserCheck,
-  Database,
+  Info,
   Home
 } from "lucide-react";
 
@@ -18,17 +18,17 @@ export default function Sidebar() {
   const { activeTab, setActiveTab } = useFarmer();
 
   const navItems = [
-    { id: "landing", label: "Product Overview", icon: Home, badge: null },
-    { id: "dashboard", label: "Farmer Dashboard", icon: LayoutDashboard, badge: "Live" },
-    { id: "crop-advisor", label: "AI Crop Advisor", icon: Sprout, badge: "Dataset 1" },
-    { id: "yield-predictor", label: "Yield Prediction", icon: TrendingUp, badge: "Dataset 3" },
-    { id: "disease-detection", label: "Disease Detection", icon: Bug, badge: "Dataset 2" },
-    { id: "weather", label: "Weather & Advisory", icon: CloudSun, badge: "Real-time" },
-    { id: "market", label: "Market Intelligence", icon: Store, badge: "Dataset 4" },
-    { id: "schemes", label: "Govt Schemes", icon: Landmark, badge: "Dataset 5" },
-    { id: "assistant", label: "AI Farmer Assistant", icon: BotMessageSquare, badge: "GenAI" },
-    { id: "profile", label: "Farmer Profile", icon: UserCheck, badge: null },
-    { id: "models-info", label: "Datasets & Models", icon: Database, badge: "5 Datasets" },
+    { id: "landing", label: "Product Overview", icon: Home },
+    { id: "dashboard", label: "Farmer Dashboard", icon: LayoutDashboard },
+    { id: "crop-advisor", label: "AI Crop Advisor", icon: Sprout },
+    { id: "yield-predictor", label: "Yield Prediction", icon: TrendingUp },
+    { id: "disease-detection", label: "Disease Detection", icon: Bug },
+    { id: "weather", label: "Weather & Advisory", icon: CloudSun },
+    { id: "market", label: "Market Intelligence", icon: Store },
+    { id: "schemes", label: "Govt Schemes", icon: Landmark },
+    { id: "assistant", label: "AI Farmer Assistant", icon: BotMessageSquare },
+    { id: "profile", label: "Farmer Profile", icon: UserCheck },
+    { id: "models-info", label: "About & Technology", icon: Info },
   ];
 
   return (
@@ -37,7 +37,7 @@ export default function Sidebar() {
       <div className="sidebar-header">
         <div 
           onClick={() => setActiveTab("landing")}
-          style={{ display: "flex", alignItems: "center", gap: "10px", cursor: "pointer", marginBottom: "6px" }}
+          style={{ display: "flex", alignItems: "center", gap: "10px", cursor: "pointer", marginBottom: "4px" }}
         >
           <div style={{
             width: "32px",
@@ -64,7 +64,7 @@ export default function Sidebar() {
         </div>
       </div>
 
-      {/* Nav List (Independently Scrollable if items exceed viewport) */}
+      {/* Nav List */}
       <nav className="sidebar-nav">
         <div style={{ fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", color: "#64748b", textTransform: "uppercase", padding: "4px 16px 8px" }}>
           Platform Navigation
@@ -82,32 +82,19 @@ export default function Sidebar() {
               <span style={{ flex: 1, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
                 {item.label}
               </span>
-              {item.badge && (
-                <span style={{
-                  fontSize: "9px",
-                  padding: "2px 6px",
-                  borderRadius: "4px",
-                  fontWeight: 700,
-                  background: isActive ? "rgba(255,255,255,0.25)" : "rgba(255,255,255,0.08)",
-                  color: isActive ? "#ffffff" : "#94a3b8",
-                  flexShrink: 0
-                }}>
-                  {item.badge}
-                </span>
-              )}
             </div>
           );
         })}
       </nav>
 
-      {/* Fixed Status Footer */}
+      {/* Fixed Clean Farmer Footer */}
       <div className="sidebar-footer">
-        <div style={{ fontSize: "11px", color: "#94a3b8", marginBottom: "4px", display: "flex", alignItems: "center", gap: "6px" }}>
+        <div style={{ fontSize: "11px", color: "#94a3b8", display: "flex", alignItems: "center", gap: "6px" }}>
           <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#10b981", display: "inline-block", flexShrink: 0 }}></span>
-          <span>Backend API: Online (8/8)</span>
+          <span>KrishiKalyan AI</span>
         </div>
-        <div style={{ fontSize: "10px", color: "#64748b" }}>
-          5 Kaggle Datasets Integrated
+        <div style={{ fontSize: "10px", color: "#64748b", marginTop: "2px" }}>
+          Smart Farming Companion
         </div>
       </div>
     </aside>

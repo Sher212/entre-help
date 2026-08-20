@@ -89,8 +89,8 @@ export default function CropAdvisor() {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "20px", flexWrap: "wrap", gap: "12px" }}>
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
-            <span className="badge badge-green">Dataset 1 • 2,200 Records</span>
-            <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Random Forest (98.86% Accuracy)</span>
+            <span className="badge badge-green">AI Crop Recommendation</span>
+            <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Soil & Agronomic Intelligence</span>
           </div>
           <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
             AI Crop Recommendation Engine
@@ -247,7 +247,7 @@ export default function CropAdvisor() {
                     Top Recommendation
                   </span>
                   <span style={{ background: "rgba(255,255,255,0.2)", padding: "3px 10px", borderRadius: "9999px", fontSize: "12px", fontWeight: 700 }}>
-                    {result.recommendations[0]?.percentage} Confidence
+                    {result.recommendations[0]?.percentage} Match
                   </span>
                 </div>
                 <h2 style={{ fontSize: "28px", fontWeight: 800, margin: "0 0 6px 0" }}>
@@ -305,9 +305,9 @@ export default function CropAdvisor() {
               <div className="card">
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
                   <h3 style={{ fontSize: "14px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
-                    Factor Influence Breakdown
+                    Agronomic Factor Influence Breakdown
                   </h3>
-                  <span style={{ fontSize: "11px", color: "#64748b" }}>Importance %</span>
+                  <span style={{ fontSize: "11px", color: "#64748b" }}>Weight %</span>
                 </div>
                 <div style={{ height: "160px", width: "100%" }}>
                   <ResponsiveContainer width="100%" height="100%">

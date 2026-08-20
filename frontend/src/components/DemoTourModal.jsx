@@ -41,18 +41,18 @@ export default function DemoTourModal() {
     },
     {
       step: 3,
-      title: "AI Crop Recommendation (Dataset 1)",
+      title: "AI Crop Recommendation",
       tab: "crop-advisor",
       icon: Sprout,
-      desc: "Receive top recommended crops powered by our Random Forest classifier trained on 2,200 Kaggle crop records (98.8% Accuracy).",
+      desc: "Receive top recommended crops tailored to your soil nutrient profile, pH levels, and regional climate conditions.",
       actionLabel: "Evaluate Crops"
     },
     {
       step: 4,
-      title: "Crop Yield Prediction (Dataset 3)",
+      title: "Crop Yield Prediction",
       tab: "yield-predictor",
       icon: TrendingUp,
-      desc: "Estimate expected yield (Tons/Ha and Quintals/Acre) using our Gradient Boosting regressor trained on multi-state crop yield data.",
+      desc: "Estimate expected yield (Tons/Ha and Quintals/Acre) and harvest targets for your farm acreage and fertilizer application.",
       actionLabel: "Predict Yield"
     },
     {
@@ -65,23 +65,23 @@ export default function DemoTourModal() {
     },
     {
       step: 6,
-      title: "Plant Disease Detection (Dataset 2)",
+      title: "Plant Disease Detection",
       tab: "disease-detection",
       icon: Bug,
-      desc: "Upload leaf photos or select sample leaves to diagnose 27 PlantVillage diseases with organic remedies and chemical schedules.",
+      desc: "Upload leaf photos or use smartphone camera to diagnose 27 plant conditions with biological, organic, and chemical remedies.",
       actionLabel: "Diagnose Leaf"
     },
     {
       step: 7,
-      title: "India Mandi Intelligence (Dataset 4)",
+      title: "India Mandi Intelligence",
       tab: "market",
       icon: Store,
-      desc: "Explore 57,000+ daily wholesale mandi price trends, volatility metrics, and the 'Where Should I Sell?' smart market ranker.",
+      desc: "Explore wholesale mandi price trends, volatility metrics, and the 'Where Should I Sell?' smart market ranker.",
       actionLabel: "View Mandi Rates"
     },
     {
       step: 8,
-      title: "Government Scheme Discovery (Dataset 5)",
+      title: "Government Scheme Discovery",
       tab: "schemes",
       icon: Landmark,
       desc: "Discover matching central and state welfare schemes (PM-KISAN, PMKSY, PMFBY, KCC, SMAM) tailored to land size and category.",
@@ -92,7 +92,7 @@ export default function DemoTourModal() {
       title: "Central AI Assistant & Farm Action Plan",
       tab: "assistant",
       icon: BotMessageSquare,
-      desc: "Interact with the central tool-augmented AI assistant and generate the consolidated 8-point 'Your Farm Action Plan'.",
+      desc: "Interact with the central tool-augmented AI assistant and generate the consolidated 'Your Farm Action Plan'.",
       actionLabel: "Chat & Action Plan"
     }
   ];
@@ -131,7 +131,7 @@ export default function DemoTourModal() {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <span className="badge badge-amber" style={{ fontSize: "12px" }}>
-              <Play size={12} /> Interactive Hackathon Walkthrough
+              <Play size={12} /> Interactive Platform Walkthrough
             </span>
             <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>
               Step {current.step} of {steps.length}
@@ -228,7 +228,7 @@ export default function DemoTourModal() {
           >
             {currentStep === steps.length - 1 ? (
               <>
-                <span>Complete Demo</span>
+                <span>Complete Tour</span>
                 <CheckCircle size={16} />
               </>
             ) : (

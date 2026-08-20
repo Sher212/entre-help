@@ -11,7 +11,7 @@ import {
   Landmark,
   BotMessageSquare,
   UserCheck,
-  Database,
+  Info,
   FileCheck2,
   HelpCircle,
   Camera,
@@ -47,7 +47,7 @@ export default function MobileDrawer() {
     { id: "schemes", label: "Government Schemes", icon: Landmark },
     { id: "assistant", label: "AI Farmer Assistant", icon: BotMessageSquare },
     { id: "profile", label: "Farmer Profile & Presets", icon: UserCheck },
-    { id: "models-info", label: "Datasets & Model Provenance", icon: Database }
+    { id: "models-info", label: "About & Technology", icon: Info }
   ];
 
   return (
