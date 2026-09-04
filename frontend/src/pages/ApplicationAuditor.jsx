@@ -59,7 +59,7 @@ export default function ApplicationAuditor() {
   const readinessScore = mandatoryDocs.length > 0 ? Math.round((uploadedMandatory / mandatoryDocs.length) * 100) : 0;
 
   return (
-    <div className="page-container animate-fade-in">
+    <div className="page-wrapper animate-fade-in">
       {/* Header */}
       <div style={{ marginBottom: "20px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>

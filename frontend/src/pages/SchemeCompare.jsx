@@ -63,7 +63,7 @@ export default function SchemeCompare() {
   const scheme2 = schemeDetails[selectedScheme2];
 
   return (
-    <div className="page-container animate-fade-in">
+    <div className="page-wrapper animate-fade-in">
       {/* Header */}
       <div style={{ marginBottom: "20px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>

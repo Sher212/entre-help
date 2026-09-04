@@ -62,7 +62,7 @@ export default function DPRGenerator() {
   const dscrY1 = (y1Profit + annualLoanRepayment) / annualLoanRepayment;
 
   return (
-    <div className="page-container animate-fade-in">
+    <div className="page-wrapper animate-fade-in">
       {/* Header */}
       <div style={{ marginBottom: "20px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
