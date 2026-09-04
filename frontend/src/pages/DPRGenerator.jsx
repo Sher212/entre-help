@@ -1,22 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FileText, Download, TrendingUp, Briefcase, Printer, CheckCircle } from 'lucide-react';
 import html2pdf from 'html2pdf.js';
+import { useFarmer } from '../context/FarmerContext';
 
 export default function DPRGenerator() {
+  const { profile } = useFarmer();
+  
   const [formData, setFormData] = useState({
-    businessName: "AgriTech Innovations Pvt Ltd",
-    promoterName: "Rajesh Kumar",
-    industry: "Manufacturing",
-    projectCost: 2500000,
-    machineryCost: 1500000,
-    workingCapital: 1000000,
-    promoterContributionPct: 10,
-    subsidyPct: 25,
+    businessName: `${profile?.name || 'Entrepreneur'} Enterprises`,
+    promoterName: profile?.name || "Rajesh Kumar",
+    industry: profile?.business_type || "Manufacturing",
+    projectCost: profile?.project_cost || 2500000,
+    machineryCost: (profile?.project_cost || 2500000) * 0.6,
+    workingCapital: (profile?.project_cost || 2500000) * 0.4,
+    promoterContributionPct: profile?.social_category === 'SC' || profile?.social_category === 'ST' || profile?.is_women ? 5 : 10,
+    subsidyPct: profile?.social_category === 'SC' || profile?.social_category === 'ST' ? 35 : 25,
     loanInterestRate: 10,
     loanTenureYears: 5,
     expectedRevenueYear1: 3000000,
     expectedProfitMargin: 15,
   });
+
+  useEffect(() => {
+    if (profile && !generated) {
+      setFormData(prev => ({
+        ...prev,
+        businessName: `${profile.name} Enterprises`,
+        promoterName: profile.name,
+        industry: profile.business_type || "Service",
+        projectCost: profile.project_cost || 500000,
+        machineryCost: (profile.project_cost || 500000) * 0.6,
+        workingCapital: (profile.project_cost || 500000) * 0.4,
+        promoterContributionPct: profile.social_category === 'SC' || profile.social_category === 'ST' || profile.is_women ? 5 : 10,
+        subsidyPct: profile.social_category === 'SC' || profile.social_category === 'ST' ? 35 : 25,
+      }));
+    }
+  }, [profile]);
 
   const [generated, setGenerated] = useState(false);
 
