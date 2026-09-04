@@ -1,97 +1,136 @@
 from typing import Dict, Any, List
 from fastapi import APIRouter
-from app.schemas import FarmerProfile
+from app.schemas import EntrepreneurProfile
 
-router = APIRouter(prefix="/profile", tags=["Farmer Profile"])
+router = APIRouter(prefix="/profile", tags=["Entrepreneur Profile"])
 
-# In-memory active profile with persistent presets
-ACTIVE_PROFILE = FarmerProfile(
-    name="Ramesh Patil",
-    state="Maharashtra",
-    district="Nashik",
-    village="Niphad",
-    land_size_acres=3.5,
-    soil_type="Black Soil (Regur)",
-    soil_ph=6.8,
-    nitrogen=75.0,
-    phosphorus=45.0,
-    potassium=40.0,
-    current_crop="Soybean",
-    farming_season="Kharif",
-    irrigation_source="Drip Irrigation & Tube Well",
-    farmer_category="Small (1-2 ha)"
+# In-memory active profile
+ACTIVE_PROFILE = EntrepreneurProfile(
+    name="Priya Kumari",
+    social_category="SC",
+    gender="Female",
+    age=28,
+    annual_income=250000,
+    state="Bihar",
+    district="Patna",
+    is_pwd=False,
+    is_women=True,
+    education_level="Graduate",
+    business_type="Service",
+    project_cost=500000,
+    is_existing_business=False,
+    is_shg_member=True
 )
 
 PRESETS: List[Dict[str, Any]] = [
     {
-        "preset_id": "mh_small_farmer",
-        "label": "Ramesh Patil - Small Farmer (Nashik, Maharashtra)",
+        "preset_id": "sc_woman_bihar",
+        "label": "Priya Kumari – SC Woman Entrepreneur (Bihar)",
         "profile": {
-            "name": "Ramesh Patil",
+            "name": "Priya Kumari",
+            "social_category": "SC",
+            "gender": "Female",
+            "age": 28,
+            "annual_income": 250000,
+            "state": "Bihar",
+            "district": "Patna",
+            "is_pwd": False,
+            "is_women": True,
+            "education_level": "Graduate",
+            "business_type": "Service",
+            "project_cost": 500000,
+            "is_existing_business": False,
+            "is_shg_member": True
+        }
+    },
+    {
+        "preset_id": "st_youth_jharkhand",
+        "label": "Arun Munda – ST Youth Entrepreneur (Jharkhand)",
+        "profile": {
+            "name": "Arun Munda",
+            "social_category": "ST",
+            "gender": "Male",
+            "age": 24,
+            "annual_income": 180000,
+            "state": "Jharkhand",
+            "district": "Ranchi",
+            "is_pwd": False,
+            "is_women": False,
+            "education_level": "12th Pass",
+            "business_type": "Manufacturing",
+            "project_cost": 300000,
+            "is_existing_business": False,
+            "is_shg_member": False
+        }
+    },
+    {
+        "preset_id": "obc_artisan_up",
+        "label": "Meena Devi – OBC Artisan (Uttar Pradesh)",
+        "profile": {
+            "name": "Meena Devi",
+            "social_category": "OBC",
+            "gender": "Female",
+            "age": 35,
+            "annual_income": 350000,
+            "state": "Uttar Pradesh",
+            "district": "Varanasi",
+            "is_pwd": False,
+            "is_women": True,
+            "education_level": "10th Pass",
+            "business_type": "Artisan",
+            "project_cost": 150000,
+            "is_existing_business": True,
+            "is_shg_member": True
+        }
+    },
+    {
+        "preset_id": "pwd_entrepreneur_mh",
+        "label": "Ravi Jadhav – PwD Entrepreneur (Maharashtra)",
+        "profile": {
+            "name": "Ravi Jadhav",
+            "social_category": "SC",
+            "gender": "Male",
+            "age": 32,
+            "annual_income": 200000,
             "state": "Maharashtra",
-            "district": "Nashik",
-            "village": "Niphad",
-            "land_size_acres": 3.5,
-            "soil_type": "Black Soil (Regur)",
-            "soil_ph": 6.8,
-            "nitrogen": 75.0,
-            "phosphorus": 45.0,
-            "potassium": 40.0,
-            "current_crop": "Soybean",
-            "farming_season=" : "Kharif",
-            "farming_season": "Kharif",
-            "irrigation_source": "Drip Irrigation & Tube Well",
-            "farmer_category": "Small (1-2 ha)"
+            "district": "Pune",
+            "is_pwd": True,
+            "is_women": False,
+            "education_level": "Graduate",
+            "business_type": "Retail",
+            "project_cost": 800000,
+            "is_existing_business": False,
+            "is_shg_member": False
         }
     },
     {
-        "preset_id": "pb_medium_farmer",
-        "label": "Sukhwinder Singh - Medium Farmer (Ludhiana, Punjab)",
+        "preset_id": "minority_woman_wb",
+        "label": "Fatima Begum – Minority Woman (West Bengal)",
         "profile": {
-            "name": "Sukhwinder Singh",
-            "state": "Punjab",
-            "district": "Ludhiana",
-            "village": "Khanna Kalan",
-            "land_size_acres": 8.0,
-            "soil_type": "Alluvial Loam",
-            "soil_ph": 7.2,
-            "nitrogen": 95.0,
-            "phosphorus": 55.0,
-            "potassium": 45.0,
-            "current_crop": "Wheat",
-            "farming_season": "Rabi",
-            "irrigation_source": "Canal & Submersible Borewell",
-            "farmer_category": "Medium (2-10 ha)"
-        }
-    },
-    {
-        "preset_id": "ka_horticulture_farmer",
-        "label": "Ananya Gowda - Horticulture Grower (Mysuru, Karnataka)",
-        "profile": {
-            "name": "Ananya Gowda",
-            "state": "Karnataka",
-            "district": "Mysuru",
-            "village": "Nanjangud",
-            "land_size_acres": 2.0,
-            "soil_type": "Red Sandy Loam",
-            "soil_ph": 6.4,
-            "nitrogen": 60.0,
-            "phosphorus": 70.0,
-            "potassium": 50.0,
-            "current_crop": "Tomato",
-            "farming_season": "Kharif",
-            "irrigation_source": "Micro Drip Automation",
-            "farmer_category": "Marginal (< 1 ha)"
+            "name": "Fatima Begum",
+            "social_category": "Minority",
+            "gender": "Female",
+            "age": 30,
+            "annual_income": 300000,
+            "state": "West Bengal",
+            "district": "Kolkata",
+            "is_pwd": False,
+            "is_women": True,
+            "education_level": "Graduate",
+            "business_type": "Food Processing",
+            "project_cost": 400000,
+            "is_existing_business": True,
+            "is_shg_member": False
         }
     }
 ]
 
-@router.get("", response_model=FarmerProfile)
+@router.get("", response_model=EntrepreneurProfile)
 def get_current_profile():
     return ACTIVE_PROFILE
 
-@router.post("", response_model=FarmerProfile)
-def update_profile(profile: FarmerProfile):
+@router.post("", response_model=EntrepreneurProfile)
+def update_profile(profile: EntrepreneurProfile):
     global ACTIVE_PROFILE
     ACTIVE_PROFILE = profile
     return ACTIVE_PROFILE
@@ -100,11 +139,11 @@ def update_profile(profile: FarmerProfile):
 def get_profile_presets():
     return PRESETS
 
-@router.post("/presets/{preset_id}", response_model=FarmerProfile)
+@router.post("/presets/{preset_id}", response_model=EntrepreneurProfile)
 def load_preset(preset_id: str):
     global ACTIVE_PROFILE
     for p in PRESETS:
         if p["preset_id"] == preset_id:
-            ACTIVE_PROFILE = FarmerProfile(**p["profile"])
+            ACTIVE_PROFILE = EntrepreneurProfile(**p["profile"])
             return ACTIVE_PROFILE
     return ACTIVE_PROFILE

@@ -1,61 +1,55 @@
 import React from "react";
 import { useFarmer } from "../context/FarmerContext";
 import {
-  Sprout,
-  TrendingUp,
-  Bug,
-  CloudSun,
-  Store,
   Landmark,
+  MapPin,
+  Calculator,
   BotMessageSquare,
   Sparkles,
   ArrowRight,
   ShieldCheck,
-  CheckCircle2,
-  Layers,
-  BarChart3,
-  Award,
-  Camera,
-  Activity
+  Building2,
+  Banknote,
+  Award
 } from "lucide-react";
 
 export default function LandingPage() {
-  const { setActiveTab, setShowDemoTour } = useFarmer();
+  const { setActiveTab } = useFarmer();
 
   const workflowSteps = [
     {
       num: "01",
-      title: "Soil & Agro-Climate Matching",
-      desc: "Analyze your farm's N-P-K nutrient profile, pH, and rainfall to discover the most profitable and high-yielding crops.",
-      tab: "crop-advisor"
+      title: "Scheme & Profile Matching",
+      desc: "Analyze your entrepreneur profile (Income, Category, Cost) to discover matching central/state subsidies.",
+      tab: "schemes"
     },
     {
       num: "02",
-      title: "Harvest & Yield Forecasting",
-      desc: "Calculate expected acreage production, tons per hectare, and customized fertilization strategies before sowing.",
-      tab: "yield-predictor"
+      title: "Loan Eligibility Calculator",
+      desc: "Calculate your exact margin money, EMI, and interest rebates based on your specific profile.",
+      tab: "loan-calculator"
     },
     {
       num: "03",
-      title: "AI Camera Plant Health Scanner",
-      desc: "Instantly scan crop leaves using your smartphone camera for rapid detection of fungal and bacterial infections with bio-cures.",
-      tab: "disease-detection"
+      title: "Find Channel Partners",
+      desc: "Locate your nearest authorized State Channelizing Agency or Bank for secure applications.",
+      tab: "channel-partners"
     },
     {
       num: "04",
-      title: "Mandi Price Intelligence & Schemes",
-      desc: "Compare wholesale APMC mandi rates across districts to know where to sell, and discover matching central/state subsidies.",
-      tab: "market"
+      title: "AI Scheme Advisory",
+      desc: "Get instant document requirements and application guidance directly from our AI assistant.",
+      tab: "assistant"
     }
   ];
 
   const features = [
-    { icon: Sprout, title: "AI Crop Advisor", desc: "Scientific crop selection matching soil N-P-K, pH, temperature, humidity, and rainfall parameters.", tab: "crop-advisor" },
-    { icon: TrendingUp, title: "Yield Prediction", desc: "Multi-factor forecasting calculating expected tons per hectare and productivity optimization tips.", tab: "yield-predictor" },
-    { icon: Bug, title: "Leaf Disease Detection", desc: "Computer vision diagnosis of 27 plant conditions with biological, organic, and chemical remedies.", tab: "disease-detection" },
-    { icon: CloudSun, title: "Weather Agro-Advisory", desc: "Actionable meteorological rules: irrigation schedules, spray safety windows, and frost/heat alerts.", tab: "weather" },
-    { icon: Store, title: "Mandi Market Intelligence", desc: "Real-time historical trends, price volatility indices, and 'Where Should I Sell?' market rankings.", tab: "market" },
-    { icon: Landmark, title: "Government Scheme Discovery", desc: "Personalized subsidy finder linking farmers directly to verified official MyScheme.gov.in portals.", tab: "schemes" },
+    { icon: Landmark, title: "Smart Scheme Recommender", desc: "Rule-based scheme matching linking marginalized entrepreneurs to targeted MoSJE support.", tab: "schemes" },
+    { icon: Calculator, title: "Loan & EMI Calculator", desc: "Automated calculations for NSFDC/NSTFDC term loans including special women interest rebates.", tab: "loan-calculator" },
+    { icon: MapPin, title: "Channel Partner Locator", desc: "Directory of SCAs, PSBs, and RRBs required for applying under the Channel Finance System.", tab: "channel-partners" },
+    { icon: BotMessageSquare, title: "AI Scheme Assistant", desc: "Natural-language assistant guiding you through documentation, eligibility, and process rules.", tab: "assistant" },
+    { icon: Banknote, title: "Margin Money Estimator", desc: "Clearly understand beneficiary contribution requirements before starting your business plan.", tab: "loan-calculator" },
+    { icon: Building2, title: "SCA Direct Routing", desc: "Ensure your application reaches the correct local authority for rapid verification.", tab: "channel-partners" },
   ];
 
   return (
@@ -74,15 +68,15 @@ export default function LandingPage() {
         <div style={{ position: "relative", zIndex: 2, maxWidth: "800px" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.25)", padding: "6px 14px", borderRadius: "9999px", fontSize: "13px", fontWeight: 600, marginBottom: "20px", backdropFilter: "blur(8px)" }}>
             <Sparkles size={14} color="#fde047" />
-            <span>Unified Agricultural Decision Support Platform</span>
+            <span>Unified AI Scheme Engine for Entrepreneurs</span>
           </div>
 
           <h1 style={{ fontSize: "40px", fontWeight: 800, lineHeight: 1.15, letterSpacing: "-0.03em", marginBottom: "16px" }}>
-            AI-Powered Farming Decisions for Every Indian Farmer
+            AI-Powered Scheme Decisions for Marginalized Entrepreneurs
           </h1>
 
           <p style={{ fontSize: "16px", color: "#d1fae5", lineHeight: 1.6, marginBottom: "28px", maxWidth: "680px" }}>
-            Connecting <strong>Soil Nutrients • Live Weather • Crop Advisory • Plant Leaf Health • Mandi Prices • Government Subsidies</strong> into one simple, actionable assistant for your farm.
+            Connecting <strong>SC • ST • OBC • PwD • Women</strong> entrepreneurs to concessional <strong>Government Subsidies • Channel Partners • Term Loans</strong> through one simple, actionable assistant.
           </p>
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: "14px" }}>
@@ -91,7 +85,7 @@ export default function LandingPage() {
               className="btn btn-amber"
               style={{ padding: "12px 24px", fontSize: "15px", fontWeight: 700 }}
             >
-              <span>Open Farmer Dashboard</span>
+              <span>Open Dashboard</span>
               <ArrowRight size={18} />
             </button>
 
@@ -105,25 +99,25 @@ export default function LandingPage() {
             </button>
 
             <button
-              onClick={() => setShowDemoTour(true)}
+              onClick={() => setActiveTab("schemes")}
               className="btn"
               style={{ background: "#ffffff", color: "#065f46", padding: "12px 20px", fontSize: "15px", fontWeight: 700 }}
             >
-              <Award size={18} color="#d97706" />
-              <span>Interactive Platform Tour</span>
+              <Landmark size={18} color="#d97706" />
+              <span>Find My Schemes</span>
             </button>
           </div>
         </div>
       </section>
 
-      {/* 4-Step Smart Farming Decision Journey */}
+      {/* 4-Step Smart Farming Decision Journey -> Entrepreneur Journey */}
       <section style={{ marginBottom: "40px" }}>
         <div style={{ marginBottom: "20px" }}>
           <h2 style={{ fontSize: "22px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
-            How KrishiKalyan AI Empowers Your Farm
+            How Entre Help Empowers Your Business
           </h2>
           <p style={{ fontSize: "13px", color: "#64748b", marginTop: "4px" }}>
-            A complete decision workflow from soil preparation to market realization.
+            A complete decision workflow from scheme discovery to SCA application.
           </p>
         </div>
 
@@ -170,7 +164,7 @@ export default function LandingPage() {
             Comprehensive Multi-Module AI Tools
           </h2>
           <p style={{ fontSize: "14px", color: "#64748b" }}>
-            Designed specifically to solve real-world agricultural challenges with precision and simplicity.
+            Designed specifically to solve real-world entrepreneurship challenges with precision and simplicity.
           </p>
         </div>
 
@@ -233,7 +227,7 @@ export default function LandingPage() {
             Production Reliability & Ethical AI Safeguards
           </h4>
           <p style={{ fontSize: "13px", color: "#64748b", margin: 0, lineHeight: 1.5 }}>
-            Our platform provides decision support with transparent confidence metrics and feature analysis. We never make unsubstantiated guarantee claims regarding crop yields, disease cures, or government eligibility. Farmers are provided direct verified links to official portals (MyScheme.gov.in) and local Krishi Vigyan Kendra contacts.
+            Our platform provides decision support with transparent scheme requirements and verified channel partner addresses. We never make unsubstantiated guarantee claims regarding loan approval. Entrepreneurs are provided direct verified links to official portals (MyScheme.gov.in) and directed strictly through the Channel Finance System (SCA).
           </p>
         </div>
       </section>

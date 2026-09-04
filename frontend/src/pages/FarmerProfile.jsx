@@ -1,306 +1,129 @@
 import React, { useState } from "react";
 import { useFarmer } from "../context/FarmerContext";
-import {
-  UserCheck,
-  Save,
-  CheckCircle,
-  Sparkles,
-  MapPin,
-  Sprout,
-  Droplets,
-  Layers,
-  Scale,
-  RefreshCw
-} from "lucide-react";
+import { UserCircle, Save, Users, CheckCircle2 } from "lucide-react";
 
-export default function FarmerProfile() {
+export default function EntrepreneurProfile() {
   const { profile, saveProfile, presets, applyPreset, loading } = useFarmer();
-  const [formData, setFormData] = useState({ ...profile });
-  const [savedSuccess, setSavedSuccess] = useState(false);
+  const [form, setForm] = useState({ ...profile });
+  const [saved, setSaved] = useState(false);
 
   const handleChange = (field, value) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
+    setForm((prev) => ({ ...prev, [field]: value }));
+    setSaved(false);
   };
 
-  const handleSave = async (e) => {
-    e.preventDefault();
-    await saveProfile(formData);
-    setSavedSuccess(true);
-    setTimeout(() => setSavedSuccess(false), 3000);
+  const handleSave = async () => {
+    // Auto-derive is_women from gender
+    const updatedForm = { ...form, is_women: form.gender === "Female" };
+    await saveProfile(updatedForm);
+    setSaved(true);
+    setTimeout(() => setSaved(false), 3000);
   };
 
-  const handlePresetClick = (presetId) => {
-    applyPreset(presetId);
-    const targetPreset = presets.find((p) => p.preset_id === presetId);
-    if (targetPreset) {
-      setFormData({ ...targetPreset.profile });
-    }
-  };
-
-  const soilTypes = [
-    "Black Soil (Regur)",
-    "Alluvial Loam",
-    "Red Sandy Loam",
-    "Laterite Soil",
-    "Clay Loam",
-    "Sandy Riverbed Soil"
+  const categories = ["SC", "ST", "OBC", "Minority", "General", "EWS", "PwD"];
+  const genders = ["Male", "Female", "Transgender"];
+  const educationLevels = ["Below 10th", "10th Pass", "12th Pass", "Graduate", "Post-Graduate"];
+  const businessTypes = ["Manufacturing", "Service", "Trading", "Transport", "Agriculture", "Retail", "Food Processing", "Artisan", "Education", "Tech Startup", "Deeptech"];
+  const states = [
+    "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Delhi", "Goa", "Gujarat",
+    "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra",
+    "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim",
+    "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"
   ];
 
-  const categories = [
-    "Marginal (< 1 ha)",
-    "Small (1-2 ha)",
-    "Medium (2-10 ha)",
-    "Large (> 10 ha)"
-  ];
-
-  const irrigationSources = [
-    "Drip Irrigation & Well",
-    "Canal & Submersible Borewell",
-    "Sprinkler Irrigation",
-    "Rainfed / Monsoonal",
-    "River Lift Irrigation",
-    "Solar Agricultural Pump"
-  ];
+  const fieldGroup = (label, field, type = "text", options = null) => (
+    <div style={{ flex: "1 1 200px" }}>
+      <label style={{ fontSize: "11px", fontWeight: 700, color: "#475569", textTransform: "uppercase", marginBottom: "4px", display: "block" }}>
+        {label}
+      </label>
+      {options ? (
+        <select value={form[field]} onChange={(e) => handleChange(field, e.target.value)} className="form-input" style={{ margin: 0 }}>
+          {options.map((o) => <option key={o} value={o}>{o}</option>)}
+        </select>
+      ) : type === "number" ? (
+        <input type="number" value={form[field]} onChange={(e) => handleChange(field, Number(e.target.value))} className="form-input" style={{ margin: 0 }} />
+      ) : type === "checkbox" ? (
+        <div style={{ display: "flex", alignItems: "center", gap: "8px", padding: "10px 0" }}>
+          <input type="checkbox" checked={form[field]} onChange={(e) => handleChange(field, e.target.checked)} style={{ width: "18px", height: "18px", cursor: "pointer" }} />
+          <span style={{ fontSize: "13px", color: "#334155" }}>Yes</span>
+        </div>
+      ) : (
+        <input type="text" value={form[field]} onChange={(e) => handleChange(field, e.target.value)} className="form-input" style={{ margin: 0 }} />
+      )}
+    </div>
+  );
 
   return (
     <div className="page-wrapper">
       {/* Header */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "20px", flexWrap: "wrap", gap: "12px" }}>
-        <div>
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
-            <span className="badge badge-green">Personalized Context</span>
-          </div>
-          <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
-            Farmer Profile & Farm Context
-          </h1>
-          <p style={{ fontSize: "13px", color: "#64748b", marginTop: "2px" }}>
-            Farm details dynamically customize crop recommendations, yield calculations, weather alerts, and subsidies.
-          </p>
-        </div>
+      <div style={{ marginBottom: "20px" }}>
+        <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
+          <UserCircle size={24} style={{ verticalAlign: "middle", marginRight: "8px" }} />
+          Entrepreneur Profile
+        </h1>
+        <p style={{ fontSize: "13px", color: "#64748b", marginTop: "4px" }}>
+          Your profile determines which schemes you're eligible for. Update it for accurate matching.
+        </p>
       </div>
 
-      {/* Preset Archetype Switcher (Responsive Grid) */}
-      <div className="card" style={{ marginBottom: "20px", background: "linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%)", border: "1px solid #bbf7d0" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
-          <Sparkles size={16} color="#059669" />
-          <h3 style={{ fontSize: "14px", fontWeight: 800, color: "#065f46", margin: 0 }}>
-            Quick Demo Farmer Presets (1-Click Switch)
-          </h3>
+      {/* Presets */}
+      <div className="card" style={{ marginBottom: "20px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "10px" }}>
+          <Users size={16} color="#4f46e5" />
+          <h3 style={{ fontSize: "14px", fontWeight: 700, color: "#0f172a", margin: 0 }}>Quick Load Demo Profile</h3>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: "10px" }}>
+        <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
           {presets.map((p) => (
             <button
               key={p.preset_id}
-              onClick={() => handlePresetClick(p.preset_id)}
+              onClick={() => { applyPreset(p.preset_id); setForm(p.profile); }}
               className="btn btn-secondary"
-              style={{
-                textAlign: "left",
-                justifyContent: "flex-start",
-                padding: "8px 12px",
-                fontSize: "12px",
-                background: profile.name === p.profile.name ? "#dcfce7" : "#ffffff",
-                borderColor: profile.name === p.profile.name ? "#86efac" : "#e2e8f0",
-                color: profile.name === p.profile.name ? "#166534" : "#334155"
-              }}
+              style={{ fontSize: "11px", padding: "6px 12px" }}
             >
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <strong>{p.profile.name}</strong>
-                <span style={{ fontSize: "10px", color: "#64748b" }}>{p.profile.district} ({p.profile.current_crop})</span>
-              </div>
+              {p.label}
             </button>
           ))}
         </div>
       </div>
 
-      {/* Edit Form */}
-      <form onSubmit={handleSave}>
-        <div className="grid-2" style={{ marginBottom: "20px" }}>
-          {/* Personal & Geographic Details */}
-          <div className="card">
-            <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", marginBottom: "14px", borderBottom: "1px solid #f1f5f9", paddingBottom: "8px", margin: 0 }}>
-              📍 Location & Farmer Identity
-            </h3>
+      {/* Profile Form */}
+      <div className="card">
+        <h3 style={{ fontSize: "15px", fontWeight: 700, color: "#0f172a", marginBottom: "16px" }}>Personal & Business Details</h3>
 
-            <div className="form-group" style={{ marginTop: "12px" }}>
-              <label className="form-label">Farmer Full Name</label>
-              <input
-                type="text"
-                value={formData.name}
-                onChange={(e) => handleChange("name", e.target.value)}
-                className="form-input"
-              />
-            </div>
-
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "10px" }}>
-              <div className="form-group">
-                <label className="form-label">State</label>
-                <input
-                  type="text"
-                  value={formData.state}
-                  onChange={(e) => handleChange("state", e.target.value)}
-                  className="form-input"
-                />
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">District</label>
-                <input
-                  type="text"
-                  value={formData.district}
-                  onChange={(e) => handleChange("district", e.target.value)}
-                  className="form-input"
-                />
-              </div>
-            </div>
-
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "10px" }}>
-              <div className="form-group">
-                <label className="form-label">Village / Taluka</label>
-                <input
-                  type="text"
-                  value={formData.village || ""}
-                  onChange={(e) => handleChange("village", e.target.value)}
-                  className="form-input"
-                />
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">Farmer Category</label>
-                <select
-                  value={formData.farmer_category}
-                  onChange={(e) => handleChange("farmer_category", e.target.value)}
-                  className="form-select"
-                >
-                  {categories.map((c) => (
-                    <option key={c} value={c}>{c}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className="form-group">
-              <label className="form-label">Land Size (Acres)</label>
-              <input
-                type="number"
-                step="0.5"
-                min="0.5"
-                max="100"
-                value={formData.land_size_acres}
-                onChange={(e) => handleChange("land_size_acres", Number(e.target.value))}
-                className="form-input"
-              />
-            </div>
-          </div>
-
-          {/* Soil & Agricultural Context */}
-          <div className="card">
-            <h3 style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", marginBottom: "14px", borderBottom: "1px solid #f1f5f9", paddingBottom: "8px", margin: 0 }}>
-              🌱 Soil Test Readings & Cropping
-            </h3>
-
-            <div className="form-group" style={{ marginTop: "12px" }}>
-              <label className="form-label">Soil Classification</label>
-              <select
-                value={formData.soil_type}
-                onChange={(e) => handleChange("soil_type", e.target.value)}
-                className="form-select"
-              >
-                {soilTypes.map((st) => (
-                  <option key={st} value={st}>{st}</option>
-                ))}
-              </select>
-            </div>
-
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "8px" }}>
-              <div className="form-group">
-                <label className="form-label" style={{ fontSize: "11px" }}>N (kg/ha)</label>
-                <input
-                  type="number"
-                  value={formData.nitrogen}
-                  onChange={(e) => handleChange("nitrogen", Number(e.target.value))}
-                  className="form-input"
-                />
-              </div>
-
-              <div className="form-group">
-                <label className="form-label" style={{ fontSize: "11px" }}>P (kg/ha)</label>
-                <input
-                  type="number"
-                  value={formData.phosphorus}
-                  onChange={(e) => handleChange("phosphorus", Number(e.target.value))}
-                  className="form-input"
-                />
-              </div>
-
-              <div className="form-group">
-                <label className="form-label" style={{ fontSize: "11px" }}>K (kg/ha)</label>
-                <input
-                  type="number"
-                  value={formData.potassium}
-                  onChange={(e) => handleChange("potassium", Number(e.target.value))}
-                  className="form-input"
-                />
-              </div>
-            </div>
-
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "10px" }}>
-              <div className="form-group">
-                <label className="form-label">Soil pH</label>
-                <input
-                  type="number"
-                  step="0.1"
-                  min="3.5"
-                  max="9.5"
-                  value={formData.soil_ph}
-                  onChange={(e) => handleChange("soil_ph", Number(e.target.value))}
-                  className="form-input"
-                />
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">Current Crop</label>
-                <input
-                  type="text"
-                  value={formData.current_crop || ""}
-                  onChange={(e) => handleChange("current_crop", e.target.value)}
-                  className="form-input"
-                />
-              </div>
-            </div>
-
-            <div className="form-group">
-              <label className="form-label">Primary Irrigation Facility</label>
-              <select
-                value={formData.irrigation_source}
-                onChange={(e) => handleChange("irrigation_source", e.target.value)}
-                className="form-select"
-              >
-                {irrigationSources.map((ir) => (
-                  <option key={ir} value={ir}>{ir}</option>
-                ))}
-              </select>
-            </div>
-          </div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "14px", marginBottom: "20px" }}>
+          {fieldGroup("Full Name", "name")}
+          {fieldGroup("Social Category", "social_category", "text", categories)}
+          {fieldGroup("Gender", "gender", "text", genders)}
+          {fieldGroup("Age", "age", "number")}
         </div>
 
-        {/* Action Button */}
-        <div style={{ display: "flex", justifyContent: "flex-end", gap: "12px", alignItems: "center", flexWrap: "wrap" }}>
-          {savedSuccess && (
-            <div style={{ display: "flex", alignItems: "center", gap: "6px", color: "#059669", fontWeight: 700, fontSize: "13px" }}>
-              <CheckCircle size={16} /> Profile updated and synced!
-            </div>
-          )}
-          <button
-            type="submit"
-            disabled={loading}
-            className="btn btn-primary"
-            style={{ padding: "12px 24px", fontSize: "14px" }}
-          >
-            <Save size={16} />
-            <span>{loading ? "Saving..." : "Save Farmer Profile"}</span>
-          </button>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "14px", marginBottom: "20px" }}>
+          {fieldGroup("Annual Family Income (₹)", "annual_income", "number")}
+          {fieldGroup("State", "state", "text", states)}
+          {fieldGroup("District", "district")}
+          {fieldGroup("Education Level", "education_level", "text", educationLevels)}
         </div>
-      </form>
+
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "14px", marginBottom: "20px" }}>
+          {fieldGroup("Business Type", "business_type", "text", businessTypes)}
+          {fieldGroup("Total Project Cost (₹)", "project_cost", "number")}
+          {fieldGroup("Person with Disability", "is_pwd", "checkbox")}
+          {fieldGroup("SHG Member", "is_shg_member", "checkbox")}
+        </div>
+
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "14px", marginBottom: "20px" }}>
+          {fieldGroup("Existing Business?", "is_existing_business", "checkbox")}
+        </div>
+
+        <button
+          onClick={handleSave}
+          className="btn btn-primary"
+          style={{ padding: "12px 24px", fontSize: "14px", fontWeight: 700 }}
+          disabled={loading}
+        >
+          {saved ? <><CheckCircle2 size={16} /> Profile Saved!</> : <><Save size={16} /> Save & Match Schemes</>}
+        </button>
+      </div>
     </div>
   );
 }

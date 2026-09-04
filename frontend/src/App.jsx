@@ -4,22 +4,15 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import BottomNav from "./components/BottomNav";
 import MobileDrawer from "./components/MobileDrawer";
-import PlantCameraScanner from "./components/PlantCameraScanner";
-import DemoTourModal from "./components/DemoTourModal";
-import ActionPlanModal from "./components/ActionPlanModal";
 
 // Pages
 import LandingPage from "./pages/LandingPage";
 import Dashboard from "./pages/Dashboard";
-import CropAdvisor from "./pages/CropAdvisor";
-import YieldPredictor from "./pages/YieldPredictor";
-import DiseaseDetection from "./pages/DiseaseDetection";
-import WeatherAdvisory from "./pages/WeatherAdvisory";
-import MarketIntelligence from "./pages/MarketIntelligence";
 import GovernmentSchemes from "./pages/GovernmentSchemes";
+import ChannelPartnerLocator from "./pages/ChannelPartnerLocator";
+import LoanCalculator from "./pages/LoanCalculator";
 import AIAssistant from "./pages/AIAssistant";
-import FarmerProfile from "./pages/FarmerProfile";
-import ModelEvaluationInfo from "./pages/ModelEvaluationInfo";
+import EntrepreneurProfile from "./pages/FarmerProfile";
 
 function MainApp() {
   const { activeTab } = useFarmer();
@@ -30,24 +23,16 @@ function MainApp() {
         return <LandingPage />;
       case "dashboard":
         return <Dashboard />;
-      case "crop-advisor":
-        return <CropAdvisor />;
-      case "yield-predictor":
-        return <YieldPredictor />;
-      case "disease-detection":
-        return <DiseaseDetection />;
-      case "weather":
-        return <WeatherAdvisory />;
-      case "market":
-        return <MarketIntelligence />;
       case "schemes":
         return <GovernmentSchemes />;
+      case "channel-partners":
+        return <ChannelPartnerLocator />;
+      case "loan-calculator":
+        return <LoanCalculator />;
       case "assistant":
         return <AIAssistant />;
       case "profile":
-        return <FarmerProfile />;
-      case "models-info":
-        return <ModelEvaluationInfo />;
+        return <EntrepreneurProfile />;
       default:
         return <Dashboard />;
     }
@@ -55,27 +40,13 @@ function MainApp() {
 
   return (
     <div className="app-container">
-      {/* Desktop Sidebar */}
       <Sidebar />
-
-      {/* Main Responsive Content Area */}
       <div className="main-content">
         <Navbar />
         <main className="main-viewport">{renderActivePage()}</main>
       </div>
-
-      {/* Mobile-Only Bottom Navigation */}
       <BottomNav />
-
-      {/* Mobile Slide-out Drawer */}
       <MobileDrawer />
-
-      {/* Camera Leaf Scanner Modal */}
-      <PlantCameraScanner />
-
-      {/* Global Modals */}
-      <DemoTourModal />
-      <ActionPlanModal />
     </div>
   );
 }

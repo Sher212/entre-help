@@ -33,11 +33,11 @@ export default function GovernmentSchemes() {
         const matched = await matchSchemesProfile(profile);
         setSchemes(matched);
         const searchRes = await searchSchemes();
-        setCategories(searchRes.categories);
+        setCategories(searchRes.categories || []);
       } else {
         const res = await searchSchemes(searchQuery, selectedCategory);
-        setSchemes(res.results);
-        setCategories(res.categories);
+        setSchemes(res.results || []);
+        setCategories(res.categories || []);
       }
     } catch (err) {
       console.error("Schemes error:", err);
@@ -54,7 +54,7 @@ export default function GovernmentSchemes() {
     e.preventDefault();
     setMatchMode(false);
     searchSchemes(searchQuery, selectedCategory).then((res) => {
-      setSchemes(res.results);
+      setSchemes(res.results || []);
     });
   };
 
@@ -69,13 +69,13 @@ export default function GovernmentSchemes() {
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
             <span className="badge badge-purple">Central & State Schemes</span>
-            <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Personalized Subsidies & Benefits</span>
+            <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Personalized Loan Subsidies</span>
           </div>
           <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
-            Government Scheme & Subsidy Discovery
+            Government Scheme & Loan Discovery
           </h1>
           <p style={{ fontSize: "13px", color: "#64748b", marginTop: "2px" }}>
-            Discover central & state agricultural schemes and financial subsidies customized for your farm.
+            Discover central & state financial schemes and loan subsidies customized for your enterprise profile.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export default function GovernmentSchemes() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search schemes (e.g. drip irrigation, solar pump, PM-KISAN)"
+              placeholder="Search schemes (e.g. term loan, micro credit, NSFDC)"
               className="form-input"
               style={{ paddingLeft: "36px", margin: 0 }}
             />
@@ -156,7 +156,7 @@ export default function GovernmentSchemes() {
       }}>
         <ShieldAlert size={18} color="#b45309" style={{ flexShrink: 0 }} />
         <div>
-          <strong>Important Verification Notice:</strong> Eligibility and scheme availability should always be verified on the official portal (<a href="https://www.myscheme.gov.in" target="_blank" rel="noreferrer" style={{ color: "#b45309", fontWeight: 700 }}>MyScheme.gov.in</a> or PM-KISAN) before applying.
+          <strong>Important Verification Notice:</strong> Eligibility and scheme availability should always be verified on the official portal (<a href="https://www.myscheme.gov.in" target="_blank" rel="noreferrer" style={{ color: "#b45309", fontWeight: 700 }}>MyScheme.gov.in</a> or MoSJE) before applying via a Channel Partner.
         </div>
       </div>
 
@@ -218,7 +218,7 @@ export default function GovernmentSchemes() {
                 {/* Key Benefits Highlight Banner */}
                 <div style={{ background: "#f0fdf4", border: "1px solid #bbf7d0", borderRadius: "8px", padding: "10px 14px", marginBottom: "10px" }}>
                   <div style={{ fontSize: "11px", fontWeight: 700, color: "#065f46", textTransform: "uppercase", marginBottom: "2px" }}>
-                    💰 Subsidy Benefit:
+                    💰 Subsidy / Loan Benefit:
                   </div>
                   <div style={{ fontSize: "13px", fontWeight: 700, color: "#065f46" }}>
                     {s.benefits}
@@ -261,7 +261,7 @@ export default function GovernmentSchemes() {
                         📄 Required Documents:
                       </h4>
                       <div style={{ display: "flex", flexWrap: "wrap", gap: "4px" }}>
-                        {s.documents_required.map((doc, idx) => (
+                        {s.documents_required?.map((doc, idx) => (
                           <span key={idx} style={{ background: "#f1f5f9", padding: "3px 6px", borderRadius: "4px", fontSize: "11px", color: "#334155" }}>
                             {doc}
                           </span>

@@ -1,27 +1,21 @@
 import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
-from app.core.config import PROJECT_NAME, VERSION, API_V1_STR, DATA_SAMPLES
+from app.core.config import PROJECT_NAME, VERSION, API_V1_STR
 
 # Import Routers
 from app.routers import (
-    crop_recommendation,
-    yield_prediction,
-    disease_detection,
-    weather_advisory,
-    market_intelligence,
     government_schemes,
     farmer_profile,
     ai_assistant,
-    action_plan,
-    models_info
+    channel_partners,
+    loan_calculator,
 )
 
 app = FastAPI(
     title=PROJECT_NAME,
     version=VERSION,
-    description="Production-Quality AI Decision Support Platform for Indian Farmers combining Crop Advisory, Disease Detection, Weather-Aware Recommendations, Mandi Intelligence, and Government Schemes."
+    description="AI-Driven Scheme Matching Platform for Marginalized Entrepreneurs — Smart Scheme Recommender, Channel Partner Locator, and Loan Eligibility Calculator powered by MoSJE/NSFDC data."
 )
 
 # Configure CORS
@@ -33,21 +27,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount Static Samples for Leaf Images
-if os.path.exists(DATA_SAMPLES):
-    app.mount("/static/samples", StaticFiles(directory=DATA_SAMPLES), name="samples")
-
 # Mount API Routers
-app.include_router(crop_recommendation.router, prefix=API_V1_STR)
-app.include_router(yield_prediction.router, prefix=API_V1_STR)
-app.include_router(disease_detection.router, prefix=API_V1_STR)
-app.include_router(weather_advisory.router, prefix=API_V1_STR)
-app.include_router(market_intelligence.router, prefix=API_V1_STR)
 app.include_router(government_schemes.router, prefix=API_V1_STR)
 app.include_router(farmer_profile.router, prefix=API_V1_STR)
 app.include_router(ai_assistant.router, prefix=API_V1_STR)
-app.include_router(action_plan.router, prefix=API_V1_STR)
-app.include_router(models_info.router, prefix=API_V1_STR)
+app.include_router(channel_partners.router, prefix=API_V1_STR)
+app.include_router(loan_calculator.router, prefix=API_V1_STR)
 
 @app.get("/health")
 def health_check():
@@ -56,17 +41,29 @@ def health_check():
         "service": PROJECT_NAME,
         "version": VERSION,
         "modules_active": [
-            "Crop Recommendation Engine (Dataset 1)",
-            "Plant Village Disease Vision Model (Dataset 2)",
-            "Crop Yield Regressor (Dataset 3)",
-            "Mandi Wholesale Market Analytics (Dataset 4)",
-            "Government Scheme Discovery (Dataset 5)",
-            "Agro-Meteorological Advisory Engine",
-            "Central AI Farmer Assistant Orchestrator",
-            "Unified Farm Action Plan"
+            "Smart Scheme Recommender (44 Central & State Schemes)",
+            "Channel Partner Locator (33 SCAs, PSBs, RRBs)",
+            "Loan Eligibility Calculator (EMI, Subsidy, Margin Money)",
+            "AI Scheme Advisory Chatbot",
+            "Entrepreneur Profile Engine (5 Demo Presets)"
         ]
+    }
+
+@app.get("/debug")
+def debug_info():
+    import sys
+    from app.core.config import BASE_DIR
+    from app.services.scheme_service import scheme_service
+    from app.services.channel_partner_service import channel_partner_service
+    return {
+        "cwd": os.getcwd(),
+        "base_dir": BASE_DIR,
+        "schemes_count": len(scheme_service.schemes_raw),
+        "channel_partners_count": len(channel_partner_service.partners_raw),
+        "sys_executable": sys.executable,
     }
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("app.main:app", host="0.0.0.0", port=port, reload=True)

@@ -2,15 +2,12 @@ import React from "react";
 import { useFarmer } from "../context/FarmerContext";
 import {
   LayoutDashboard,
-  Sprout,
-  TrendingUp,
-  Bug,
-  CloudSun,
-  Store,
+  Building2,
   Landmark,
   BotMessageSquare,
   UserCheck,
-  Info,
+  MapPin,
+  Calculator,
   Home
 } from "lucide-react";
 
@@ -18,17 +15,13 @@ export default function Sidebar() {
   const { activeTab, setActiveTab } = useFarmer();
 
   const navItems = [
-    { id: "landing", label: "Product Overview", icon: Home },
-    { id: "dashboard", label: "Farmer Dashboard", icon: LayoutDashboard },
-    { id: "crop-advisor", label: "AI Crop Advisor", icon: Sprout },
-    { id: "yield-predictor", label: "Yield Prediction", icon: TrendingUp },
-    { id: "disease-detection", label: "Disease Detection", icon: Bug },
-    { id: "weather", label: "Weather & Advisory", icon: CloudSun },
-    { id: "market", label: "Market Intelligence", icon: Store },
+    { id: "landing", label: "Overview", icon: Home },
+    { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
     { id: "schemes", label: "Govt Schemes", icon: Landmark },
-    { id: "assistant", label: "AI Farmer Assistant", icon: BotMessageSquare },
-    { id: "profile", label: "Farmer Profile", icon: UserCheck },
-    { id: "models-info", label: "About & Technology", icon: Info },
+    { id: "loan-calculator", label: "Loan Calculator", icon: Calculator },
+    { id: "channel-partners", label: "Channel Partners", icon: MapPin },
+    { id: "assistant", label: "AI Assistant", icon: BotMessageSquare },
+    { id: "profile", label: "My Profile", icon: UserCheck },
   ];
 
   return (
@@ -51,14 +44,14 @@ export default function Sidebar() {
             boxShadow: "0 4px 10px rgba(5, 150, 105, 0.3)",
             flexShrink: 0
           }}>
-            <Sprout size={18} />
+            <Building2 size={18} />
           </div>
           <div>
             <div style={{ fontWeight: 800, fontSize: "15px", letterSpacing: "-0.02em", color: "#ffffff", lineHeight: 1.1 }}>
-              KrishiKalyan <span style={{ color: "#10b981" }}>AI</span>
+              Entre <span style={{ color: "#10b981" }}>Help</span>
             </div>
             <div style={{ fontSize: "10px", color: "#94a3b8", fontWeight: 500 }}>
-              Kisan AI Sahayata Desk
+              Entre Help — AI Scheme Engine
             </div>
           </div>
         </div>
@@ -87,14 +80,14 @@ export default function Sidebar() {
         })}
       </nav>
 
-      {/* Fixed Clean Farmer Footer */}
+      {/* Fixed Clean Footer */}
       <div className="sidebar-footer">
         <div style={{ fontSize: "11px", color: "#94a3b8", display: "flex", alignItems: "center", gap: "6px" }}>
           <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#10b981", display: "inline-block", flexShrink: 0 }}></span>
-          <span>KrishiKalyan AI</span>
+          <span>Entre Help</span>
         </div>
         <div style={{ fontSize: "10px", color: "#64748b", marginTop: "2px" }}>
-          Smart Farming Companion
+          MoSJE Scheme Hub
         </div>
       </div>
     </aside>

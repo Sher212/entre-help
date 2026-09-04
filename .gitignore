@@ -22,3 +22,11 @@ dist/
 .DS_Store
 Thumbs.db
 *.log
+
+# Databases and heavy binary models
+*.db
+*.sqlite
+*.pt
+*.pdf
+
+

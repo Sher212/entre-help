@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.git/
+tests/
+test_*.py
+.env
+*.md
+
+# Ignore large generated data and models (they will be recreated during Docker build)
+data/processed/
+data/smartagri.db
+data/krishi_kalyan.db
+models/

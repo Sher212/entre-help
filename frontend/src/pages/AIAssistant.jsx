@@ -4,16 +4,9 @@ import { askAssistant } from "../services/api";
 import {
   BotMessageSquare,
   Send,
-  Sparkles,
-  User,
   Wrench,
-  HelpCircle,
-  CornerDownLeft,
   RefreshCw,
-  Camera,
-  Bug,
-  CheckCircle2,
-  AlertTriangle
+  Camera
 } from "lucide-react";
 
 export default function AIAssistant() {
@@ -28,14 +21,14 @@ export default function AIAssistant() {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      content: `Namaste ${profile.name}! 🙏 I am your **AI Farmer Assistant (KrishiKalyan AI)**.\n\nI combine real-time weather, agronomic intelligence, soil health data, mandi prices, and government schemes to assist your farm decisions.\n\nHow can I help your farm today?`,
-      tools: ["Agricultural Intelligence Hub", "Farm Profile Context"],
+      content: `Namaste ${profile.name}! 🙏 I am your **Entre Help AI Assistant**.\n\nI combine real-time scheme data, loan calculators, and Channel Partner directories to assist your business decisions.\n\nHow can I help your enterprise today?`,
+      tools: ["Entrepreneur Intelligence Hub", "Profile Context"],
       followups: [
-        "Which crop should I grow in my soil?",
-        "Is the weather suitable for spraying today?",
-        "What is the current mandi price for my crop?",
         "What government schemes apply to me?",
-        "What is my Farm Action Plan for this week?"
+        "What is my Max Loan Eligibility?",
+        `Find Channel Partners in ${profile.state}`,
+        "What documents are required for NSFDC?",
+        "How is Margin Money calculated?"
       ]
     }
   ]);
@@ -43,30 +36,34 @@ export default function AIAssistant() {
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messagesEndRef.current) {
+      const container = messagesEndRef.current.closest(".chat-messages");
+      if (container) {
+        container.scrollTop = container.scrollHeight;
+      }
+    }
   };
 
   useEffect(() => {
     scrollToBottom();
   }, [messages, loading]);
 
-  // Handle cross-module pending context (e.g. from Plant Disease Scanner)
+  // Handle cross-module pending context if any
   useEffect(() => {
-    if (pendingAiContext && pendingAiContext.type === "disease") {
+    if (pendingAiContext && pendingAiContext.type === "scheme") {
       const d = pendingAiContext;
-      const diseaseSummaryMsg = {
+      const schemeSummaryMsg = {
         role: "assistant",
-        content: `🔍 **Diagnosis Context Received from Plant Disease Scanner**:\n\n• **Detected Crop:** ${d.crop}\n• **Identified Condition:** **${d.condition}** (${d.confidence} match)\n• **Severity:** ${d.severity} • **Pathogen:** ${d.status === "Healthy" ? "None (Plant is healthy)" : "Fungal / Bacterial lesion"}\n\n**Immediate Treatment Advice:**\n• **Organic Cure:** ${d.organicTreatment}\n• **Chemical Fungicide:** ${d.chemicalTreatment}\n• **Cultural Prevention:** ${d.prevention}\n\nHow can I assist further with this diagnosis?`,
-        tools: ["Plant Disease Vision", "Agronomic Treatment Guide"],
+        content: `🔍 **Context Received from Scheme Recommender**:\n\n• **Target Scheme:** ${d.scheme_name}\n• **Match Score:** ${(d.match_score * 100).toFixed(0)}%\n\nHow can I assist further with this scheme application?`,
+        tools: ["Scheme Match Guide"],
         followups: [
-          `What is the exact water dilution for ${d.chemicalTreatment?.split(" ")[0] || "spray"}?`,
-          "Will upcoming rain wash away the spray?",
-          "How can I prevent this disease next season?",
-          "Are there any subsidized bio-pesticides under PKVY?"
+          `What documents are needed for ${d.scheme_name}?`,
+          "Where is the nearest SCA to apply?",
+          "Can you calculate my loan EMIs?"
         ]
       };
-      setMessages((prev) => [...prev, diseaseSummaryMsg]);
-      setPendingAiContext(null); // Clear context once injected
+      setMessages((prev) => [...prev, schemeSummaryMsg]);
+      setPendingAiContext(null);
     }
   }, [pendingAiContext]);
 
@@ -120,14 +117,14 @@ export default function AIAssistant() {
       {/* Header */}
       <div style={{ marginBottom: "16px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
-          <span className="badge badge-green">AI Farmer Assistant</span>
-          <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Multi-Tool Agricultural Decision Support</span>
+          <span className="badge badge-green">AI Scheme Assistant</span>
+          <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Multi-Tool Scheme Support</span>
         </div>
         <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
-          AI Farmer Assistant
+          AI Scheme Assistant
         </h1>
         <p style={{ fontSize: "13px", color: "#64748b", marginTop: "2px" }}>
-          Ask natural-language questions in English or Hindi. Grounded in weather, crop advisories, mandi prices, and government schemes.
+          Ask natural-language questions in English or Hindi. Grounded in scheme rules, loan data, and partner directories.
         </p>
       </div>
 
@@ -207,7 +204,7 @@ export default function AIAssistant() {
                 <RefreshCw size={16} color="#059669" />
               </div>
               <span style={{ fontSize: "13px", color: "#64748b" }}>
-                Analyzing agronomic insights & advice...
+                Analyzing scheme insights & advice...
               </span>
             </div>
           )}
@@ -215,7 +212,7 @@ export default function AIAssistant() {
           <div ref={messagesEndRef} />
         </div>
 
-        {/* Chat Input Bar with Quick Camera Scanner Button */}
+        {/* Chat Input Bar */}
         <div style={{ padding: "12px 14px", background: "#ffffff", borderTop: "1px solid #e2e8f0" }}>
           <form
             onSubmit={(e) => {
@@ -224,25 +221,13 @@ export default function AIAssistant() {
             }}
             style={{ display: "flex", gap: "8px", alignItems: "center" }}
           >
-            {/* Quick Camera Scan Button */}
-            <button
-              type="button"
-              onClick={() => setShowCameraScanner(true)}
-              className="btn btn-secondary"
-              style={{ padding: "10px", borderRadius: "10px", flexShrink: 0 }}
-              title="Scan Plant Disease Leaf"
-              aria-label="Scan Plant Leaf"
-            >
-              <Camera size={18} color="#059669" />
-            </button>
-
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask anything (e.g. spray timing, mandi rate, crop advice)..."
+              placeholder="Ask about schemes, margin money, or SCAs..."
               className="form-input"
-              style={{ padding: "10px 14px", fontSize: "13px", margin: 0 }}
+              style={{ padding: "10px 14px", fontSize: "13px", margin: 0, flex: 1 }}
             />
 
             <button

@@ -91,7 +91,7 @@ def get_models_and_datasets_summary():
     ]
 
     return {
-        "platform_name": "KrishiKalyan AI",
+        "platform_name": "SmartAgri AI",
         "description": "Production-Quality AI Decision Support Platform for Indian Farmers",
         "datasets": datasets,
         "crop_recommendation_metrics": crop_metrics,
@@ -102,3 +102,8 @@ def get_models_and_datasets_summary():
             "disclaimer": "All predictions communicate uncertainty scores. Farmers should verify critical decisions with local agricultural officers (KVK / Gram Sevak) and official government portals."
         }
     }
+
+@router.get("/registry")
+def get_data_sources_registry():
+    from app.core.data_registry import get_registry_summary
+    return get_registry_summary()

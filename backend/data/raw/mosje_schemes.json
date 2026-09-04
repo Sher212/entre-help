@@ -1,0 +1,5939 @@
+[
+  {
+    "id": "nsfdc-term-loan",
+    "scheme_name": "NSFDC Term Loan Scheme",
+    "short_name": "TL",
+    "category": "Business Loan",
+    "sponsoring_agency": "National Scheduled Castes Finance and Development Corporation (NSFDC), MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "SC individuals, partnership firms, cooperative societies for income-generating projects",
+    "description": "Provides concessional term loans for viable income-generating projects such as small businesses, manufacturing units, transport vehicles, dairy, agriculture, and service enterprises.",
+    "benefits": "Up to 90% of project cost financed. Interest: 6% (up to ₹5L), 8% (₹5-10L), 9% (₹10-50L). Women get 0.5% rebate.",
+    "max_project_cost": 5000000,
+    "max_loan_amount": 4500000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 9.0,
+    "repayment_years": 10,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 500000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Transport",
+        "Dairy",
+        "Agriculture",
+        "Retail",
+        "Small Business"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Government employees, income tax payers"
+    },
+    "documents_required": [
+      "Caste Certificate (SC)",
+      "Income Certificate (< ₹5 Lakh)",
+      "Aadhaar Card",
+      "Project Report / Business Plan",
+      "Bank Account Details",
+      "Address Proof",
+      "Passport Size Photos",
+      "Quotations for Machinery/Equipment"
+    ],
+    "application_process": "Apply through your State Channelizing Agency (SCA) or authorized Channel Partner bank. NSFDC does not accept direct applications.",
+    "official_url": "https://nsfdc.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nsfdc-tl",
+    "helpdesk_contact": "1800-110-396"
+  },
+  {
+    "id": "nsfdc-micro-credit",
+    "scheme_name": "NSFDC Micro Credit Finance Scheme",
+    "short_name": "MCF",
+    "category": "Micro Finance",
+    "sponsoring_agency": "NSFDC, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "SC individuals for small/micro daily income-generating activities",
+    "description": "Designed for small and micro business activities such as vegetable vending, tea stalls, tailoring, cycle repair, and other petty trades requiring minimal capital.",
+    "benefits": "Up to 90% financing (max ₹1.25 Lakh). Interest rate: 6.5% p.a. Women get 0.5% rebate. Quick disbursement.",
+    "max_project_cost": 140000,
+    "max_loan_amount": 125000,
+    "interest_rate_min": 6.5,
+    "interest_rate_max": 6.5,
+    "repayment_years": 3,
+    "moratorium_months": 3,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 500000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Street Vending",
+        "Tailoring",
+        "Small Retail",
+        "Food Stall",
+        "Cycle/Auto Repair",
+        "Handicrafts",
+        "Petty Trade"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Government employees"
+    },
+    "documents_required": [
+      "Caste Certificate (SC)",
+      "Income Certificate (< ₹5 Lakh)",
+      "Aadhaar Card",
+      "Business Activity Description",
+      "Bank Account Details",
+      "Address Proof"
+    ],
+    "application_process": "Apply through SCA, NBFC-MFI, or authorized microfinance channel partner in your state.",
+    "official_url": "https://nsfdc.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nsfdc-mcf",
+    "helpdesk_contact": "1800-110-396"
+  },
+  {
+    "id": "nsfdc-udyam-nidhi",
+    "scheme_name": "Udyam Nidhi Yojana",
+    "short_name": "UNY",
+    "category": "Micro Finance",
+    "sponsoring_agency": "NSFDC, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "SC individuals for small/micro enterprises through cooperative and small finance banks",
+    "description": "Supports small and micro enterprise ventures through cooperative banks and small finance banks. Ideal for individuals looking to start or expand a small business.",
+    "benefits": "Up to 90% financing (max ₹4.50 Lakh) for projects up to ₹5 Lakh. Interest: 13% (Co-op banks) / 15% (SFBs).",
+    "max_project_cost": 500000,
+    "max_loan_amount": 450000,
+    "interest_rate_min": 13.0,
+    "interest_rate_max": 15.0,
+    "repayment_years": 5,
+    "moratorium_months": 3,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 500000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Small Business",
+        "Micro Enterprise",
+        "Retail",
+        "Service",
+        "Manufacturing"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Government employees"
+    },
+    "documents_required": [
+      "Caste Certificate (SC)",
+      "Income Certificate (< ₹5 Lakh)",
+      "Aadhaar Card",
+      "Project Report",
+      "Bank Account Details",
+      "Address Proof"
+    ],
+    "application_process": "Apply through cooperative banks or small finance banks authorized as NSFDC channel partners.",
+    "official_url": "https://nsfdc.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nsfdc-uny",
+    "helpdesk_contact": "1800-110-396"
+  },
+  {
+    "id": "nsfdc-green-business",
+    "scheme_name": "Green Business Scheme",
+    "short_name": "GBS",
+    "category": "Green Enterprise",
+    "sponsoring_agency": "NSFDC, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "SC individuals for climate-friendly and green business activities",
+    "description": "Supports environmentally sustainable business ventures such as E-rickshaws, solar energy gadgets, poly-houses, organic farming inputs, and waste recycling units.",
+    "benefits": "Up to 90% financing for projects up to ₹30 Lakh. Interest: 4% (up to ₹7.5L), 6% (₹7.5-15L), 7% (₹15-30L). Lowest rates among NSFDC schemes.",
+    "max_project_cost": 3000000,
+    "max_loan_amount": 2700000,
+    "interest_rate_min": 4.0,
+    "interest_rate_max": 7.0,
+    "repayment_years": 10,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 500000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "E-Rickshaw",
+        "Solar Energy",
+        "Poly-house",
+        "Organic Farming",
+        "Waste Recycling",
+        "Green Transport",
+        "Renewable Energy"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Government employees"
+    },
+    "documents_required": [
+      "Caste Certificate (SC)",
+      "Income Certificate (< ₹5 Lakh)",
+      "Aadhaar Card",
+      "Green Business Project Report",
+      "Bank Account Details",
+      "Equipment Quotations",
+      "Address Proof"
+    ],
+    "application_process": "Apply through SCA or authorized channel partner. Green business plan must demonstrate environmental benefit.",
+    "official_url": "https://nsfdc.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nsfdc-gbs",
+    "helpdesk_contact": "1800-110-396"
+  },
+  {
+    "id": "nsfdc-mahila-samriddhi",
+    "scheme_name": "Mahila Samriddhi Yojana",
+    "short_name": "MSY",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "NSFDC, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "SC women entrepreneurs for micro-finance activities",
+    "description": "A micro-finance scheme exclusively for SC women to start or expand small income-generating activities like tailoring, beauty parlours, food processing, and small retail shops.",
+    "benefits": "Up to 90% financing (max ₹1.25 Lakh). Concessional interest at 6% p.a. (additional 0.5% women rebate applied).",
+    "max_project_cost": 140000,
+    "max_loan_amount": 125000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 6.0,
+    "repayment_years": 3,
+    "moratorium_months": 3,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 500000,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tailoring",
+        "Beauty Parlour",
+        "Food Processing",
+        "Small Retail",
+        "Handicrafts",
+        "Petty Trade"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Male applicants, Government employees"
+    },
+    "documents_required": [
+      "Caste Certificate (SC)",
+      "Income Certificate (< ₹5 Lakh)",
+      "Aadhaar Card",
+      "Business Plan",
+      "Bank Account Details",
+      "Address Proof"
+    ],
+    "application_process": "Apply through SCA or NBFC-MFI channel partner. Only women applicants eligible.",
+    "official_url": "https://nsfdc.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nsfdc-msy",
+    "helpdesk_contact": "1800-110-396"
+  },
+  {
+    "id": "nsfdc-laghu-vyavsay",
+    "scheme_name": "Laghu Vyavsay Yojana",
+    "short_name": "LVY",
+    "category": "Micro Finance",
+    "sponsoring_agency": "NSFDC, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "SC individuals for small business and micro-enterprise activities",
+    "description": "Supports small business ventures with project costs up to ₹5 Lakh. Ideal for starting grocery stores, mobile repair shops, auto spare parts, and small manufacturing units.",
+    "benefits": "Up to 90% of project cost (max ₹4.50 Lakh). Concessional interest rates. Women get 0.5% rebate.",
+    "max_project_cost": 500000,
+    "max_loan_amount": 450000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 8.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 500000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Grocery Store",
+        "Mobile Repair",
+        "Auto Spare Parts",
+        "Small Manufacturing",
+        "Retail",
+        "Service"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Government employees"
+    },
+    "documents_required": [
+      "Caste Certificate (SC)",
+      "Income Certificate (< ₹5 Lakh)",
+      "Aadhaar Card",
+      "Business Plan",
+      "Bank Account Details",
+      "Address Proof"
+    ],
+    "application_process": "Apply through State Channelizing Agency or authorized channel partner.",
+    "official_url": "https://nsfdc.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nsfdc-lvy",
+    "helpdesk_contact": "1800-110-396"
+  },
+  {
+    "id": "nsfdc-education-loan",
+    "scheme_name": "NSFDC Educational Loan Scheme",
+    "short_name": "ELS",
+    "category": "Education Loan",
+    "sponsoring_agency": "NSFDC, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "SC students pursuing professional/technical courses in India or abroad",
+    "description": "Provides concessional educational loans for SC students admitted to recognized professional and technical courses (Engineering, Medical, MBA, Law, CA, etc.) in India and abroad.",
+    "benefits": "Up to 90% of course fee (max ₹40 Lakh). Interest: 6% (India), 7% (Abroad). Women get 0.5% rebate. Covers tuition, hostel, books, travel.",
+    "max_project_cost": 4000000,
+    "max_loan_amount": 3600000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 7.0,
+    "repayment_years": 7,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 300000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 17,
+      "max_age": 35,
+      "project_types": [
+        "Engineering",
+        "Medical",
+        "MBA",
+        "Law",
+        "CA/CS/ICWA",
+        "Architecture",
+        "Nursing",
+        "Education",
+        "PhD"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Students in non-professional or part-time courses"
+    },
+    "documents_required": [
+      "Caste Certificate (SC)",
+      "Income Certificate (< ₹3 Lakh)",
+      "Aadhaar Card",
+      "Admission Letter from Institute",
+      "Course Fee Structure",
+      "Bank Account Details",
+      "Academic Transcripts"
+    ],
+    "application_process": "Apply through SCA with admission letter and fee structure. Course must be full-time professional/technical.",
+    "official_url": "https://nsfdc.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nsfdc-els",
+    "helpdesk_contact": "1800-110-396"
+  },
+  {
+    "id": "nsfdc-nari-arthik",
+    "scheme_name": "Nari Arthik Sashaktikaran Yojana",
+    "short_name": "NASY",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "NSFDC, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "Single SC women (widows, divorcees, single mothers) aged 25-50",
+    "description": "Economic empowerment scheme specifically for single SC women — widows, divorcees, and single mothers — to help them achieve financial independence through self-employment.",
+    "benefits": "Concessional loans for small enterprises. Special priority processing. Women-only interest rebate of 0.5%.",
+    "max_project_cost": 300000,
+    "max_loan_amount": 270000,
+    "interest_rate_min": 5.5,
+    "interest_rate_max": 7.5,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 500000,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 25,
+      "max_age": 50,
+      "project_types": [
+        "Self Employment",
+        "Small Business",
+        "Service",
+        "Manufacturing",
+        "Handicrafts"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Male applicants, married women with spouse"
+    },
+    "documents_required": [
+      "Caste Certificate (SC)",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Proof of Single Status (Death/Divorce Certificate)",
+      "Business Plan",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through SCA. Must provide documentary proof of single status (widowhood/divorce).",
+    "official_url": "https://nsfdc.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nsfdc-nasy",
+    "helpdesk_contact": "1800-110-396"
+  },
+  {
+    "id": "nsfdc-shilpi-samriddhi",
+    "scheme_name": "Shilpi Samriddhi Yojana",
+    "short_name": "SSY",
+    "category": "Artisan Support",
+    "sponsoring_agency": "NSFDC, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "SC artisans possessing Artisan Identity Card",
+    "description": "Specifically designed for SC artisans and craftspersons to support traditional crafts, handloom, pottery, metalwork, woodwork, and other artisanal trades.",
+    "benefits": "Concessional loans for craft-based enterprises. Supports raw material purchase, tools, and workshop setup.",
+    "max_project_cost": 200000,
+    "max_loan_amount": 180000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 6.5,
+    "repayment_years": 3,
+    "moratorium_months": 3,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 500000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Handloom",
+        "Pottery",
+        "Metalwork",
+        "Woodwork",
+        "Leather Craft",
+        "Traditional Crafts",
+        "Weaving"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non-artisans, those without Artisan Identity Card"
+    },
+    "documents_required": [
+      "Caste Certificate (SC)",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Artisan Identity Card",
+      "Business Plan",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through SCA with valid Artisan Identity Card.",
+    "official_url": "https://nsfdc.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nsfdc-ssy",
+    "helpdesk_contact": "1800-110-396"
+  },
+  {
+    "id": "nsfdc-mahila-kisan",
+    "scheme_name": "Mahila Kisan Yojana",
+    "short_name": "MKY",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "NSFDC, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "SC women in agriculture and allied sectors",
+    "description": "Designed for SC women engaged in agriculture, dairy, poultry, fisheries, and allied agricultural activities to help them scale up their farming enterprises.",
+    "benefits": "Concessional loans for agri-based enterprises. Women-only interest rebate. Supports equipment and input costs.",
+    "max_project_cost": 500000,
+    "max_loan_amount": 450000,
+    "interest_rate_min": 5.5,
+    "interest_rate_max": 8.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 500000,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Agriculture",
+        "Dairy",
+        "Poultry",
+        "Fisheries",
+        "Sericulture",
+        "Horticulture"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Male applicants"
+    },
+    "documents_required": [
+      "Caste Certificate (SC)",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Land Records / Lease Agreement",
+      "Business Plan",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through SCA. Only SC women in agri/allied activities are eligible.",
+    "official_url": "https://nsfdc.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nsfdc-mky",
+    "helpdesk_contact": "1800-110-396"
+  },
+  {
+    "id": "cegssc",
+    "scheme_name": "Credit Enhancement Guarantee Scheme for Scheduled Castes",
+    "short_name": "CEGSSC",
+    "category": "Credit Guarantee",
+    "sponsoring_agency": "IFCI Limited (Nodal Agency), MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "SC entrepreneurs with >51% shareholding in registered companies, societies, or firms",
+    "description": "Promotes entrepreneurship among SCs by providing credit guarantee to banks lending to SC entrepreneurs. Covers loans from ₹15 Lakh to ₹5 Crore for manufacturing, services, and trading.",
+    "benefits": "Credit guarantee cover for loans ₹15L to ₹5 Crore. No collateral required from entrepreneur. Enables access to mainstream bank credit.",
+    "max_project_cost": 50000000,
+    "max_loan_amount": 50000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 7,
+    "moratorium_months": 18,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Trading",
+        "Agri-Allied"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "SC shareholding must be >51%, existing defaulters"
+    },
+    "documents_required": [
+      "Caste Certificate (SC)",
+      "Company/Firm Registration",
+      "Shareholding Pattern Proof",
+      "Detailed Project Report",
+      "Financial Statements",
+      "KYC Documents"
+    ],
+    "application_process": "Apply through Member Lending Institutions (MLIs) listed on ifcicegssc.in portal.",
+    "official_url": "https://ifcicegssc.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/cegssc",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "nstfdc-term-loan",
+    "scheme_name": "NSTFDC Term Loan Scheme",
+    "short_name": "NSTFDC-TL",
+    "category": "Business Loan",
+    "sponsoring_agency": "National Scheduled Tribes Finance and Development Corporation (NSTFDC), Ministry of Tribal Affairs",
+    "level": "Central",
+    "target_beneficiaries": "ST individuals for income-generating ventures in industrial, agricultural, and service sectors",
+    "description": "Provides concessional term loans for viable income-generating projects for Scheduled Tribe entrepreneurs including agriculture, small business, transport, and manufacturing.",
+    "benefits": "Up to 90% of project cost. Interest: 6% (up to ₹5L), 8% (up to ₹10L), 10% (above ₹10L). Max ₹50 Lakh.",
+    "max_project_cost": 5000000,
+    "max_loan_amount": 4500000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 10.0,
+    "repayment_years": 10,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "ST"
+      ],
+      "max_annual_income": 300000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Transport",
+        "Agriculture",
+        "Small Business",
+        "Retail"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Government employees"
+    },
+    "documents_required": [
+      "Tribe Certificate (ST)",
+      "Income Certificate (< ₹3 Lakh)",
+      "Aadhaar Card",
+      "Project Report",
+      "Bank Account Details",
+      "Address Proof"
+    ],
+    "application_process": "Apply through State Channelizing Agency (SCA) for tribal welfare in your state.",
+    "official_url": "https://nstfdc.tribal.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nstfdc-tl",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "nstfdc-amsy",
+    "scheme_name": "Adivasi Mahila Sashaktikaran Yojana",
+    "short_name": "AMSY",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "NSTFDC, Ministry of Tribal Affairs",
+    "level": "Central",
+    "target_beneficiaries": "ST women for income-generating activities",
+    "description": "Exclusive scheme for Scheduled Tribe women to support self-employment and micro-enterprises with highly concessional interest rates.",
+    "benefits": "Loans up to ₹2 Lakh at just 4% interest. Exclusively for ST women entrepreneurs.",
+    "max_project_cost": 200000,
+    "max_loan_amount": 200000,
+    "interest_rate_min": 4.0,
+    "interest_rate_max": 4.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "ST"
+      ],
+      "max_annual_income": 300000,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Small Business",
+        "Handicrafts",
+        "Tailoring",
+        "Food Processing",
+        "Agriculture"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Male applicants"
+    },
+    "documents_required": [
+      "Tribe Certificate (ST)",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Business Plan",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through State Channelizing Agency for tribal welfare.",
+    "official_url": "https://nstfdc.tribal.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nstfdc-amsy",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "nstfdc-education",
+    "scheme_name": "Adivasi Shiksha Rrinn Yojana",
+    "short_name": "ASRY",
+    "category": "Education Loan",
+    "sponsoring_agency": "NSTFDC, Ministry of Tribal Affairs",
+    "level": "Central",
+    "target_beneficiaries": "ST students pursuing professional/technical courses",
+    "description": "Educational loan for Scheduled Tribe students admitted to professional and technical courses at recognized institutions in India.",
+    "benefits": "Up to ₹10 Lakh at 6% interest for professional courses. Covers tuition, books, hostel.",
+    "max_project_cost": 1000000,
+    "max_loan_amount": 1000000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 6.0,
+    "repayment_years": 7,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "ST"
+      ],
+      "max_annual_income": 300000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 17,
+      "max_age": 35,
+      "project_types": [
+        "Engineering",
+        "Medical",
+        "MBA",
+        "Law",
+        "Nursing",
+        "Education"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Part-time or non-professional courses"
+    },
+    "documents_required": [
+      "Tribe Certificate (ST)",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Admission Letter",
+      "Fee Structure",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through State Channelizing Agency with admission proof.",
+    "official_url": "https://nstfdc.tribal.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nstfdc-asry",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "nbcfdc-general-loan",
+    "scheme_name": "NBCFDC General Loan Scheme for OBC",
+    "short_name": "NBCFDC-GLS",
+    "category": "Business Loan",
+    "sponsoring_agency": "National Backward Classes Finance & Development Corporation (NBCFDC), MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "OBC individuals for self-employment and income-generating activities",
+    "description": "Provides concessional loans to Other Backward Classes entrepreneurs for viable business projects in agriculture, small business, artisan trades, transport, and service sectors.",
+    "benefits": "Up to 85% financing (max ₹15 Lakh). Interest: 6% (up to ₹5L), 7% (₹5-10L), 8% (₹10-15L).",
+    "max_project_cost": 1500000,
+    "max_loan_amount": 1275000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 8.0,
+    "repayment_years": 8,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 85,
+    "beneficiary_share_percent": 15,
+    "eligibility_criteria": {
+      "social_category": [
+        "OBC"
+      ],
+      "max_annual_income": 300000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Agriculture",
+        "Small Business",
+        "Artisan",
+        "Transport",
+        "Service",
+        "Manufacturing",
+        "Retail"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Government employees, creamy layer OBC"
+    },
+    "documents_required": [
+      "OBC Certificate (Non-Creamy Layer)",
+      "Income Certificate (< ₹3 Lakh)",
+      "Aadhaar Card",
+      "Project Report",
+      "Bank Account Details",
+      "Address Proof"
+    ],
+    "application_process": "Apply through State Channelizing Agency or authorized channel partner bank.",
+    "official_url": "https://nbcfdc.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nbcfdc-gls",
+    "helpdesk_contact": "1800-102-3399"
+  },
+  {
+    "id": "nmdfc-term-loan",
+    "scheme_name": "NMDFC Term Loan for Minorities",
+    "short_name": "NMDFC-TL",
+    "category": "Business Loan",
+    "sponsoring_agency": "National Minorities Development & Finance Corporation (NMDFC), Ministry of Minority Affairs",
+    "level": "Central",
+    "target_beneficiaries": "Minority community individuals (Muslim, Christian, Sikh, Buddhist, Parsi, Jain) for self-employment",
+    "description": "Concessional term loans for minority entrepreneurs for commercially viable projects. Two credit lines based on income levels.",
+    "benefits": "Credit Line 1: Up to ₹20L at 6% (income <₹3L). Credit Line 2: Up to ₹30L at 8% (income <₹8L). Women get 2% rebate.",
+    "max_project_cost": 3000000,
+    "max_loan_amount": 3000000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 8.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "Minority"
+      ],
+      "max_annual_income": 800000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Trading",
+        "Small Business",
+        "Agriculture",
+        "Transport"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non-minority applicants"
+    },
+    "documents_required": [
+      "Minority Community Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Project Report",
+      "Bank Account Details",
+      "Address Proof"
+    ],
+    "application_process": "Apply through State Channelizing Agency or designated bank.",
+    "official_url": "https://www.nmdfc.org/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nmdfc-tl",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "nmdfc-education",
+    "scheme_name": "NMDFC Educational Loan for Minorities",
+    "short_name": "NMDFC-EL",
+    "category": "Education Loan",
+    "sponsoring_agency": "NMDFC, Ministry of Minority Affairs",
+    "level": "Central",
+    "target_beneficiaries": "Minority students pursuing professional/technical courses",
+    "description": "Highly concessional educational loans for minority community students admitted to professional and technical courses.",
+    "benefits": "Up to ₹20 Lakh at just 3% interest. Covers tuition, books, hostel, equipment.",
+    "max_project_cost": 2000000,
+    "max_loan_amount": 2000000,
+    "interest_rate_min": 3.0,
+    "interest_rate_max": 3.0,
+    "repayment_years": 7,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "Minority"
+      ],
+      "max_annual_income": 600000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 17,
+      "max_age": 35,
+      "project_types": [
+        "Engineering",
+        "Medical",
+        "MBA",
+        "Law",
+        "CA/CS",
+        "Nursing",
+        "PhD"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non-minority, part-time courses"
+    },
+    "documents_required": [
+      "Minority Community Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Admission Letter",
+      "Fee Structure",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through State Channelizing Agency with admission letter.",
+    "official_url": "https://www.nmdfc.org/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nmdfc-el",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "ndfdc-dsy",
+    "scheme_name": "Divyangjan Swavalamban Yojana",
+    "short_name": "DSY",
+    "category": "Business Loan",
+    "sponsoring_agency": "National Divyangjan Finance & Development Corporation (NDFDC), Dept of Empowerment of PwD",
+    "level": "Central",
+    "target_beneficiaries": "Persons with Disabilities (40%+ disability) for income-generating activities",
+    "description": "Concessional loans for persons with disabilities to start or expand self-employment ventures. Covers all types of disabilities recognized under PwD Act.",
+    "benefits": "Up to ₹50 Lakh. Interest: 5% (<₹50K), 6% (₹50K-5L), 7% (₹5-15L), 8% (₹15-30L), 9% (₹30-50L). 1% rebate for women.",
+    "max_project_cost": 5000000,
+    "max_loan_amount": 5000000,
+    "interest_rate_min": 5.0,
+    "interest_rate_max": 9.0,
+    "repayment_years": 10,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Retail",
+        "Transport",
+        "IT",
+        "Small Business",
+        "Agriculture"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Disability less than 40%"
+    },
+    "documents_required": [
+      "Disability Certificate (40%+)",
+      "UDID Card",
+      "Aadhaar Card",
+      "Project Report",
+      "Bank Account Details",
+      "Address Proof"
+    ],
+    "application_process": "Apply through State Channelizing Agency or designated bank. UDID registration mandatory.",
+    "official_url": "https://ndfdc.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/ndfdc-dsy",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "nskfdc-general-loan",
+    "scheme_name": "NSKFDC General Term Loan",
+    "short_name": "NSKFDC-TL",
+    "category": "Business Loan",
+    "sponsoring_agency": "National Safai Karamcharis Finance & Development Corporation (NSKFDC), MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "Safai Karamcharis, manual scavengers, and their dependents",
+    "description": "Concessional loans for safai karamcharis and their dependents for income-generating activities to help them transition to dignified livelihoods.",
+    "benefits": "Loans up to ₹15 Lakh at 6-8% interest. No income ceiling. Supports sanitation-related and other businesses.",
+    "max_project_cost": 1500000,
+    "max_loan_amount": 1500000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 8.0,
+    "repayment_years": 10,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "Safai Karamchari"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Sanitation",
+        "Transport",
+        "Small Business",
+        "Service",
+        "Manufacturing"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non-safai karamchari applicants"
+    },
+    "documents_required": [
+      "Safai Karamchari Identity Proof",
+      "Aadhaar Card",
+      "Project Report",
+      "Bank Account Details",
+      "Address Proof"
+    ],
+    "application_process": "Apply through State Channelizing Agency or designated partner.",
+    "official_url": "https://nskfdc.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nskfdc-tl",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "standup-india",
+    "scheme_name": "Stand-Up India Scheme",
+    "short_name": "Stand-Up India",
+    "category": "Business Loan",
+    "sponsoring_agency": "Department of Financial Services, Ministry of Finance",
+    "level": "Central",
+    "target_beneficiaries": "SC/ST and Women entrepreneurs for greenfield (new) enterprises",
+    "description": "Facilitates bank loans between ₹10 Lakh and ₹1 Crore per bank branch for SC/ST and Women borrowers setting up greenfield enterprises in manufacturing, services, or trading.",
+    "benefits": "Composite loans ₹10L to ₹1 Crore. Repayment up to 7 years. Moratorium up to 18 months. At every bank branch.",
+    "max_project_cost": 10000000,
+    "max_loan_amount": 10000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 7,
+    "moratorium_months": 18,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 25,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Trading",
+        "Agri-Allied"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non-greenfield enterprises, defaulters"
+    },
+    "documents_required": [
+      "Caste Certificate / Gender Proof",
+      "Aadhaar Card",
+      "Business Plan",
+      "Address Proof",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through standupmitra.in portal, any bank branch, or Lead District Manager.",
+    "official_url": "https://www.standupmitra.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/sui",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "pmmy-mudra",
+    "scheme_name": "Pradhan Mantri MUDRA Yojana",
+    "short_name": "MUDRA",
+    "category": "Micro Finance",
+    "sponsoring_agency": "MUDRA Ltd, Ministry of Finance",
+    "level": "Central",
+    "target_beneficiaries": "All Indian citizens for non-farm micro/small enterprise activities",
+    "description": "Collateral-free institutional credit for micro and small enterprises. Three tiers: Shishu (up to ₹50K), Kishore (₹50K-5L), Tarun (₹5L-10L), Tarun Plus (up to ₹20L).",
+    "benefits": "Collateral-free loans up to ₹20 Lakh. No processing fee for Shishu. Covered under CGFMU guarantee.",
+    "max_project_cost": 2000000,
+    "max_loan_amount": 2000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "SC",
+        "ST",
+        "OBC",
+        "Minority",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Manufacturing",
+        "Trading",
+        "Service",
+        "Food Processing",
+        "Textile",
+        "Transport"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Farm/agriculture activities, existing defaulters"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "PAN Card",
+      "Business Plan",
+      "Address Proof",
+      "Bank Statements",
+      "Identity Proof"
+    ],
+    "application_process": "Apply through any Commercial Bank, RRB, Small Finance Bank, MFI, or via JanSamarth portal.",
+    "official_url": "https://www.mudra.org.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/pmmy",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "pm-svanidhi",
+    "scheme_name": "PM Street Vendor's AtmaNirbhar Nidhi",
+    "short_name": "PM SVANidhi",
+    "category": "Micro Finance",
+    "sponsoring_agency": "Ministry of Housing and Urban Affairs",
+    "level": "Central",
+    "target_beneficiaries": "Street vendors in urban areas for working capital",
+    "description": "Micro-credit facility for street vendors to resume and expand their livelihoods. Progressive lending: ₹10K first loan, ₹20K second, ₹50K third upon timely repayment.",
+    "benefits": "₹10K-₹50K working capital. 7% interest subsidy. Digital payment incentive of ₹1200/year. No collateral.",
+    "max_project_cost": 50000,
+    "max_loan_amount": 50000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 1,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "SC",
+        "ST",
+        "OBC",
+        "Minority"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Street Vending",
+        "Food Stall",
+        "Hawking",
+        "Small Retail"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non-urban vendors, those without CoV/LoR"
+    },
+    "documents_required": [
+      "Certificate of Vending (CoV) or Letter of Recommendation (LoR)",
+      "Aadhaar Card",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through pmsvanidhi.mohua.gov.in or through lending institutions.",
+    "official_url": "https://pmsvanidhi.mohua.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/pmsvanidhi",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "pmegp",
+    "scheme_name": "Prime Minister's Employment Generation Programme",
+    "short_name": "PMEGP",
+    "category": "Business Loan",
+    "sponsoring_agency": "Khadi & Village Industries Commission (KVIC), Ministry of MSME",
+    "level": "Central",
+    "target_beneficiaries": "All individuals above 18 years for new micro-enterprises in non-farm sector",
+    "description": "Credit-linked subsidy programme for generating self-employment by establishing new micro-enterprises. Higher subsidy for SC/ST/OBC/Women/Minorities/PwD.",
+    "benefits": "Subsidy: 25% (urban) / 35% (rural) for General. 35% (urban) / 45% (rural) for SC/ST/OBC/Women/Minorities/PwD. Max project ₹50L (mfg) / ₹20L (service).",
+    "max_project_cost": 5000000,
+    "max_loan_amount": 5000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 7,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "SC",
+        "ST",
+        "OBC",
+        "Minority",
+        "Women",
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Food Processing",
+        "Handicrafts",
+        "Khadi",
+        "Village Industry"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Existing units, projects under other govt subsidy, farm activities"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Caste/Category Certificate (if applicable)",
+      "Project Report",
+      "Educational Certificate (8th pass for projects >₹10L)",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply online at kviconline.gov.in. Applications routed through KVIC/KVIB/DIC to banks.",
+    "official_url": "https://www.kviconline.gov.in/pmegpeportal/pmegphome/index.jsp",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/pmegp",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "vcfsc",
+    "scheme_name": "Venture Capital Fund for Scheduled Castes",
+    "short_name": "VCF-SC",
+    "category": "Venture Capital",
+    "sponsoring_agency": "IFCI Ltd, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "SC entrepreneurs with innovative/growth-oriented businesses",
+    "description": "Provides venture capital to SC entrepreneurs for scaling innovative businesses. Equity/quasi-equity up to ₹15 Crore.",
+    "benefits": "Venture funding up to ₹15 Crore. Equity/quasi-equity support for scaling businesses.",
+    "max_project_cost": 150000000,
+    "max_loan_amount": 150000000,
+    "interest_rate_min": 0,
+    "interest_rate_max": 0,
+    "repayment_years": 7,
+    "moratorium_months": 18,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Startup",
+        "Technology",
+        "Manufacturing",
+        "Service",
+        "Innovation"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non-SC, defaulters"
+    },
+    "documents_required": [
+      "Caste Certificate",
+      "Business Registration",
+      "Financial Statements",
+      "Project Report",
+      "KYC Documents"
+    ],
+    "application_process": "Apply through vcfsc.in portal.",
+    "official_url": "https://vcfsc.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/vcfsc",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "asiim",
+    "scheme_name": "Ambedkar Social Innovation & Incubation Mission",
+    "short_name": "ASIIM",
+    "category": "Startup Support",
+    "sponsoring_agency": "MoSJE under VCF-SC",
+    "level": "Central",
+    "target_beneficiaries": "SC youth with innovative startup ideas from TBIs and hackathons",
+    "description": "Provides equity assistance up to ₹30 Lakh over 3 years to SC innovators to convert ideas into commercial ventures. Successful ventures can access up to ₹15 Cr from VCF-SC.",
+    "benefits": "Up to ₹30 Lakh equity over 3 years. Mentoring and incubation support. Path to ₹15 Cr venture funding.",
+    "max_project_cost": 3000000,
+    "max_loan_amount": 3000000,
+    "interest_rate_min": 0,
+    "interest_rate_max": 0,
+    "repayment_years": 3,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 35,
+      "project_types": [
+        "Startup",
+        "Technology",
+        "Innovation",
+        "Social Enterprise"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non-SC applicants"
+    },
+    "documents_required": [
+      "Caste Certificate",
+      "Business Plan",
+      "Incubator Recommendation",
+      "Aadhaar Card",
+      "KYC Documents"
+    ],
+    "application_process": "Apply through Technology Business Incubators or hackathon winners pathway.",
+    "official_url": "https://vcfsc.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/asiim",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "cgtmse",
+    "scheme_name": "Credit Guarantee Fund Trust for MSEs",
+    "short_name": "CGTMSE",
+    "category": "Credit Guarantee",
+    "sponsoring_agency": "SIDBI & Ministry of MSME",
+    "level": "Central",
+    "target_beneficiaries": "All MSEs; higher coverage for SC/ST/Women/Micro enterprises",
+    "description": "Collateral-free credit guarantee for micro and small enterprises up to ₹10 Crore. Women get 90% guarantee, SC/ST get 85%.",
+    "benefits": "Collateral-free loans up to ₹10 Crore. 90% guarantee for women, 85% for SC/ST, 75% general.",
+    "max_project_cost": 100000000,
+    "max_loan_amount": 100000000,
+    "interest_rate_min": 0,
+    "interest_rate_max": 0,
+    "repayment_years": 7,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "SC",
+        "ST",
+        "OBC",
+        "Minority",
+        "Women",
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Trading"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Large enterprises, SHGs in some cases"
+    },
+    "documents_required": [
+      "Udyam Registration",
+      "Business Plan",
+      "KYC Documents",
+      "Bank Statements",
+      "Financial Statements"
+    ],
+    "application_process": "Apply through any Member Lending Institution (bank). Cannot apply directly to CGTMSE.",
+    "official_url": "https://www.cgtmse.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/cgtmse",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "sclcss",
+    "scheme_name": "Special Credit Linked Capital Subsidy for SC/ST",
+    "short_name": "SCLCSS",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "National SC-ST Hub, Ministry of MSME",
+    "level": "Central",
+    "target_beneficiaries": "SC/ST MSME entrepreneurs for technology upgradation",
+    "description": "25% capital subsidy (max ₹25 Lakh) for SC/ST entrepreneurs to procure plant and machinery for technology upgradation.",
+    "benefits": "25% subsidy up to ₹25 Lakh on plant & machinery. Supports technology upgradation.",
+    "max_project_cost": 10000000,
+    "max_loan_amount": 10000000,
+    "interest_rate_min": 0,
+    "interest_rate_max": 0,
+    "repayment_years": 7,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Technology"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non SC/ST, non-MSME"
+    },
+    "documents_required": [
+      "Caste Certificate",
+      "Udyam Registration",
+      "Quotations for Machinery",
+      "Bank Loan Sanction Letter",
+      "KYC Documents"
+    ],
+    "application_process": "Apply through bank when taking term loan for technology upgradation.",
+    "official_url": "https://www.nssh.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/sclcss",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "nssh",
+    "scheme_name": "National SC-ST Hub",
+    "short_name": "NSSH",
+    "category": "Market Access",
+    "sponsoring_agency": "Ministry of MSME",
+    "level": "Central",
+    "target_beneficiaries": "SC/ST MSMEs seeking public procurement and market access",
+    "description": "Provides professional support to SC/ST entrepreneurs to fulfil public procurement obligations. Includes vendor development, capacity building, and market linkage.",
+    "benefits": "Access to government procurement opportunities. Vendor development programs. Mentoring and handholding.",
+    "max_project_cost": 0,
+    "max_loan_amount": 0,
+    "interest_rate_min": 0,
+    "interest_rate_max": 0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Trading",
+        "Supply"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non SC/ST MSMEs"
+    },
+    "documents_required": [
+      "Caste Certificate",
+      "Udyam Registration",
+      "Business Registration",
+      "KYC Documents"
+    ],
+    "application_process": "Register at nssh.gov.in portal.",
+    "official_url": "https://www.nssh.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nssh",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "nbcfdc-swarnima",
+    "scheme_name": "New Swarnima Scheme for OBC Women",
+    "short_name": "Swarnima",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "NBCFDC, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "OBC women entrepreneurs for self-employment",
+    "description": "Term loan scheme for OBC women to foster self-reliance through small business ventures at highly concessional 5% interest.",
+    "benefits": "Up to ₹2 Lakh at just 5% interest. 95% NBCFDC funding. Only 5% own contribution.",
+    "max_project_cost": 200000,
+    "max_loan_amount": 190000,
+    "interest_rate_min": 5,
+    "interest_rate_max": 5,
+    "repayment_years": 8,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 95,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "OBC"
+      ],
+      "max_annual_income": 300000,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Small Business",
+        "Tailoring",
+        "Food Processing",
+        "Retail",
+        "Handicrafts"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Male applicants, creamy layer OBC"
+    },
+    "documents_required": [
+      "OBC Certificate (Non-Creamy Layer)",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Business Plan",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through State Channelizing Agency.",
+    "official_url": "https://nbcfdc.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nbcfdc-swarnima",
+    "helpdesk_contact": "1800-102-3399"
+  },
+  {
+    "id": "nbcfdc-mahila-samridhi",
+    "scheme_name": "NBCFDC Mahila Samridhi Yojana for OBC",
+    "short_name": "NBCFDC-MSY",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "NBCFDC, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "OBC women through SHGs for micro-credit",
+    "description": "Micro-credit for OBC women entrepreneurs through SHGs. Up to ₹1.25 Lakh per beneficiary at just 4% interest.",
+    "benefits": "Up to ₹1.25 Lakh at 4% interest. Up to ₹15 Lakh per SHG. Quick disbursement.",
+    "max_project_cost": 125000,
+    "max_loan_amount": 125000,
+    "interest_rate_min": 4,
+    "interest_rate_max": 4,
+    "repayment_years": 4,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 95,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "OBC"
+      ],
+      "max_annual_income": 300000,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Small Business",
+        "Tailoring",
+        "Food Stall",
+        "Handicrafts",
+        "Petty Trade"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Male applicants, creamy layer OBC"
+    },
+    "documents_required": [
+      "OBC Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "SHG Membership Proof",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through SHG via State Channelizing Agency.",
+    "official_url": "https://nbcfdc.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nbcfdc-msy",
+    "helpdesk_contact": "1800-102-3399"
+  },
+  {
+    "id": "nbcfdc-education",
+    "scheme_name": "NBCFDC Education Loan for OBC",
+    "short_name": "NBCFDC-EL",
+    "category": "Education Loan",
+    "sponsoring_agency": "NBCFDC, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "OBC students pursuing professional/technical courses",
+    "description": "Concessional education loans for OBC students. Up to ₹15 Lakh (India) / ₹20 Lakh (abroad) at 4% interest. Girls get 3.5%.",
+    "benefits": "Up to ₹20 Lakh at 4% (3.5% for girls). Repayment up to 15 years with 5-year moratorium.",
+    "max_project_cost": 2000000,
+    "max_loan_amount": 2000000,
+    "interest_rate_min": 3.5,
+    "interest_rate_max": 4,
+    "repayment_years": 15,
+    "moratorium_months": 60,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "OBC"
+      ],
+      "max_annual_income": 300000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 17,
+      "max_age": 35,
+      "project_types": [
+        "Engineering",
+        "Medical",
+        "MBA",
+        "Law",
+        "CA/CS",
+        "Nursing",
+        "PhD"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Creamy layer OBC, part-time courses"
+    },
+    "documents_required": [
+      "OBC Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Admission Letter",
+      "Fee Structure",
+      "Academic Records"
+    ],
+    "application_process": "Apply through State Channelizing Agency with admission letter.",
+    "official_url": "https://nbcfdc.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nbcfdc-el",
+    "helpdesk_contact": "1800-102-3399"
+  },
+  {
+    "id": "nskfdc-suy",
+    "scheme_name": "Swachhta Udyami Yojana",
+    "short_name": "SUY",
+    "category": "Green Enterprise",
+    "sponsoring_agency": "NSKFDC, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "Safai Karamcharis for sanitation-related businesses",
+    "description": "Loans for sanitation vehicles, equipment, and community toilet construction. Supports mechanized sanitation under Swachh Bharat.",
+    "benefits": "Up to ₹15L (individuals) / ₹50L (projects) at 4-6% interest. Supports Swachh Bharat.",
+    "max_project_cost": 5000000,
+    "max_loan_amount": 5000000,
+    "interest_rate_min": 4,
+    "interest_rate_max": 6,
+    "repayment_years": 10,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "Safai Karamchari"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Sanitation",
+        "Waste Management",
+        "Green Transport",
+        "Community Toilet"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non-safai karamchari"
+    },
+    "documents_required": [
+      "Safai Karamchari Identity",
+      "Aadhaar Card",
+      "Project Report",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through State Channelizing Agency.",
+    "official_url": "https://nskfdc.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nskfdc-suy",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "nskfdc-mahila",
+    "scheme_name": "NSKFDC Mahila Samridhi Yojana",
+    "short_name": "NSKFDC-MSY",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "NSKFDC, MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "Women safai karamcharis for micro-credit",
+    "description": "Micro-credit for women safai karamcharis at highly concessional 4% interest for self-employment.",
+    "benefits": "Micro-credit at 4% interest. Quick disbursement. No collateral.",
+    "max_project_cost": 125000,
+    "max_loan_amount": 125000,
+    "interest_rate_min": 4,
+    "interest_rate_max": 4,
+    "repayment_years": 3,
+    "moratorium_months": 3,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "Safai Karamchari"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Small Business",
+        "Tailoring",
+        "Food Stall",
+        "Retail"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Male applicants"
+    },
+    "documents_required": [
+      "Safai Karamchari Identity",
+      "Aadhaar Card",
+      "Business Plan",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through State Channelizing Agency.",
+    "official_url": "https://nskfdc.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nskfdc-msy",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "pm-ajay",
+    "scheme_name": "PM Anusuchit Jaati Abhyuday Yojana",
+    "short_name": "PM-AJAY",
+    "category": "Skill Development",
+    "sponsoring_agency": "MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "SC population in SC-dominated villages for holistic development",
+    "description": "Comprehensive scheme for socio-economic upliftment of SC population. Covers skill development, income generation, infrastructure in SC-majority villages.",
+    "benefits": "100% Central funding. Skill training, income generation support, infrastructure development.",
+    "max_project_cost": 0,
+    "max_loan_amount": 0,
+    "interest_rate_min": 0,
+    "interest_rate_max": 0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Skill Development",
+        "Income Generation",
+        "Infrastructure"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non-SC villages"
+    },
+    "documents_required": [
+      "Caste Certificate",
+      "Aadhaar Card",
+      "Residence Proof"
+    ],
+    "application_process": "Implemented through state governments. Contact District Magistrate office.",
+    "official_url": "https://dosje.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/pm-ajay",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "nmdfc-micro",
+    "scheme_name": "NMDFC Micro Finance for Minorities",
+    "short_name": "NMDFC-MF",
+    "category": "Micro Finance",
+    "sponsoring_agency": "NMDFC, Ministry of Minority Affairs",
+    "level": "Central",
+    "target_beneficiaries": "Minority women through SHGs for micro-credit",
+    "description": "Micro-credit for minority women through SHGs. Up to ₹1.5 Lakh per member. 7-10% interest with women concessions.",
+    "benefits": "Up to ₹1.5 Lakh per member through SHG. Concessions for women.",
+    "max_project_cost": 150000,
+    "max_loan_amount": 150000,
+    "interest_rate_min": 7,
+    "interest_rate_max": 10,
+    "repayment_years": 3,
+    "moratorium_months": 3,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "Minority"
+      ],
+      "max_annual_income": 300000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Small Business",
+        "Handicrafts",
+        "Tailoring",
+        "Food Stall",
+        "Petty Trade"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non-minority applicants"
+    },
+    "documents_required": [
+      "Minority Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "SHG Proof",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through SHG via State Channelizing Agency.",
+    "official_url": "https://www.nmdfc.org/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nmdfc-mf",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "sisfs",
+    "scheme_name": "Startup India Seed Fund Scheme",
+    "short_name": "SISFS",
+    "category": "Startup Support",
+    "sponsoring_agency": "DPIIT, Ministry of Commerce & Industry",
+    "level": "Central",
+    "target_beneficiaries": "Early-stage startups for proof of concept and prototype",
+    "description": "Financial assistance for early-stage startups for proof of concept, prototype development, product trials, and market entry. Up to ₹50 Lakh.",
+    "benefits": "Up to ₹20 Lakh (grant) for validation. Up to ₹50 Lakh (debt/convertible) for market entry.",
+    "max_project_cost": 5000000,
+    "max_loan_amount": 5000000,
+    "interest_rate_min": 0,
+    "interest_rate_max": 0,
+    "repayment_years": 5,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "SC",
+        "ST",
+        "OBC",
+        "Minority",
+        "Women",
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Startup",
+        "Technology",
+        "Innovation",
+        "Social Enterprise",
+        "Manufacturing"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Startups older than 2 years, non-DPIIT recognized"
+    },
+    "documents_required": [
+      "DPIIT Startup Recognition",
+      "Business Plan",
+      "Incorporation Certificate",
+      "KYC Documents"
+    ],
+    "application_process": "Apply through seedfund.startupindia.gov.in via DPIIT-recognized incubators.",
+    "official_url": "https://seedfund.startupindia.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/sisfs",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "udyogini",
+    "scheme_name": "Udyogini Scheme (Karnataka Model)",
+    "short_name": "Udyogini",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "State Women Development Corporations",
+    "level": "State",
+    "target_beneficiaries": "Women entrepreneurs for micro-enterprises",
+    "description": "State scheme providing 50% subsidy (SC/ST) / 30% subsidy (General) on loans up to ₹3 Lakh for women starting micro-enterprises.",
+    "benefits": "50% subsidy for SC/ST women, 30% for others. Loans up to ₹3 Lakh.",
+    "max_project_cost": 300000,
+    "max_loan_amount": 300000,
+    "interest_rate_min": 0,
+    "interest_rate_max": 0,
+    "repayment_years": 5,
+    "moratorium_months": 3,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "SC",
+        "ST",
+        "OBC",
+        "Minority"
+      ],
+      "max_annual_income": 150000,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tailoring",
+        "Beauty Parlour",
+        "Food Processing",
+        "Small Retail",
+        "Handicrafts"
+      ],
+      "states": [
+        "Karnataka",
+        "Multiple States"
+      ],
+      "exclusions": "Male applicants"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Caste Certificate (if applicable)",
+      "Income Certificate",
+      "Business Plan",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through State Women Development Corporation or District Industries Centre.",
+    "official_url": "",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/udyogini",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "bihar-mahila-udyami",
+    "scheme_name": "Mukhyamantri Mahila Udyami Yojana",
+    "short_name": "MMUY",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "Department of Industries, Govt of Bihar",
+    "level": "State",
+    "target_beneficiaries": "Women entrepreneurs in Bihar for new enterprises",
+    "description": "Up to ₹10 Lakh financial assistance for women in Bihar to set up businesses. Includes subsidy and loan components.",
+    "benefits": "Up to ₹10 Lakh. Significant subsidy component. Training and handholding support.",
+    "max_project_cost": 1000000,
+    "max_loan_amount": 1000000,
+    "interest_rate_min": 0,
+    "interest_rate_max": 0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "SC",
+        "ST",
+        "OBC"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 50,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Retail",
+        "Food Processing"
+      ],
+      "states": [
+        "Bihar"
+      ],
+      "exclusions": "Male applicants, existing enterprise owners"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Residence Proof (Bihar)",
+      "Business Plan",
+      "Bank Account Details",
+      "Educational Certificates"
+    ],
+    "application_process": "Apply online through Bihar Industries Department portal.",
+    "official_url": "https://udyami.bihar.gov.in/",
+    "myscheme_url": "",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "bihar-scst-udyami",
+    "scheme_name": "Mukhyamantri SC/ST Udyami Yojana",
+    "short_name": "MAJAJUY",
+    "category": "Business Loan",
+    "sponsoring_agency": "Department of Industries, Govt of Bihar",
+    "level": "State",
+    "target_beneficiaries": "SC/ST youth in Bihar for entrepreneurship",
+    "description": "Financial assistance up to ₹10 Lakh for SC/ST youth in Bihar to promote entrepreneurship with subsidy and interest-free loan.",
+    "benefits": "Up to ₹10 Lakh with 50% subsidy (₹5L) + 50% interest-free loan.",
+    "max_project_cost": 1000000,
+    "max_loan_amount": 1000000,
+    "interest_rate_min": 0,
+    "interest_rate_max": 0,
+    "repayment_years": 7,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 50,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Retail",
+        "Food Processing",
+        "Transport"
+      ],
+      "states": [
+        "Bihar"
+      ],
+      "exclusions": "General/OBC, existing enterprise owners"
+    },
+    "documents_required": [
+      "Caste Certificate",
+      "Aadhaar Card",
+      "Residence Proof (Bihar)",
+      "Business Plan",
+      "Educational Certificates",
+      "Bank Account"
+    ],
+    "application_process": "Apply online through udyami.bihar.gov.in portal.",
+    "official_url": "https://udyami.bihar.gov.in/",
+    "myscheme_url": "",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "tn-needs",
+    "scheme_name": "New Entrepreneur-cum-Enterprise Development Scheme",
+    "short_name": "NEEDS",
+    "category": "Business Loan",
+    "sponsoring_agency": "Dept of Industries, Govt of Tamil Nadu",
+    "level": "State",
+    "target_beneficiaries": "First-generation educated entrepreneurs in Tamil Nadu",
+    "description": "Training, business plan assistance, and financial links for first-gen entrepreneurs. Priority for women, SC/ST, PwD. Age relaxation up to 55 years.",
+    "benefits": "Up to ₹5 Lakh subsidy. 25% of project cost as margin money. Training and mentoring.",
+    "max_project_cost": 500000,
+    "max_loan_amount": 500000,
+    "interest_rate_min": 0,
+    "interest_rate_max": 0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "SC",
+        "ST",
+        "OBC",
+        "Minority"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 21,
+      "max_age": 55,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "IT",
+        "Food Processing"
+      ],
+      "states": [
+        "Tamil Nadu"
+      ],
+      "exclusions": "Non-first-generation entrepreneurs, non-TN residents"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Educational Certificates",
+      "Residence Proof (TN)",
+      "Business Plan",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through District Industries Centres in Tamil Nadu.",
+    "official_url": "",
+    "myscheme_url": "",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "mp-swarojgar",
+    "scheme_name": "Mukhyamantri Swarojgar Yojana",
+    "short_name": "MMSY-MP",
+    "category": "Business Loan",
+    "sponsoring_agency": "Dept of MSME, Govt of Madhya Pradesh",
+    "level": "State",
+    "target_beneficiaries": "Youth in MP for self-employment ventures",
+    "description": "Financial assistance and interest subsidy for setting up new manufacturing/service enterprises in Madhya Pradesh.",
+    "benefits": "Margin money assistance, interest subsidy, and guarantee fee reimbursement for new enterprises.",
+    "max_project_cost": 5000000,
+    "max_loan_amount": 5000000,
+    "interest_rate_min": 0,
+    "interest_rate_max": 0,
+    "repayment_years": 7,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 0,
+    "beneficiary_share_percent": 15,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "SC",
+        "ST",
+        "OBC"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 45,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Retail",
+        "Food Processing"
+      ],
+      "states": [
+        "Madhya Pradesh"
+      ],
+      "exclusions": "Non-MP residents, existing defaulters"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Residence Proof (MP)",
+      "Business Plan",
+      "Educational Certificate",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply through DIC or MSME portal of Madhya Pradesh.",
+    "official_url": "",
+    "myscheme_url": "",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "svep",
+    "scheme_name": "Start-up Village Entrepreneurship Programme",
+    "short_name": "SVEP",
+    "category": "Enterprise Support",
+    "sponsoring_agency": "Ministry of Rural Development (MoRD)",
+    "level": "Central",
+    "description": "DAY-NRLM sub-scheme helping rural poor set up local enterprises through community enterprise support.",
+    "benefits": "Community Enterprise Fund (CEF) loan (avg. ₹27k, up to ₹45k), business management training, and mentoring by CRP-EPs.",
+    "eligibility_criteria": {
+      "farmer_type": [
+        "Rural Entrepreneurs",
+        "Women",
+        "SHG Members",
+        "SC/ST/Minority/OBC",
+        "Persons with Disabilities (PwD)"
+      ],
+      "land_size_max_acres": 100,
+      "states": [
+        "All States"
+      ],
+      "crops": []
+    },
+    "target_beneficiaries": "Rural Poor, SHG Members, Women (min 60% quota), SC/ST/OBC/Minority (covers ~86% of beneficiaries), PwD",
+    "documents_required": [],
+    "application_process": "Apply through local SHG / NRLM network.",
+    "official_url": "",
+    "myscheme_url": "",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "sti-hubs",
+    "scheme_name": "Science Technology and Innovation Hubs for SC/ST Communities",
+    "short_name": "STI Hubs",
+    "category": "Innovation Support",
+    "sponsoring_agency": "Department of Science and Technology (DST)",
+    "level": "Central",
+    "description": "STI Hubs support local institutions in using science, technology, and innovation to improve livelihoods of SC and ST communities.",
+    "benefits": "Livelihood improvement through Science and Technological intervention, conservation of Indigenous Knowledge Systems.",
+    "eligibility_criteria": {
+      "farmer_type": [
+        "SC Entrepreneurs",
+        "ST Entrepreneurs"
+      ],
+      "land_size_max_acres": 100,
+      "states": [
+        "All States"
+      ],
+      "crops": []
+    },
+    "target_beneficiaries": "SC and ST Communities",
+    "documents_required": [],
+    "application_process": "Through supported institutions and DST guidelines.",
+    "official_url": "",
+    "myscheme_url": "",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "nidhi-i-tbi",
+    "scheme_name": "NIDHI - Inclusive-Technology Business Incubator",
+    "short_name": "i-TBI",
+    "category": "Incubation",
+    "sponsoring_agency": "Department of Science and Technology (DST)",
+    "level": "Central",
+    "description": "Supports institutions in underserved regions to set up incubators so local innovators and startups can get space and funding.",
+    "benefits": "Creates a culture of innovation and provides incubation support in nascent startup ecosystems.",
+    "eligibility_criteria": {
+      "farmer_type": [
+        "All Farmers",
+        "Underserved Entrepreneurs"
+      ],
+      "land_size_max_acres": 100,
+      "states": [
+        "All States"
+      ],
+      "crops": []
+    },
+    "target_beneficiaries": "Innovators from Underserved Regions",
+    "documents_required": [],
+    "application_process": "Through supported institutions.",
+    "official_url": "",
+    "myscheme_url": "",
+    "helpdesk_contact": ""
+  },
+  {
+    "id": "mudra-yojana",
+    "scheme_name": "Pradhan Mantri MUDRA Yojana (PMMY)",
+    "short_name": "MUDRA",
+    "category": "Business Loan",
+    "sponsoring_agency": "MUDRA / Ministry of Finance",
+    "level": "Central",
+    "target_beneficiaries": "Non-corporate, non-farm small/micro-enterprises and micro units",
+    "description": "Provides collateral-free loans up to ₹20 Lakh across three categories: Shishu (up to ₹50k), Kishore (₹50k-₹5L), Tarun (₹5L-₹10L/20L).",
+    "benefits": "No collateral required. Low processing fee. Covers working capital and machinery loans.",
+    "max_project_cost": 2000000,
+    "max_loan_amount": 2000000,
+    "interest_rate_min": 8.0,
+    "interest_rate_max": 12.0,
+    "repayment_years": 5,
+    "moratorium_months": 3,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women",
+        "Minorities"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Small Business",
+        "Retail",
+        "Service",
+        "Micro Enterprise",
+        "Artisans",
+        "Food Processing"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Corporate entities, non-farm default accounts"
+    },
+    "documents_required": [
+      "Mudra Application Form",
+      "KYC Documents",
+      "Business Plan",
+      "Quotation for Machinery/Supplies",
+      "Bank Statement"
+    ],
+    "application_process": "Apply via JanSamarth Portal (jansamarth.in) or any Commercial Bank, RRB, or MFI.",
+    "official_url": "https://www.mudra.org.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/pmmy",
+    "helpdesk_contact": "1800-180-1111"
+  },
+  {
+    "id": "stand-up-india",
+    "scheme_name": "Stand-Up India Scheme",
+    "short_name": "SUI",
+    "category": "Greenfield Loan",
+    "sponsoring_agency": "SIDBI / Ministry of Finance",
+    "level": "Central",
+    "target_beneficiaries": "SC/ST and Women entrepreneurs setting up greenfield enterprises",
+    "description": "Facilitates bank loans between ₹10 Lakh and ₹1 Crore to at least one SC/ST borrower and at least one woman borrower per bank branch.",
+    "benefits": "Loans from ₹10L to ₹1 Crore for manufacturing, services, trading, or agriculture-allied activities. Margin money up to 15%.",
+    "max_project_cost": 10000000,
+    "max_loan_amount": 10000000,
+    "interest_rate_min": 7.5,
+    "interest_rate_max": 10.0,
+    "repayment_years": 7,
+    "moratorium_months": 18,
+    "nsfdc_share_percent": 85,
+    "beneficiary_share_percent": 15,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Greenfield Unit",
+        "Manufacturing",
+        "Service",
+        "Trading",
+        "Agri-Allied"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Existing non-greenfield expansion projects"
+    },
+    "documents_required": [
+      "Category/Caste Certificate",
+      "Aadhaar Card",
+      "PAN Card",
+      "Project Report",
+      "Company Registration/Partnership Deed",
+      "Land Details/Lease Agreement"
+    ],
+    "application_process": "Apply online at standupmitra.in or directly at any Scheduled Commercial Bank branch.",
+    "official_url": "https://www.standupmitra.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/suis",
+    "helpdesk_contact": "1800-180-1122"
+  },
+  {
+    "id": "pm-vishwakarma",
+    "scheme_name": "PM Vishwakarma Scheme",
+    "short_name": "PM-VISHWAKARMA",
+    "category": "Artisan Support",
+    "sponsoring_agency": "Ministry of MSME / MoSJE",
+    "level": "Central",
+    "target_beneficiaries": "Traditional artisans and craftspeople across 18 trades (carpenter, blacksmith, potter, tailor, etc.)",
+    "description": "Comprehensive support for traditional artisans providing skill training, toolkit incentive of ₹15,000, and collateral-free enterprise loans up to ₹3 Lakh at 5% interest.",
+    "benefits": "₹15,000 Toolkit E-Voucher + ₹1 Lakh (Tranche 1) & ₹2 Lakh (Tranche 2) loan at 5% interest rate. ₹500/day stipend during training.",
+    "max_project_cost": 300000,
+    "max_loan_amount": 300000,
+    "interest_rate_min": 5.0,
+    "interest_rate_max": 5.0,
+    "repayment_years": 3,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Minorities",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Artisan Trades",
+        "Handicrafts",
+        "Carpentry",
+        "Blacksmith",
+        "Pottery",
+        "Tailoring",
+        "Masons",
+        "Cobblers"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Government employees and their family members"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Mobile Linked Bank Account",
+      "Ration Card/Family Details",
+      "Trade Declaration"
+    ],
+    "application_process": "Register via CSC (Common Service Centre) or pmvishwakarma.gov.in portal. Verification by Gram Panchayat / Urban Local Body.",
+    "official_url": "https://pmvishwakarma.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/pm-vishwakarma",
+    "helpdesk_contact": "1800-267-7777"
+  },
+  {
+    "id": "pm-fme",
+    "scheme_name": "PM Formalisation of Micro Food Processing Enterprises (PM-FME)",
+    "short_name": "PM-FME",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Ministry of Food Processing Industries (MoFPI)",
+    "level": "Central",
+    "target_beneficiaries": "Micro food processing individual entrepreneurs, SHGs, FPOs, Cooperatives",
+    "description": "Financial, technical and business support for micro food processing units adopting 'One District One Product' (ODOP) approach.",
+    "benefits": "Credit-linked capital subsidy at 35% of eligible project cost with maximum ceiling of ₹10 Lakh per unit.",
+    "max_project_cost": 3000000,
+    "max_loan_amount": 2000000,
+    "interest_rate_min": 8.0,
+    "interest_rate_max": 10.5,
+    "repayment_years": 7,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 35,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Food Processing",
+        "Agri Processing",
+        "Pickle/Spices",
+        "Bakery",
+        "Dairy Processing",
+        "Flour/Oil Mills"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non-food processing manufacturing units"
+    },
+    "documents_required": [
+      "Aadhaar",
+      "PAN Card",
+      "FSSAI License / Application",
+      "Project Report",
+      "Bank Statement",
+      "Land/Shed Rent Agreement"
+    ],
+    "application_process": "Apply online at pmfme.mofpi.gov.in or through Resource Persons (RPs) appointed by State Nodal Agencies.",
+    "official_url": "https://pmfme.mofpi.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/pmfme",
+    "helpdesk_contact": "011-26492476"
+  },
+  {
+    "id": "bihar-udyami-yojana",
+    "scheme_name": "Mukhyamantri Udyami Yojana (Bihar)",
+    "short_name": "MUY-BIHAR",
+    "category": "Capital Grant & Loan",
+    "sponsoring_agency": "Department of Industries, Government of Bihar",
+    "level": "State",
+    "target_beneficiaries": "SC, ST, EBC, Women, and Youth entrepreneurs in Bihar setting up new manufacturing or service units",
+    "description": "Flagship Bihar state scheme providing ₹10 Lakh financial assistance (50% grant + 50% interest-free/1% loan) for setting up micro-enterprises.",
+    "benefits": "₹5 Lakh Grant/Subsidy + ₹5 Lakh Loan (0% interest for Women/SC/ST/EBC, 1% for General Youth). Repayable in 84 installments.",
+    "max_project_cost": 1000000,
+    "max_loan_amount": 500000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 1.0,
+    "repayment_years": 7,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 50,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 50,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Textile",
+        "Food Processing",
+        "Plastic",
+        "IT/Electronics"
+      ],
+      "states": [
+        "Bihar"
+      ],
+      "exclusions": "Non-residents of Bihar, government employees"
+    },
+    "documents_required": [
+      "Bihar Domicile Certificate",
+      "Caste Certificate",
+      "Intermediate/10+2 Educational Certificate",
+      "Aadhaar Card",
+      "PAN Card",
+      "Current Bank Account Details"
+    ],
+    "application_process": "Apply online at udyami.bihar.gov.in during official application window.",
+    "official_url": "https://udyami.bihar.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/bmuy",
+    "helpdesk_contact": "1800-345-6214"
+  },
+  {
+    "id": "up-yuva-swarojgar",
+    "scheme_name": "Mukhyamantri Yuva Swarojgar Yojana (Uttar Pradesh)",
+    "short_name": "MMYSY-UP",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Department of MSME and Export Promotion, Uttar Pradesh",
+    "level": "State",
+    "target_beneficiaries": "Unemployed educated youth of Uttar Pradesh for setting up industrial or service enterprises",
+    "description": "Provides financial credit support up to ₹25 Lakh for Industry sector and ₹10 Lakh for Service sector with 25% state margin money subsidy.",
+    "benefits": "25% Government Margin Money Subsidy (Max ₹6.25L for Industry, ₹2.5L for Service).",
+    "max_project_cost": 2500000,
+    "max_loan_amount": 1875000,
+    "interest_rate_min": 8.0,
+    "interest_rate_max": 10.5,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 25,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women",
+        "Minorities"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 40,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Small Business",
+        "Food Processing",
+        "Repair Workshops"
+      ],
+      "states": [
+        "Uttar Pradesh"
+      ],
+      "exclusions": "Defaulters of any bank, non-residents of UP"
+    },
+    "documents_required": [
+      "UP Domicile Certificate",
+      "High School / 10th Pass Certificate",
+      "Aadhaar Card",
+      "Project Report",
+      "Affidavit of non-default"
+    ],
+    "application_process": "Apply via DIUP Portal (diupmsme.upsdc.gov.in) or DIC office.",
+    "official_url": "https://diupmsme.upsdc.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/mmysy-up",
+    "helpdesk_contact": "0522-2238448"
+  },
+  {
+    "id": "up-odop-margin-money",
+    "scheme_name": "One District One Product (ODOP) Margin Money Scheme (UP)",
+    "short_name": "ODOP-UP",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Department of MSME, Govt of Uttar Pradesh",
+    "level": "State",
+    "target_beneficiaries": "Artisans and entrepreneurs setting up units for specified ODOP products in UP districts",
+    "description": "Financial assistance scheme providing up to 20%-25% financial margin money subsidy for starting or expanding ODOP-notified traditional craft and manufacturing units.",
+    "benefits": "Margin money subsidy of 25% (up to ₹6.25L for ₹25L unit), 20% (up to ₹12L for ₹60L unit), or 15% (up to ₹20L for >₹60L unit).",
+    "max_project_cost": 6000000,
+    "max_loan_amount": 4800000,
+    "interest_rate_min": 7.5,
+    "interest_rate_max": 9.5,
+    "repayment_years": 7,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 25,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 60,
+      "project_types": [
+        "ODOP Craft",
+        "Leather",
+        "Textile",
+        "Pottery",
+        "Brassware",
+        "Woodwork",
+        "Food Processing"
+      ],
+      "states": [
+        "Uttar Pradesh"
+      ],
+      "exclusions": "Non-ODOP manufacturing activities"
+    },
+    "documents_required": [
+      "UP Domicile",
+      "Aadhaar Card",
+      "ODOP Trade Proof",
+      "Project DPR",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply online at odopup.in or submit through local District Industries Centre.",
+    "official_url": "https://odopup.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/odop-mm",
+    "helpdesk_contact": "1800-180-0888"
+  },
+  {
+    "id": "maharashtra-cmegp",
+    "scheme_name": "Chief Minister Employment Generation Programme (CMEGP Maharashtra)",
+    "short_name": "CMEGP-MH",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Directorate of Industries, Government of Maharashtra",
+    "level": "State",
+    "target_beneficiaries": "Unemployed youth and entrepreneurs in Maharashtra for new micro/small projects",
+    "description": "State credit-linked subsidy scheme offering up to 35% capital subsidy for manufacturing (up to ₹50 Lakh) and service (up to ₹10 Lakh) projects.",
+    "benefits": "Subsidy: 15%-25% for Urban/General, 25%-35% for Rural & SC/ST/Women/PwD/Ex-servicemen. Max loan ₹50L (Mfg) / ₹10L (Service).",
+    "max_project_cost": 5000000,
+    "max_loan_amount": 3250000,
+    "interest_rate_min": 8.0,
+    "interest_rate_max": 10.5,
+    "repayment_years": 7,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 35,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women",
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 45,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Agri-Allied",
+        "Engineering",
+        "Textiles"
+      ],
+      "states": [
+        "Maharashtra"
+      ],
+      "exclusions": "Non-residents of Maharashtra, existing CMEGP/PMEGP beneficiaries"
+    },
+    "documents_required": [
+      "Domicile Certificate of Maharashtra",
+      "Caste Certificate",
+      "Project Report",
+      "Aadhaar Card",
+      "Educational Qualification (7th pass for >10L Mfg)"
+    ],
+    "application_process": "Apply via maha-cmegp.gov.in online portal.",
+    "official_url": "https://maha-cmegp.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/cmegp-mh",
+    "helpdesk_contact": "022-22028616"
+  },
+  {
+    "id": "tn-needs-scheme",
+    "scheme_name": "New Entrepreneur cum Enterprise Development Scheme (NEEDS - Tamil Nadu)",
+    "short_name": "NEEDS-TN",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Department of Micro, Small and Medium Enterprises, Tamil Nadu",
+    "level": "State",
+    "target_beneficiaries": "Educated first-generation entrepreneurs in Tamil Nadu with degree/diploma/ITI qualifications",
+    "description": "Financial assistance scheme providing 25% capital subsidy (max ₹75 Lakh) and 3% interest subvention for projects up to ₹5 Crore.",
+    "benefits": "25% Capital Subsidy (capped at ₹75 Lakh) + 3% Interest Subvention for the entire loan tenure.",
+    "max_project_cost": 50000000,
+    "max_loan_amount": 37500000,
+    "interest_rate_min": 6.5,
+    "interest_rate_max": 9.5,
+    "repayment_years": 9,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 25,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women",
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 21,
+      "max_age": 45,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "IT",
+        "Biotech",
+        "Food Processing",
+        "Auto Components"
+      ],
+      "states": [
+        "Tamil Nadu"
+      ],
+      "exclusions": "Partnership without degree holders, pure retail trading"
+    },
+    "documents_required": [
+      "TN Resident Proof",
+      "Degree/Diploma/ITI Certificate",
+      "Project Report",
+      "Aadhaar Card",
+      "Community Certificate"
+    ],
+    "application_process": "Apply at msmeonline.tn.gov.in or directly through District Industries Centre (DIC) in Tamil Nadu.",
+    "official_url": "https://msmeonline.tn.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/needs-tn",
+    "helpdesk_contact": "044-22501542"
+  },
+  {
+    "id": "tn-aabcs",
+    "scheme_name": "Annal Ambedkar Business Champions Scheme (AABCS - Tamil Nadu)",
+    "short_name": "AABCS-TN",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "MSME Department, Government of Tamil Nadu",
+    "level": "State",
+    "target_beneficiaries": "SC and ST entrepreneurs in Tamil Nadu for setting up new ventures or expanding existing units",
+    "description": "Special incentive scheme for SC/ST entrepreneurs offering 35% capital subsidy (max ₹1.5 Crore) and 6% interest subvention.",
+    "benefits": "35% Capital Subsidy up to ₹1.5 Crore + 6% Interest Subvention for term loans.",
+    "max_project_cost": 50000000,
+    "max_loan_amount": 32500000,
+    "interest_rate_min": 4.0,
+    "interest_rate_max": 7.0,
+    "repayment_years": 10,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 35,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Commercial Transport",
+        "Agri-Processing"
+      ],
+      "states": [
+        "Tamil Nadu"
+      ],
+      "exclusions": "Non-SC/ST applicants"
+    },
+    "documents_required": [
+      "SC/ST Community Certificate",
+      "TN Native Certificate",
+      "Detailed Project Report",
+      "Aadhaar Card",
+      "Bank Loan Sanction Copy"
+    ],
+    "application_process": "Apply online at msmeonline.tn.gov.in (AABCS portal).",
+    "official_url": "https://msmeonline.tn.gov.in/aabcs/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/aabcs-tn",
+    "helpdesk_contact": "044-22501542"
+  },
+  {
+    "id": "karnataka-cmegp",
+    "scheme_name": "Chief Minister's Self Employment Generation Programme (CMEGP Karnataka)",
+    "short_name": "CMEGP-KA",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Department of Commerce and Industries, Government of Karnataka",
+    "level": "State",
+    "target_beneficiaries": "Rural and urban entrepreneurs in Karnataka setting up micro-enterprises",
+    "description": "Provides financial subsidy between 25% and 35% for projects up to ₹20 Lakh (Manufacturing) and ₹10 Lakh (Service).",
+    "benefits": "Subsidy: 25% for Urban General, 35% for SC/ST/OBC/Minorities/Women/Rural. Loan up to ₹20 Lakh.",
+    "max_project_cost": 2000000,
+    "max_loan_amount": 1300000,
+    "interest_rate_min": 8.0,
+    "interest_rate_max": 10.5,
+    "repayment_years": 7,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 35,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women",
+        "Minorities"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 45,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Small Business",
+        "Agri Processing"
+      ],
+      "states": [
+        "Karnataka"
+      ],
+      "exclusions": "Existing business units, non-Karnataka residents"
+    },
+    "documents_required": [
+      "Karnataka Domicile",
+      "Caste Certificate",
+      "Project Report",
+      "Aadhaar Card",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply via cmegp.kar.nic.in portal or Joint Director DIC office.",
+    "official_url": "https://cmegp.kar.nic.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/cmegp-ka",
+    "helpdesk_contact": "080-22255850"
+  },
+  {
+    "id": "karnataka-udyogini",
+    "scheme_name": "Udyogini Scheme (Karnataka)",
+    "short_name": "UDYOGINI-KA",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "Karnataka State Women's Development Corporation (KSWDC)",
+    "level": "State",
+    "target_beneficiaries": "Women entrepreneurs in Karnataka starting small business activities",
+    "description": "Encourages women to take up self-employment in micro-trades with up to 30%-50% loan subsidy.",
+    "benefits": "Subsidy: 50% for SC/ST women (max ₹1.5L subsidy on ₹3L loan). 30% for Special/General category women (max ₹90k subsidy).",
+    "max_project_cost": 300000,
+    "max_loan_amount": 300000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 6.0,
+    "repayment_years": 3,
+    "moratorium_months": 3,
+    "nsfdc_share_percent": 50,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women"
+      ],
+      "max_annual_income": 150000,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tailoring",
+        "Beauty Parlour",
+        "Grocery",
+        "Dairy",
+        "Handicrafts",
+        "Petty Shop"
+      ],
+      "states": [
+        "Karnataka"
+      ],
+      "exclusions": "Family income > ₹1.5L, male applicants"
+    },
+    "documents_required": [
+      "Income Certificate (< ₹1.5L)",
+      "Caste Certificate",
+      "Aadhaar Card",
+      "Bank Passbook",
+      "Business Proposal"
+    ],
+    "application_process": "Apply through KSWDC Child Development Project Officer (CDPO) or bank.",
+    "official_url": "https://kswdc.karnataka.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/udyogini-ka",
+    "helpdesk_contact": "080-22868870"
+  },
+  {
+    "id": "gujarat-vby",
+    "scheme_name": "Shri Vajpayee Bankable Yojana (VBY Gujarat)",
+    "short_name": "VBY-GUJ",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Cottage and Rural Industries Department, Government of Gujarat",
+    "level": "State",
+    "target_beneficiaries": "Rural and urban cottage industry artisans, un-employed youth in Gujarat",
+    "description": "Credit-linked subsidy scheme for self-employment in cottage industries, service, and small business sectors up to ₹8 Lakh.",
+    "benefits": "Subsidy: 20%-40% (Rural SC/ST/Women get 40% max ₹1.25L). Max loan: ₹8L (Mfg), ₹3L (Service), ₹3L (Business).",
+    "max_project_cost": 800000,
+    "max_loan_amount": 800000,
+    "interest_rate_min": 7.0,
+    "interest_rate_max": 9.5,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 40,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women",
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Cottage Industry",
+        "Handicrafts",
+        "Service",
+        "Retail",
+        "Small Business"
+      ],
+      "states": [
+        "Gujarat"
+      ],
+      "exclusions": "Defaulters, non-residents of Gujarat"
+    },
+    "documents_required": [
+      "Gujarat Domicile",
+      "Caste Certificate",
+      "Experience/Training Certificate",
+      "Aadhaar Card",
+      "Quotation for Tools"
+    ],
+    "application_process": "Apply online at blp.gujarat.gov.in or DIC / District Cottage Officer.",
+    "official_url": "https://blp.gujarat.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/vby-guj",
+    "helpdesk_contact": "079-23252621"
+  },
+  {
+    "id": "rajasthan-mlupy",
+    "scheme_name": "Mukhyamantri Laghu Udyog Protsahan Yojana (MLUPY Rajasthan)",
+    "short_name": "MLUPY-RAJ",
+    "category": "Interest Subvention",
+    "sponsoring_agency": "Department of Industries and Commerce, Government of Rajasthan",
+    "level": "State",
+    "target_beneficiaries": "Micro, small and medium enterprises in Rajasthan for new or expansion projects",
+    "description": "Provides interest subsidy on bank loans up to ₹10 Crore to facilitate easy access to credit for manufacturing, service, and trade.",
+    "benefits": "Interest Subvention: 8% on loans up to ₹25L, 6% on loans up to ₹5 Cr, 5% on loans up to ₹10 Cr.",
+    "max_project_cost": 100000000,
+    "max_loan_amount": 100000000,
+    "interest_rate_min": 2.0,
+    "interest_rate_max": 5.0,
+    "repayment_years": 7,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 8,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Trading",
+        "Textile",
+        "Handicrafts",
+        "Mineral Processing"
+      ],
+      "states": [
+        "Rajasthan"
+      ],
+      "exclusions": "Default accounts"
+    },
+    "documents_required": [
+      "Rajasthan Domicile / Business Address",
+      "Aadhaar Card",
+      "PAN Card",
+      "Project Report",
+      "Bank Loan Application Form"
+    ],
+    "application_process": "Apply via SSO Rajasthan portal (sso.rajasthan.gov.in) under MLUPY service.",
+    "official_url": "https://sso.rajasthan.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/mlupy-raj",
+    "helpdesk_contact": "0141-2227704"
+  },
+  {
+    "id": "wb-karma-sathi",
+    "scheme_name": "Karma Sathi Prakalpa (West Bengal)",
+    "short_name": "KSP-WB",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Department of Micro, Small and Medium Enterprises, West Bengal",
+    "level": "State",
+    "target_beneficiaries": "Unemployed youth in West Bengal for setting up manufacturing, service, or trading units",
+    "description": "Financial scheme offering soft loans up to ₹2 Lakh along with government subsidy of 15% (max ₹25,000) for starting small enterprises.",
+    "benefits": "Soft loan up to ₹2 Lakh with 15% State Subsidy. Low interest rate and simple bank processing.",
+    "max_project_cost": 200000,
+    "max_loan_amount": 170000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 8.0,
+    "repayment_years": 3,
+    "moratorium_months": 3,
+    "nsfdc_share_percent": 15,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women",
+        "Minorities"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 50,
+      "project_types": [
+        "Small Business",
+        "Retail",
+        "Service",
+        "Handicrafts",
+        "Food Shop",
+        "Repair Work"
+      ],
+      "states": [
+        "West Bengal"
+      ],
+      "exclusions": "Non-residents of West Bengal"
+    },
+    "documents_required": [
+      "WB Resident Certificate",
+      "Aadhaar Card",
+      "Educational/School Certificate",
+      "Project Scheme Proposal"
+    ],
+    "application_process": "Apply online at karmasathi.wb.gov.in or Block Development Office (BDO) / Municipality.",
+    "official_url": "https://karmasathi.wb.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/ksp-wb",
+    "helpdesk_contact": "033-22893000"
+  },
+  {
+    "id": "kerala-ksbcdc-micro",
+    "scheme_name": "KSBCDC Self Employment Scheme (Kerala)",
+    "short_name": "KSBCDC-KL",
+    "category": "Business Loan",
+    "sponsoring_agency": "Kerala State Backward Classes Development Corporation (KSBCDC)",
+    "level": "State",
+    "target_beneficiaries": "OBC and Minority entrepreneurs in Kerala for self-employment ventures",
+    "description": "Concessional loans up to ₹15 Lakh at low interest rates (6%-8%) for backward classes and minority individuals in Kerala.",
+    "benefits": "Loan up to ₹15 Lakh at 6%-8% interest. Special Mahila Samriddhi rebate of 1% for women applicants.",
+    "max_project_cost": 1500000,
+    "max_loan_amount": 1350000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 8.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "OBC",
+        "Minorities",
+        "Women"
+      ],
+      "max_annual_income": 350000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Service",
+        "Retail",
+        "Small Business",
+        "Food Unit",
+        "Tailoring",
+        "Computer Centre"
+      ],
+      "states": [
+        "Kerala"
+      ],
+      "exclusions": "Annual income > ₹3.5L"
+    },
+    "documents_required": [
+      "Non-Creamy Layer / OBC Certificate",
+      "Kerala Income Certificate",
+      "Aadhaar Card",
+      "Project Report"
+    ],
+    "application_process": "Apply via ksbcdc.com or visit local KSBCDC district office in Kerala.",
+    "official_url": "https://ksbcdc.com/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/ksbcdc-kl",
+    "helpdesk_contact": "0471-2577539"
+  },
+  {
+    "id": "mp-udyam-kranti",
+    "scheme_name": "Mukhyamantri Udyam Kranti Yojana (Madhya Pradesh)",
+    "short_name": "MMUKY-MP",
+    "category": "Interest Subvention",
+    "sponsoring_agency": "Department of Micro, Small and Medium Enterprises, Madhya Pradesh",
+    "level": "State",
+    "target_beneficiaries": "Youth of MP (18-45 years) setting up new manufacturing or service units",
+    "description": "State credit scheme providing bank loans from ₹1 Lakh to ₹50 Lakh (Manufacturing) and up to ₹25 Lakh (Service) with 3% interest subsidy and bank guarantee cover.",
+    "benefits": "3% Interest Subvention for 7 years + 100% CGTMSE Credit Guarantee Fee covered by State.",
+    "max_project_cost": 5000000,
+    "max_loan_amount": 5000000,
+    "interest_rate_min": 5.0,
+    "interest_rate_max": 8.0,
+    "repayment_years": 7,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 3,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women"
+      ],
+      "max_annual_income": 1200000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 45,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Agri-Allied",
+        "Trading"
+      ],
+      "states": [
+        "Madhya Pradesh"
+      ],
+      "exclusions": "12th pass mandatory, family income > ₹12L"
+    },
+    "documents_required": [
+      "MP Domicile",
+      "12th Pass Marksheet",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Project Profile"
+    ],
+    "application_process": "Apply online at samast.mponline.gov.in or mpmsme.gov.in.",
+    "official_url": "https://samast.mponline.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/mmuky-mp",
+    "helpdesk_contact": "0755-2551334"
+  },
+  {
+    "id": "assam-cmaaa",
+    "scheme_name": "Chief Minister's Atmanirbhar Asom Abhijan (CMAAA - Assam)",
+    "short_name": "CMAAA-ASSAM",
+    "category": "Capital Grant & Loan",
+    "sponsoring_agency": "Government of Assam",
+    "level": "State",
+    "target_beneficiaries": "Unemployed youth in Assam for setting up self-employment micro-ventures",
+    "description": "Financial assistance of ₹2 Lakh to ₹5 Lakh (50% Government Grant + 50% Interest-free Bank Loan) to promote self-reliance in Assam.",
+    "benefits": "₹1 Lakh Grant + ₹1 Lakh Interest-free loan (Category 1) OR ₹2.5L Grant + ₹2.5L Loan (Category 2 professional).",
+    "max_project_cost": 500000,
+    "max_loan_amount": 250000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 5,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 50,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 28,
+      "max_age": 40,
+      "project_types": [
+        "Agriculture",
+        "Fisheries",
+        "Packaging",
+        "Handloom",
+        "Services",
+        "Tourism"
+      ],
+      "states": [
+        "Assam"
+      ],
+      "exclusions": "Government employees"
+    },
+    "documents_required": [
+      "Assam Permanent Resident Certificate",
+      "Employment Exchange Registration",
+      "Aadhaar Card",
+      "Bank Passbook",
+      "Project DPR"
+    ],
+    "application_process": "Apply via cmaaa.assam.gov.in portal.",
+    "official_url": "https://cmaaa.assam.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/cmaaa-assam",
+    "helpdesk_contact": "1800-345-3578"
+  },
+  {
+    "id": "odisha-msme-cis",
+    "scheme_name": "Odisha MSME Capital Investment Subsidy (CIS)",
+    "short_name": "CIS-ODISHA",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "MSME Department, Government of Odisha",
+    "level": "State",
+    "target_beneficiaries": "New micro and small manufacturing units established in Odisha",
+    "description": "State capital investment subsidy scheme providing 25% (up to ₹1 Crore) for general and 30% (up to ₹1.25 Crore) for SC/ST/Women/ST Zone units.",
+    "benefits": "25%-30% Capital Investment Subsidy on plant & machinery. Additional 5% for units in backward districts.",
+    "max_project_cost": 50000000,
+    "max_loan_amount": 35000000,
+    "interest_rate_min": 7.5,
+    "interest_rate_max": 10.0,
+    "repayment_years": 7,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 30,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women",
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 60,
+      "project_types": [
+        "Manufacturing",
+        "Food Processing",
+        "Plastics",
+        "Chemicals",
+        "Handicrafts"
+      ],
+      "states": [
+        "Odisha"
+      ],
+      "exclusions": "Trading/Retail service units"
+    },
+    "documents_required": [
+      "Odisha Resident Proof",
+      "Udyam Registration",
+      "Caste/Gender Proof",
+      "CA Certified Machinery Invoices"
+    ],
+    "application_process": "Apply via GO-SWIFT portal (goswift.odisha.gov.in).",
+    "official_url": "https://goswift.odisha.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/cis-odisha",
+    "helpdesk_contact": "1800-345-7111"
+  },
+  {
+    "id": "telangana-ts-pride",
+    "scheme_name": "TS-PRIDE (Telangana Program for Rapid Incubation of Dalit Entrepreneurs)",
+    "short_name": "TS-PRIDE",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Department of Industries, Government of Telangana",
+    "level": "State",
+    "target_beneficiaries": "SC and ST entrepreneurs setting up micro, small, and medium enterprises in Telangana",
+    "description": "Comprehensive incentive scheme offering 35% capital subsidy (max ₹50 Lakh) and 33% power tariff subsidy for SC/ST entrepreneurs in Telangana.",
+    "benefits": "35% Investment Subsidy (max ₹50 Lakh) + 33% Power Subsidy + ₹1 per unit power rebate + 100% Stamp Duty reimbursement.",
+    "max_project_cost": 20000000,
+    "max_loan_amount": 13000000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 8.5,
+    "repayment_years": 7,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 35,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Transport",
+        "Textiles",
+        "Pharma",
+        "Engineering"
+      ],
+      "states": [
+        "Telangana"
+      ],
+      "exclusions": "Non-SC/ST applicants"
+    },
+    "documents_required": [
+      "Telangana Domicile",
+      "SC/ST Caste Certificate",
+      "TS-iPASS Registration",
+      "Detailed Project Report",
+      "Aadhaar Card"
+    ],
+    "application_process": "Apply online at ipass.telangana.gov.in portal.",
+    "official_url": "https://ipass.telangana.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/ts-pride",
+    "helpdesk_contact": "040-23441666"
+  },
+  {
+    "id": "ap-ysr-cheyutha",
+    "scheme_name": "YSR Cheyutha & AP SC Finance Corporation Loan Scheme",
+    "short_name": "YSR-CHEYUTHA",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "AP Scheduled Castes Co-operative Finance Corporation / Govt of AP",
+    "level": "State",
+    "target_beneficiaries": "SC, ST, OBC, and Minority women aged 45-60 in Andhra Pradesh for enterprise creation",
+    "description": "Provides financial assistance of ₹75,000 over 4 years along with tied-up bank linkage for setting up retail, grocery, and dairy businesses.",
+    "benefits": "₹18,750 per year direct financial assistance + Bank credit linkage for self-employment enterprises.",
+    "max_project_cost": 200000,
+    "max_loan_amount": 150000,
+    "interest_rate_min": 4.0,
+    "interest_rate_max": 7.0,
+    "repayment_years": 3,
+    "moratorium_months": 3,
+    "nsfdc_share_percent": 75,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "Minorities"
+      ],
+      "max_annual_income": 120000,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 45,
+      "max_age": 60,
+      "project_types": [
+        "Retail",
+        "Dairy",
+        "Grocery",
+        "Goat Rearing",
+        "Tailoring"
+      ],
+      "states": [
+        "Andhra Pradesh"
+      ],
+      "exclusions": "Male applicants, family income > ₹10,000/month rural"
+    },
+    "documents_required": [
+      "AP Rice Card / Income Proof",
+      "Caste Certificate",
+      "Aadhaar Card",
+      "Bank Account Linked with Aadhaar"
+    ],
+    "application_process": "Apply via Navasakam portal or Village/Ward Secretariat in Andhra Pradesh.",
+    "official_url": "https://navasakam.ap.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/ysr-cheyutha",
+    "helpdesk_contact": "1902"
+  },
+  {
+    "id": "punjab-sc-land-corp",
+    "scheme_name": "Punjab Scheduled Castes Land Development & Finance Corp Loan Scheme",
+    "short_name": "PSCFC-PB",
+    "category": "Business Loan",
+    "sponsoring_agency": "Punjab Scheduled Castes Land Development and Finance Corporation",
+    "level": "State",
+    "target_beneficiaries": "SC individuals living below poverty line in Punjab for self-employment",
+    "description": "Provides concessional loans up to ₹5 Lakh with up to ₹10,000 government subsidy for small trade, transport, and micro-enterprises.",
+    "benefits": "Loan up to ₹5 Lakh at 6% interest p.a. + ₹10,000 capital subsidy.",
+    "max_project_cost": 500000,
+    "max_loan_amount": 450000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 6.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC"
+      ],
+      "max_annual_income": 100000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Dairy",
+        "Poultry",
+        "Small Shop",
+        "Auto Repair",
+        "Transport"
+      ],
+      "states": [
+        "Punjab"
+      ],
+      "exclusions": "Non-SC, non-residents of Punjab"
+    },
+    "documents_required": [
+      "Punjab SC Caste Certificate",
+      "Income Certificate (< ₹1L)",
+      "Aadhaar Card",
+      "Bank Passbook"
+    ],
+    "application_process": "Apply through District Manager PSCFC office in Punjab districts.",
+    "official_url": "http://pscfc.punjab.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/pscfc-pb",
+    "helpdesk_contact": "0172-2602856"
+  },
+  {
+    "id": "hp-swavalamban",
+    "scheme_name": "Mukhyamantri Swavalamban Yojana (Himachal Pradesh)",
+    "short_name": "MMSY-HP",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Department of Industries, Himachal Pradesh",
+    "level": "State",
+    "target_beneficiaries": "Himachali youth (18-45 years) setting up micro enterprises in Himachal Pradesh",
+    "description": "Capital subsidy of 25%-35% on machinery investment up to ₹1 Crore along with 5% interest subvention for 3 years.",
+    "benefits": "Subsidy: 25% for Male, 30% for Female, 35% for SC/ST/Divyang. 5% Interest Subvention for 3 years.",
+    "max_project_cost": 10000000,
+    "max_loan_amount": 6500000,
+    "interest_rate_min": 4.0,
+    "interest_rate_max": 6.5,
+    "repayment_years": 7,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 35,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women",
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 45,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Tourism",
+        "Agri-Processing",
+        "Horticulture"
+      ],
+      "states": [
+        "Himachal Pradesh"
+      ],
+      "exclusions": "Non-Bonafide Himachali"
+    },
+    "documents_required": [
+      "Bonafide Himachali Certificate",
+      "Aadhaar Card",
+      "Project Report",
+      "Caste/Gender Proof"
+    ],
+    "application_process": "Apply online at mmsy.hp.gov.in portal.",
+    "official_url": "https://mmsy.hp.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/mmsy-hp",
+    "helpdesk_contact": "0177-2813414"
+  },
+  {
+    "id": "jk-tejaswini",
+    "scheme_name": "Tejaswini Scheme for Women Entrepreneurs (J&K)",
+    "short_name": "TEJASWINI-JK",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "Mission Youth, Government of Jammu & Kashmir",
+    "level": "State",
+    "target_beneficiaries": "Young women (18-35 years) in J&K setting up self-employment micro-ventures",
+    "description": "Financial assistance up to ₹5 Lakh to young women for starting business units with 10% state upfront subsidy and full interest subvention.",
+    "benefits": "₹50,000 upfront state subsidy + 100% Interest Subvention (0% effective interest rate).",
+    "max_project_cost": 500000,
+    "max_loan_amount": 450000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 10,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 35,
+      "project_types": [
+        "Handicrafts",
+        "Beauty Parlour",
+        "Boutique",
+        "Retail",
+        "Service",
+        "IT Services"
+      ],
+      "states": [
+        "Jammu and Kashmir",
+        "Ladakh"
+      ],
+      "exclusions": "Male applicants, non-J&K Domicile"
+    },
+    "documents_required": [
+      "J&K Domicile Certificate",
+      "10th Pass Certificate",
+      "Aadhaar Card",
+      "Project Proposal"
+    ],
+    "application_process": "Apply via Mission Youth J&K online portal (missionyouthjk.in).",
+    "official_url": "https://missionyouthjk.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/tejaswini-jk",
+    "helpdesk_contact": "0194-2479001"
+  },
+  {
+    "id": "birac-big",
+    "scheme_name": "BIRAC Biotechnology Ignition Grant (BIG)",
+    "short_name": "BIRAC-BIG",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Biotechnology Industry Research Assistance Council (BIRAC), DST",
+    "level": "Central",
+    "target_beneficiaries": "Biotech, Agritech, Medtech, and Life Sciences early-stage innovators and startups",
+    "description": "Offers non-dilutive grant-in-aid up to ₹50 Lakhs to scientists, graduates, and startups to establish Proof of Concept for commercial biotech inventions.",
+    "benefits": "100% Non-dilutive grant up to ₹50 Lakhs for 18 months + Mentorship + Access to BIRAC bio-incubators.",
+    "max_project_cost": 5000000,
+    "max_loan_amount": 5000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Biotechnology",
+        "Agritech",
+        "Medical Devices",
+        "Healthcare",
+        "Bio-energy",
+        "Pharma"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Startups > 5 years old"
+    },
+    "documents_required": [
+      "Proposal Presentation",
+      "Biotech Research Abstract",
+      "Founder Profile",
+      "Company Registration (if incorporated)"
+    ],
+    "application_process": "Apply online via birac.nic.in during BIG Call windows (Jan & July).",
+    "official_url": "https://birac.nic.in/big.php",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/birac-big",
+    "helpdesk_contact": "011-24682177"
+  },
+  {
+    "id": "nidhi-prayas",
+    "scheme_name": "NIDHI-PRAYAS (Promoting and Accelerating Young and Aspiring innovators)",
+    "short_name": "NIDHI-PRAYAS",
+    "category": "Prototype Grant",
+    "sponsoring_agency": "Department of Science and Technology (DST)",
+    "level": "Central",
+    "target_beneficiaries": "Individual tech innovators and early hardware startups building physical prototypes",
+    "description": "Provides financial grant up to ₹10 Lakhs to translate innovative hardware and deeptech ideas into proof-of-concept functional prototypes.",
+    "benefits": "Up to ₹10 Lakhs prototype grant + Lab access at PRAYAS Centres (DST Incubators).",
+    "max_project_cost": 1000000,
+    "max_loan_amount": 1000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 65,
+      "project_types": [
+        "Hardware",
+        "Robotics",
+        "IoT",
+        "Clean Tech",
+        "Biomedical Devices",
+        "Agri-machinery"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Pure software or IT services without hardware innovation"
+    },
+    "documents_required": [
+      "Prototype Proposal",
+      "Aadhaar Card",
+      "Technical Design Abstract"
+    ],
+    "application_process": "Apply directly through DST PRAYAS incubators across India.",
+    "official_url": "https://nidhi-prayas.org/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nidhi-prayas",
+    "helpdesk_contact": "011-26590200"
+  },
+  {
+    "id": "ews-general-udyam",
+    "scheme_name": "National EWS & General Category Enterprise Support Scheme",
+    "short_name": "EWS-UDYAM",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Ministry of MSME / State DICs",
+    "level": "Central",
+    "target_beneficiaries": "Economically Weaker Section (EWS) and General Category entrepreneurs setting up micro-enterprises",
+    "description": "Concessional credit and 15%-25% capital margin money subsidy for General and EWS category individuals starting manufacturing, service, or retail ventures.",
+    "benefits": "15% to 25% Capital Subsidy + Credit Guarantee under CGTMSE. Loans up to ₹50 Lakhs with bank credit linkage.",
+    "max_project_cost": 5000000,
+    "max_loan_amount": 4250000,
+    "interest_rate_min": 7.5,
+    "interest_rate_max": 10.0,
+    "repayment_years": 7,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 25,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS"
+      ],
+      "max_annual_income": 800000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 60,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Retail",
+        "Small Business",
+        "Agri Processing",
+        "Food Processing"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Income tax payers with family income > ₹8 Lakhs"
+    },
+    "documents_required": [
+      "EWS Certificate / Income Certificate (< ₹8 Lakhs)",
+      "Aadhaar Card",
+      "PAN Card",
+      "Project Profile",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply via JanSamarth portal or DIC in your district.",
+    "official_url": "https://www.jansamarth.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/ews-udyam",
+    "helpdesk_contact": "1800-180-1111"
+  },
+  {
+    "id": "nmdfdc-term-loan",
+    "scheme_name": "NMDFDC Term Loan Scheme for Minorities",
+    "short_name": "NMDFDC-TL",
+    "category": "Business Loan",
+    "sponsoring_agency": "National Minorities Development & Finance Corporation (NMDFDC), Ministry of Minority Affairs",
+    "level": "Central",
+    "target_beneficiaries": "Individuals from notified Minority Communities (Muslim, Christian, Sikh, Buddhist, Jain, Parsi) for self-employment",
+    "description": "Concessional loans up to ₹30 Lakhs for manufacturing, commercial transport, service, and agricultural businesses for minority entrepreneurs.",
+    "benefits": "Loans up to ₹30 Lakhs at 6% to 8% interest rate. Credit up to 90% of project cost.",
+    "max_project_cost": 3000000,
+    "max_loan_amount": 2700000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 8.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "Minorities"
+      ],
+      "max_annual_income": 600000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Small Business",
+        "Transport",
+        "Handicrafts",
+        "Services",
+        "Manufacturing"
+      ],
+      "states": [
+        "All States"
+      ],
+      "exclusions": "Non-minority applicants"
+    },
+    "documents_required": [
+      "Minority Community Self-Declaration / Certificate",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Business DPR"
+    ],
+    "application_process": "Apply through State Channelizing Agency (SCA) for Minority Development.",
+    "official_url": "https://nmdfdc.org/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nmdfdc-tl",
+    "helpdesk_contact": "1800-11-4000"
+  },
+  {
+    "id": "istart-rajasthan",
+    "scheme_name": "iStart Rajasthan Startup Policy & Seed Grant",
+    "short_name": "iStart-RAJ",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Department of Information Technology & Communication, Rajasthan",
+    "level": "State",
+    "target_beneficiaries": "Innovative startups registered in Rajasthan across Ideation, Seed, and Growth stages",
+    "description": "Offers up to ₹2.4 Lakhs Ideation Grant, up to ₹60 Lakhs Seed Grant, and ₹10,000-₹25,000 monthly sustenance allowance for QRate ranked startups.",
+    "benefits": "Ideation Grant ₹2.4L + Seed Grant up to ₹60L + Monthly Sustenance Allowance up to ₹25,000/month for 1 year.",
+    "max_project_cost": 6000000,
+    "max_loan_amount": 6000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tech Startup",
+        "IT",
+        "Agritech",
+        "Edtech",
+        "E-commerce",
+        "Clean Tech"
+      ],
+      "states": [
+        "Rajasthan"
+      ],
+      "exclusions": "Non-residents of Rajasthan"
+    },
+    "documents_required": [
+      "Rajasthan Domicile",
+      "iStart Registration",
+      "Pitch Deck",
+      "QRate Certificate"
+    ],
+    "application_process": "Register and apply online via istart.rajasthan.gov.in portal.",
+    "official_url": "https://istart.rajasthan.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/istart-raj",
+    "helpdesk_contact": "0141-2921136"
+  },
+  {
+    "id": "ksum-kerala-startup",
+    "scheme_name": "Kerala Startup Mission (KSUM) Idea & Seed Fund",
+    "short_name": "KSUM-KL",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Kerala Startup Mission, Government of Kerala",
+    "level": "State",
+    "target_beneficiaries": "Early-stage innovative startups registered in Kerala",
+    "description": "Provides non-dilutive Idea Grants up to ₹7 Lakhs (up to ₹12 Lakhs for Women/Transgender founders) and Seed Loans up to ₹15 Lakhs at 6% simple interest.",
+    "benefits": "₹7L - ₹12L Non-dilutive Grant + ₹15L Soft Loan at 6% interest + Co-working space & incubation.",
+    "max_project_cost": 2500000,
+    "max_loan_amount": 1500000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 6.0,
+    "repayment_years": 5,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Technology Startup",
+        "Hardware",
+        "Software",
+        "Biotech",
+        "Agritech"
+      ],
+      "states": [
+        "Kerala"
+      ],
+      "exclusions": "Non-Kerala registered companies"
+    },
+    "documents_required": [
+      "KSUM Startup Registration",
+      "Company PAN/Incorporation",
+      "Pitch Deck"
+    ],
+    "application_process": "Apply via startupmission.kerala.gov.in portal.",
+    "official_url": "https://startupmission.kerala.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/ksum-kl",
+    "helpdesk_contact": "0471-2700270"
+  },
+  {
+    "id": "startup-odisha",
+    "scheme_name": "Startup Odisha Grants & Monthly Allowance",
+    "short_name": "STARTUP-ODISHA",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Startup Odisha, MSME Department, Govt of Odisha",
+    "level": "State",
+    "target_beneficiaries": "DPIIT / Startup Odisha recognized innovative startups in Odisha",
+    "description": "Offers ₹20,000/month sustenance allowance for 1 year (₹22,000/month for Women/SC/ST/PwD) and Product Development / Marketing grant up to ₹15 Lakhs.",
+    "benefits": "₹20,000/month Sustenance Allowance for 12 months + ₹15 Lakhs Product Development Grant.",
+    "max_project_cost": 1500000,
+    "max_loan_amount": 1500000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women",
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tech Startup",
+        "IT",
+        "Agritech",
+        "Food Tech",
+        "Biotech",
+        "Handicrafts Tech"
+      ],
+      "states": [
+        "Odisha"
+      ],
+      "exclusions": "Non-Odisha registered units"
+    },
+    "documents_required": [
+      "Startup Odisha Recognition Certificate",
+      "DPR",
+      "Pitch Deck",
+      "Bank Details"
+    ],
+    "application_process": "Apply online at startupodisha.gov.in portal.",
+    "official_url": "https://startupodisha.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/startup-odisha",
+    "helpdesk_contact": "1800-345-7100"
+  },
+  {
+    "id": "elevate-karnataka",
+    "scheme_name": "ELEVATE Karnataka (Grant-in-Aid Scheme)",
+    "short_name": "ELEVATE-KA",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Department of Electronics, IT, Bt and S&T, Government of Karnataka",
+    "level": "State",
+    "target_beneficiaries": "Innovative early-stage startups registered in Karnataka",
+    "description": "Flagship grant-in-aid scheme providing up to ₹50 Lakhs non-dilutive grant to early-stage startups across General, Shakti (Women), and Unnati (SC/ST) tracks.",
+    "benefits": "100% Non-dilutive Grant up to ₹50 Lakhs + Incubation support + Mentorship.",
+    "max_project_cost": 5000000,
+    "max_loan_amount": 5000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 60,
+      "project_types": [
+        "Deeptech",
+        "IT/Software",
+        "Biotech",
+        "Hardware",
+        "Clean Energy",
+        "Agritech"
+      ],
+      "states": [
+        "Karnataka"
+      ],
+      "exclusions": "Startups registered outside Karnataka"
+    },
+    "documents_required": [
+      "Karnataka Incorporation Proof",
+      "Pitch Deck",
+      "Audited Financials / Bank Statement"
+    ],
+    "application_process": "Apply during annual ELEVATE call on startup.karnataka.gov.in.",
+    "official_url": "https://startup.karnataka.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/elevate-ka",
+    "helpdesk_contact": "080-22231006"
+  },
+  {
+    "id": "north-east-venture-fund",
+    "scheme_name": "North East Venture Fund (NEVF)",
+    "short_name": "NEVF",
+    "category": "Venture Fund / Equity",
+    "sponsoring_agency": "NEDFi / Ministry of Development of North Eastern Region (DoNER)",
+    "level": "Central",
+    "target_beneficiaries": "Startups and early-stage commercial ventures in North Eastern States (Assam, Meghalaya, Manipur, Nagaland, Mizoram, Tripura, Arunachal, Sikkim)",
+    "description": "Dedicated venture capital fund offering equity and quasi-equity investment from ₹25 Lakhs to ₹1 Crore for innovative North Eastern enterprises.",
+    "benefits": "Venture equity capital investment up to ₹1 Crore + Incubation & market linkage across NE region.",
+    "max_project_cost": 10000000,
+    "max_loan_amount": 10000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 7,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 60,
+      "project_types": [
+        "Food Processing",
+        "Tourism",
+        "IT/Electronics",
+        "Handicrafts",
+        "Healthcare",
+        "Agri-logistics"
+      ],
+      "states": [
+        "Assam",
+        "Meghalaya",
+        "Manipur",
+        "Nagaland",
+        "Mizoram",
+        "Tripura",
+        "Arunachal Pradesh",
+        "Sikkim"
+      ],
+      "exclusions": "Ventures outside North East India"
+    },
+    "documents_required": [
+      "NE State Domicile / Business Proof",
+      "Detailed Business DPR",
+      "Company Financial Statements"
+    ],
+    "application_process": "Apply via nedfi.com/nevf portal.",
+    "official_url": "https://www.nedfi.com/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/nevf",
+    "helpdesk_contact": "0361-2229370"
+  },
+  {
+    "id": "cg-mmysy",
+    "scheme_name": "Mukhyamantri Yuva Swarozgar Yojana (Chhattisgarh)",
+    "short_name": "MMYSY-CG",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Dept of Industries, Govt of Chhattisgarh",
+    "level": "State",
+    "target_beneficiaries": "Educated unemployed youth in Chhattisgarh",
+    "description": "Credit-linked subsidy for manufacturing (up to ₹25L), service (up to ₹10L), and business (up to ₹2L) projects with interest subsidy and CGTMSE cover.",
+    "benefits": "Govt covers CGTMSE guarantee fee + interest subsidy. Extra 10% grant for SC/ST/Women/PwD.",
+    "max_project_cost": 2500000,
+    "max_loan_amount": 2250000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 9.0,
+    "repayment_years": 7,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 25,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "EWS",
+        "Women",
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 40,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Small Business"
+      ],
+      "states": [
+        "Chhattisgarh"
+      ],
+      "exclusions": "Non-residents of Chhattisgarh"
+    },
+    "documents_required": [
+      "CG Domicile",
+      "Caste Certificate",
+      "8th Pass Certificate",
+      "Aadhaar",
+      "Project Report"
+    ],
+    "application_process": "Apply via DIC or invest.cg.gov.in portal.",
+    "official_url": "https://invest.cg.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/mmysy-cg",
+    "helpdesk_contact": "0771-2511574"
+  },
+  {
+    "id": "cg-startup-seed",
+    "scheme_name": "Chhattisgarh Startup Seed Fund & Interest Subsidy",
+    "short_name": "CG-STARTUP",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Dept of IT, Govt of Chhattisgarh",
+    "level": "State",
+    "target_beneficiaries": "Recognized startups in Chhattisgarh for PoC and MVP development",
+    "description": "Up to ₹10L seed funding for PoC/MVP + up to 75% interest subsidy (max ₹50L) for 5 years on term/working capital loans + ₹50 Cr credit risk fund for collateral-free loans up to ₹1 Cr.",
+    "benefits": "₹10L Seed Fund + 75% Interest Subsidy (max ₹50L for 5 yrs) + Stamp duty exemption. Extra 10% for SC/ST/Women/PwD.",
+    "max_project_cost": 10000000,
+    "max_loan_amount": 10000000,
+    "interest_rate_min": 3.0,
+    "interest_rate_max": 6.0,
+    "repayment_years": 7,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 75,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women",
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tech Startup",
+        "IT",
+        "Agritech",
+        "Clean Tech",
+        "Manufacturing"
+      ],
+      "states": [
+        "Chhattisgarh"
+      ],
+      "exclusions": "Non-CG registered startups"
+    },
+    "documents_required": [
+      "DPIIT/CG Startup Recognition",
+      "Incorporation Certificate",
+      "Pitch Deck",
+      "Bank Details"
+    ],
+    "application_process": "Apply via Chhattisgarh Startup Portal.",
+    "official_url": "https://invest.cg.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/cg-startup",
+    "helpdesk_contact": "0771-2511574"
+  },
+  {
+    "id": "jh-mmrsy",
+    "scheme_name": "Mukhyamantri Rojgar Srijan Yojana (Jharkhand)",
+    "short_name": "MMRSY-JH",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "SC/ST/OBC Development Dept, Govt of Jharkhand",
+    "level": "State",
+    "target_beneficiaries": "Unemployed SC/ST/BC/Minority/PwD youth in Jharkhand",
+    "description": "Subsidized loans up to ₹25L with 40% state subsidy on loan amount. No margin money for loans up to ₹50,000.",
+    "benefits": "40% State Government Subsidy on loan. 10% beneficiary margin for loans > ₹50K. Zero margin for loans ≤ ₹50K.",
+    "max_project_cost": 2500000,
+    "max_loan_amount": 2500000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 8.0,
+    "repayment_years": 7,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 40,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "Minorities",
+        "PwD"
+      ],
+      "max_annual_income": 500000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 50,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Trading",
+        "Dairy",
+        "Poultry",
+        "Transport"
+      ],
+      "states": [
+        "Jharkhand"
+      ],
+      "exclusions": "Family income > ₹5L, non-residents of Jharkhand"
+    },
+    "documents_required": [
+      "Jharkhand Domicile",
+      "Caste Certificate",
+      "Income Certificate (<₹5L)",
+      "Aadhaar",
+      "Unemployment Declaration",
+      "Project DPR"
+    ],
+    "application_process": "Apply via Sankalp Portal or JSTCDC/JSMFDC district office.",
+    "official_url": "https://jstcdc.org.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/mmrsy-jh",
+    "helpdesk_contact": "0651-2490017"
+  },
+  {
+    "id": "hr-startup-seed",
+    "scheme_name": "Startup Haryana Seed Grant & Lease Subsidy",
+    "short_name": "STARTUP-HR",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Startup Haryana, Dept of IT, Govt of Haryana",
+    "level": "State",
+    "target_beneficiaries": "DPIIT-recognized startups with Haryana address",
+    "description": "Seed grants up to ₹10L + 30% lease rental reimbursement (45% for women-led, max ₹5L for 1 yr) + 100% patent filing reimbursement (up to ₹25L).",
+    "benefits": "₹10L Seed Grant + 30-45% Lease Rental Subsidy + Patent Reimbursement up to ₹25L.",
+    "max_project_cost": 2500000,
+    "max_loan_amount": 1000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tech Startup",
+        "IT",
+        "Agritech",
+        "Healthtech",
+        "Edtech",
+        "Clean Tech"
+      ],
+      "states": [
+        "Haryana"
+      ],
+      "exclusions": "Non-DPIIT recognized, non-Haryana address"
+    },
+    "documents_required": [
+      "DPIIT Recognition",
+      "Haryana Address Proof",
+      "Pitch Deck",
+      "Incorporation Certificate"
+    ],
+    "application_process": "Register on startupharyana.gov.in portal.",
+    "official_url": "https://startupharyana.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/startup-hr",
+    "helpdesk_contact": "0172-2590764"
+  },
+  {
+    "id": "hr-matrushakti",
+    "scheme_name": "Haryana Matrushakti Udyamita Yojana",
+    "short_name": "MATRUSHAKTI-HR",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "Haryana Women Development Corporation (HWDC)",
+    "level": "State",
+    "target_beneficiaries": "Women entrepreneurs in Haryana with family income < ₹5L",
+    "description": "7% interest subvention for 3 years on loans up to ₹5 Lakh for women entrepreneurs from low-income families.",
+    "benefits": "7% Interest Subvention for 3 years on loans up to ₹5L.",
+    "max_project_cost": 500000,
+    "max_loan_amount": 500000,
+    "interest_rate_min": 2.0,
+    "interest_rate_max": 4.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 7,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "EWS",
+        "Women"
+      ],
+      "max_annual_income": 500000,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Small Business",
+        "Service",
+        "Tailoring",
+        "Beauty Parlour",
+        "Food Processing",
+        "Retail"
+      ],
+      "states": [
+        "Haryana"
+      ],
+      "exclusions": "Family income > ₹5L, male applicants"
+    },
+    "documents_required": [
+      "Parivar Pehchan Patra (PPP)",
+      "Income Certificate",
+      "Aadhaar",
+      "Bank Account Details"
+    ],
+    "application_process": "Apply via Saral Haryana portal or HWDC office.",
+    "official_url": "https://hwdcl.org/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/matrushakti-hr",
+    "helpdesk_contact": "0172-2564006"
+  },
+  {
+    "id": "hr-hsfdc-sc",
+    "scheme_name": "Aatmanirbhar SC/BC Loan Scheme (Haryana HSFDC)",
+    "short_name": "HSFDC-HR",
+    "category": "Business Loan",
+    "sponsoring_agency": "Haryana Scheduled Castes Finance & Development Corporation (HSFDC)",
+    "level": "State",
+    "target_beneficiaries": "SC and BC individuals in Haryana for micro and small enterprises",
+    "description": "Low-cost credit from ₹15,000 to ₹3 Lakh at 2% annual interest rate for self-employment ventures.",
+    "benefits": "Loan ₹15K to ₹3L at 2% p.a. interest rate.",
+    "max_project_cost": 300000,
+    "max_loan_amount": 300000,
+    "interest_rate_min": 2.0,
+    "interest_rate_max": 2.0,
+    "repayment_years": 5,
+    "moratorium_months": 3,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "OBC"
+      ],
+      "max_annual_income": 300000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Small Business",
+        "Dairy",
+        "Tailoring",
+        "Auto Repair",
+        "Transport",
+        "Retail"
+      ],
+      "states": [
+        "Haryana"
+      ],
+      "exclusions": "Non-SC/BC, non-Haryana residents"
+    },
+    "documents_required": [
+      "Haryana Domicile",
+      "SC/BC Caste Certificate",
+      "Income Certificate",
+      "Aadhaar",
+      "Bank Passbook"
+    ],
+    "application_process": "Apply via Saral Haryana portal or HSFDC district office.",
+    "official_url": "https://haryanascbc.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/hsfdc-hr",
+    "helpdesk_contact": "0172-2564006"
+  },
+  {
+    "id": "uk-msy",
+    "scheme_name": "Mukhyamantri Swarozgar Yojana (Uttarakhand)",
+    "short_name": "MSY-UK",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Dept of Industries, Govt of Uttarakhand",
+    "level": "State",
+    "target_beneficiaries": "Unemployed youth in Uttarakhand for manufacturing, service, or business ventures",
+    "description": "Bank-linked loan scheme with 25%-40% state subsidy depending on district category and social category.",
+    "benefits": "Subsidy: 25% General, 30% Women, 35% SC/ST, 40% for backward hill districts.",
+    "max_project_cost": 2500000,
+    "max_loan_amount": 2000000,
+    "interest_rate_min": 7.0,
+    "interest_rate_max": 9.0,
+    "repayment_years": 7,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 40,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "EWS",
+        "Women",
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 45,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Small Business",
+        "Tourism",
+        "Horticulture"
+      ],
+      "states": [
+        "Uttarakhand"
+      ],
+      "exclusions": "Non-Uttarakhand residents"
+    },
+    "documents_required": [
+      "Uttarakhand Domicile",
+      "Aadhaar",
+      "Project Report",
+      "Caste Certificate",
+      "Bank Details"
+    ],
+    "application_process": "Apply via DIC office or msy.uk.gov.in portal.",
+    "official_url": "https://msy.uk.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/msy-uk",
+    "helpdesk_contact": "0135-2712051"
+  },
+  {
+    "id": "uk-ekal-mahila",
+    "scheme_name": "Mukhyamantri Ekal Mahila Swarozgar Yojana (Uttarakhand)",
+    "short_name": "EMSY-UK",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "Women Empowerment & Child Development Dept, Uttarakhand",
+    "level": "State",
+    "target_beneficiaries": "Single, widowed, abandoned, divorced women, acid attack survivors, and transgender persons in Uttarakhand",
+    "description": "Project assistance up to ₹2 Lakh with 75% government subsidy for establishing micro-enterprises.",
+    "benefits": "75% Government Subsidy (max ₹1.5L) on project cost up to ₹2L.",
+    "max_project_cost": 200000,
+    "max_loan_amount": 50000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 4.0,
+    "repayment_years": 3,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 75,
+    "beneficiary_share_percent": 5,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "EWS",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 60,
+      "project_types": [
+        "Tailoring",
+        "Dairy",
+        "Grocery",
+        "Beauty Parlour",
+        "Handicrafts",
+        "Food Processing"
+      ],
+      "states": [
+        "Uttarakhand"
+      ],
+      "exclusions": "Male applicants (except transgender)"
+    },
+    "documents_required": [
+      "Uttarakhand Domicile",
+      "Widow/Divorce/Abandonment Proof",
+      "Aadhaar",
+      "Bank Passbook"
+    ],
+    "application_process": "Apply via District Women Welfare Office.",
+    "official_url": "https://uk.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/emsy-uk",
+    "helpdesk_contact": "0135-2712051"
+  },
+  {
+    "id": "goa-startup-policy",
+    "scheme_name": "Goa Startup Policy Seed Grant & Incentives",
+    "short_name": "STARTUP-GOA",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Startup IT Promotion Cell (SITPC), Govt of Goa",
+    "level": "State",
+    "target_beneficiaries": "Innovative startups registered in Goa",
+    "description": "Seed capital grants up to ₹10L + Venture Capital Fund of Funds (up to ₹1 Cr equity) + 50% R&D reimbursement (up to ₹5L/yr) + salary reimbursement + lease rental support.",
+    "benefits": "₹10L Seed Grant + ₹1 Cr Equity via Fund of Funds + 50% R&D Reimbursement + Salary Support.",
+    "max_project_cost": 10000000,
+    "max_loan_amount": 1000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tech Startup",
+        "IT",
+        "Tourism Tech",
+        "Ocean Tech",
+        "Agritech"
+      ],
+      "states": [
+        "Goa"
+      ],
+      "exclusions": "Non-Goa registered"
+    },
+    "documents_required": [
+      "Goa Startup Registration",
+      "Incorporation Certificate",
+      "Pitch Deck"
+    ],
+    "application_process": "Apply via Goa Startup Portal or SITPC office.",
+    "official_url": "https://goaindustry.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/startup-goa",
+    "helpdesk_contact": "0832-2494200"
+  },
+  {
+    "id": "goa-25pct-subsidy",
+    "scheme_name": "Goa 25% Self-Employment Subsidy Scheme",
+    "short_name": "SELF-EMP-GOA",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Directorate of Industries, Trade & Commerce, Goa",
+    "level": "State",
+    "target_beneficiaries": "Individuals and firms in Goa with bank loans for approved self-employment activities",
+    "description": "25% subsidy on fixed capital investment (premises, plant, machinery, furniture) for bank-linked self-employment projects.",
+    "benefits": "25% Subsidy on Fixed Capital Investment.",
+    "max_project_cost": 2000000,
+    "max_loan_amount": 1500000,
+    "interest_rate_min": 7.0,
+    "interest_rate_max": 9.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 25,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "EWS",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 50,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Retail",
+        "Food Processing"
+      ],
+      "states": [
+        "Goa"
+      ],
+      "exclusions": "15+ years Goa residence required"
+    },
+    "documents_required": [
+      "Goa Residence Proof (15 yrs)",
+      "Bank Loan Sanction",
+      "Aadhaar",
+      "Project Report"
+    ],
+    "application_process": "Apply via goaonline.gov.in or EDC Panaji office.",
+    "official_url": "https://goaonline.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/self-emp-goa",
+    "helpdesk_contact": "0832-2437810"
+  },
+  {
+    "id": "delhi-dsy",
+    "scheme_name": "Dilli Swarojgar Yojna (DSY)",
+    "short_name": "DSY-DELHI",
+    "category": "Business Loan",
+    "sponsoring_agency": "Delhi SC/ST/OBC/Minorities & Handicapped Finance Corp (DSFDC)",
+    "level": "State",
+    "target_beneficiaries": "SC/ST/OBC/Minority and PwD individuals in Delhi for self-employment",
+    "description": "Need-based loans up to ₹5 Lakh at 6% interest for income-generating self-employment activities.",
+    "benefits": "Loan up to ₹5L at 6% interest p.a. Low processing charges.",
+    "max_project_cost": 500000,
+    "max_loan_amount": 500000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 6.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "Minorities",
+        "PwD"
+      ],
+      "max_annual_income": 300000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Small Business",
+        "Retail",
+        "Service",
+        "Dairy",
+        "Auto Repair",
+        "Transport"
+      ],
+      "states": [
+        "Delhi"
+      ],
+      "exclusions": "Non-Delhi residents"
+    },
+    "documents_required": [
+      "Delhi Domicile",
+      "Caste/Category Certificate",
+      "Income Certificate",
+      "Aadhaar",
+      "Bank Passbook"
+    ],
+    "application_process": "Apply through DSFDC district office or dsfdc.delhi.gov.in.",
+    "official_url": "http://dsfdc.delhi.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/dsy-delhi",
+    "helpdesk_contact": "011-23379511"
+  },
+  {
+    "id": "delhi-swarnima-women",
+    "scheme_name": "New Swarnima Scheme for Women (Delhi)",
+    "short_name": "SWARNIMA-DELHI",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "DSFDC / NBCFDC, Delhi",
+    "level": "State",
+    "target_beneficiaries": "Women entrepreneurs from backward classes in Delhi",
+    "description": "Term loans up to ₹2 Lakh at concessional 5% p.a. interest rate for women starting small businesses. No beneficiary contribution for projects up to ₹2L.",
+    "benefits": "₹2L Loan at 5% interest. Zero beneficiary contribution.",
+    "max_project_cost": 200000,
+    "max_loan_amount": 200000,
+    "interest_rate_min": 5.0,
+    "interest_rate_max": 5.0,
+    "repayment_years": 3,
+    "moratorium_months": 3,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "Minorities"
+      ],
+      "max_annual_income": 300000,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tailoring",
+        "Beauty Parlour",
+        "Grocery",
+        "Handicrafts",
+        "Food Stall",
+        "Small Shop"
+      ],
+      "states": [
+        "Delhi"
+      ],
+      "exclusions": "Male applicants, non-Delhi residents"
+    },
+    "documents_required": [
+      "Delhi Domicile",
+      "Category Certificate",
+      "Income Certificate",
+      "Aadhaar",
+      "Business Plan"
+    ],
+    "application_process": "Apply through DSFDC office.",
+    "official_url": "http://dsfdc.delhi.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/swarnima-delhi",
+    "helpdesk_contact": "011-23379511"
+  },
+  {
+    "id": "tn-tanseed",
+    "scheme_name": "TANSEED - Tamil Nadu Startup Seed Grant Fund",
+    "short_name": "TANSEED-TN",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "StartupTN, Govt of Tamil Nadu",
+    "level": "State",
+    "target_beneficiaries": "DPIIT-recognized early-stage startups registered in Tamil Nadu with PoC/MVP",
+    "description": "Equity-linked seed grant up to ₹15L (Green Tech/Women/Rural Impact) and up to ₹10L (other sectors) + 1-year accelerator with mentorship.",
+    "benefits": "₹10-15L Seed Grant + 1-year Accelerator Program. 3% support stake to StartupTN.",
+    "max_project_cost": 1500000,
+    "max_loan_amount": 1500000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tech Startup",
+        "Green Tech",
+        "Rural Impact",
+        "Agritech",
+        "Healthtech",
+        "Edtech"
+      ],
+      "states": [
+        "Tamil Nadu"
+      ],
+      "exclusions": "Subsidiaries of foreign firms, non-TN registered"
+    },
+    "documents_required": [
+      "DPIIT Recognition",
+      "TN Incorporation",
+      "Pitch Deck",
+      "PoC/MVP Demo"
+    ],
+    "application_process": "Apply during TANSEED cohort calls on startuptn.in portal.",
+    "official_url": "https://startuptn.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/tanseed-tn",
+    "helpdesk_contact": "044-22501542"
+  },
+  {
+    "id": "mh-maha-fund",
+    "scheme_name": "Maha-Fund Startup Assistance (Maharashtra)",
+    "short_name": "MAHAFUND-MH",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Maharashtra State Innovation Society (MSInS)",
+    "level": "State",
+    "target_beneficiaries": "Early-stage entrepreneurs and startups in Maharashtra",
+    "description": "Dedicated ₹500 Cr fund providing loan assistance of ₹5L-₹10L per startup. Pilot work orders up to ₹25L through Maharashtra Startup Week.",
+    "benefits": "₹5-10L Startup Loan Assistance + ₹25L Pilot Work Orders + IPR Reimbursement.",
+    "max_project_cost": 2500000,
+    "max_loan_amount": 1000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 6.0,
+    "repayment_years": 5,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tech Startup",
+        "IT",
+        "Manufacturing",
+        "Agritech",
+        "Fintech",
+        "Healthtech"
+      ],
+      "states": [
+        "Maharashtra"
+      ],
+      "exclusions": "Non-Maharashtra registered"
+    },
+    "documents_required": [
+      "Maharashtra Incorporation",
+      "DPIIT Recognition",
+      "Pitch Deck",
+      "Business Plan"
+    ],
+    "application_process": "Register on msins.in portal and apply during funding calls.",
+    "official_url": "https://msins.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/mahafund-mh",
+    "helpdesk_contact": "022-22631104"
+  },
+  {
+    "id": "guj-startup-scheme",
+    "scheme_name": "Startup Gujarat Seed Support & Sustenance Allowance",
+    "short_name": "STARTUP-GUJ",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Dept of Science & Technology, Govt of Gujarat",
+    "level": "State",
+    "target_beneficiaries": "Recognized startups in Gujarat",
+    "description": "₹20K/month sustenance allowance for 1 year (₹25K/month for women co-founders) + up to ₹30L seed support for prototype, market research, testing, and marketing.",
+    "benefits": "₹20-25K/month Sustenance Allowance + ₹30L Seed Support + Incubation access.",
+    "max_project_cost": 3000000,
+    "max_loan_amount": 3000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tech Startup",
+        "IT",
+        "Hardware",
+        "Clean Tech",
+        "Biotech",
+        "Agritech"
+      ],
+      "states": [
+        "Gujarat"
+      ],
+      "exclusions": "Non-Gujarat registered"
+    },
+    "documents_required": [
+      "Gujarat Startup Registration",
+      "Incorporation Certificate",
+      "Pitch Deck",
+      "Bank Details"
+    ],
+    "application_process": "Apply via Startup Gujarat portal.",
+    "official_url": "https://startupgujarat.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/startup-guj",
+    "helpdesk_contact": "079-23252621"
+  },
+  {
+    "id": "wb-banglashree",
+    "scheme_name": "Banglashree MSME Incentive Scheme (West Bengal)",
+    "short_name": "BANGLASHREE-WB",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Dept of MSME & Textiles, Govt of West Bengal",
+    "level": "State",
+    "target_beneficiaries": "New micro, small and medium manufacturing enterprises in West Bengal",
+    "description": "Comprehensive fiscal incentive scheme providing State Capital Investment Subsidy, interest subsidy on term loans, stamp duty & registration fee reimbursement, and quality certification subsidies for MSMEs.",
+    "benefits": "Capital Investment Subsidy (CIS) for Micro/Small units + Interest subsidy on term loans + Stamp duty reimbursement + ISO/BIS certification costs covered.",
+    "max_project_cost": 50000000,
+    "max_loan_amount": 35000000,
+    "interest_rate_min": 7.0,
+    "interest_rate_max": 9.5,
+    "repayment_years": 7,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 25,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "EWS",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 60,
+      "project_types": [
+        "Manufacturing",
+        "Textile",
+        "Food Processing",
+        "Plastics",
+        "Engineering",
+        "Chemicals"
+      ],
+      "states": [
+        "West Bengal"
+      ],
+      "exclusions": "Service/trading sector units, non-WB registered"
+    },
+    "documents_required": [
+      "WB Udyam Registration",
+      "Commercial Production Proof",
+      "Plant & Machinery Invoice",
+      "Bank Loan Sanction",
+      "Aadhaar/PAN"
+    ],
+    "application_process": "Apply via Shilpasathi Portal or wbmsme.gov.in.",
+    "official_url": "https://wbmsme.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/banglashree-wb",
+    "helpdesk_contact": "033-22143627"
+  },
+  {
+    "id": "wb-gatidhara",
+    "scheme_name": "Gatidhara Self-Employment Scheme (West Bengal SC/ST)",
+    "short_name": "GATIDHARA-WB",
+    "category": "Business Loan",
+    "sponsoring_agency": "WB SC ST & OBC Development & Finance Corporation",
+    "level": "State",
+    "target_beneficiaries": "SC/ST/OBC individuals in West Bengal for self-employment ventures",
+    "description": "Concessional self-employment loans with interest subvention for SC/ST/OBC entrepreneurs under the poverty line via NSFDC/NSTFDC channeling.",
+    "benefits": "Concessional loans with government interest subvention. Channeled via NSFDC/NSTFDC.",
+    "max_project_cost": 1000000,
+    "max_loan_amount": 900000,
+    "interest_rate_min": 4.0,
+    "interest_rate_max": 6.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 90,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC"
+      ],
+      "max_annual_income": 300000,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Small Business",
+        "Transport",
+        "Dairy",
+        "Poultry",
+        "Retail",
+        "Service"
+      ],
+      "states": [
+        "West Bengal"
+      ],
+      "exclusions": "Non-SC/ST/OBC, income > ₹3L"
+    },
+    "documents_required": [
+      "WB Domicile",
+      "Caste Certificate",
+      "Income Certificate",
+      "Aadhaar",
+      "Project Proposal"
+    ],
+    "application_process": "Apply via WBSCSTFDC district office or wbbcdev.gov.in.",
+    "official_url": "https://wbbcdev.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/gatidhara-wb",
+    "helpdesk_contact": "033-22143627"
+  },
+  {
+    "id": "ap-startup-seed",
+    "scheme_name": "AP Innovation & Startup Policy 4.0 Seed Grant",
+    "short_name": "AP-STARTUP",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Andhra Pradesh Innovation Society (APIS)",
+    "level": "State",
+    "target_beneficiaries": "Early-stage innovative startups in Andhra Pradesh",
+    "description": "Tiered seed funding: ₹2L for Prototype/PoC, ₹15L for MVP/Scaling, ₹20L for Women/SC/ST/BC inclusive startups. Ratan Tata Innovation Hub provides up to ₹30L incubation funding.",
+    "benefits": "₹2-20L Seed Grants + ₹30L Incubation Funding via RTIH + Mentorship.",
+    "max_project_cost": 3000000,
+    "max_loan_amount": 2000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women",
+        "Minorities"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tech Startup",
+        "Agritech",
+        "Fintech",
+        "Healthtech",
+        "Edtech",
+        "Manufacturing"
+      ],
+      "states": [
+        "Andhra Pradesh"
+      ],
+      "exclusions": "Non-AP registered startups"
+    },
+    "documents_required": [
+      "DPIIT/AP Startup Recognition",
+      "Incorporation Certificate",
+      "Pitch Deck",
+      "PoC/MVP Demo"
+    ],
+    "application_process": "Apply via apinnovationsociety.com or RTIH spoke centers.",
+    "official_url": "https://apinnovationsociety.com/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/ap-startup",
+    "helpdesk_contact": "0866-2456789"
+  },
+  {
+    "id": "ap-msme-cis",
+    "scheme_name": "AP MSME Capital Investment Subsidy (Policy 4.0)",
+    "short_name": "AP-MSME-CIS",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "MSME Department, Govt of Andhra Pradesh",
+    "level": "State",
+    "target_beneficiaries": "New micro, small and medium manufacturing/service enterprises in AP",
+    "description": "25% capital subsidy for General category; enhanced 45% for Women/SC/ST/BC/Minorities/PwD. Additional 75% land cost rebate (max ₹25L) for SC/ST. 100% SGST reimbursement for 5 years.",
+    "benefits": "25-45% Capital Subsidy + 75% Land Rebate for SC/ST + 100% SGST Reimbursement + 7-10% Interest Subsidy.",
+    "max_project_cost": 100000000,
+    "max_loan_amount": 70000000,
+    "interest_rate_min": 5.0,
+    "interest_rate_max": 8.0,
+    "repayment_years": 10,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 45,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "SC",
+        "ST",
+        "OBC",
+        "General",
+        "EWS",
+        "Women",
+        "Minorities",
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 60,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Food Processing",
+        "Pharma",
+        "Textiles",
+        "Auto Components"
+      ],
+      "states": [
+        "Andhra Pradesh"
+      ],
+      "exclusions": "Purely trading/retail units"
+    },
+    "documents_required": [
+      "Udyam Registration",
+      "AP Business Address Proof",
+      "Caste/Gender Certificate",
+      "CA Certified Investment Proof",
+      "Bank Loan Sanction"
+    ],
+    "application_process": "Apply via apmsmeone.ap.gov.in portal.",
+    "official_url": "https://apmsmeone.ap.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/ap-msme-cis",
+    "helpdesk_contact": "0866-2456789"
+  },
+  {
+    "id": "ts-tfund",
+    "scheme_name": "T-Fund Startup Investment (Telangana)",
+    "short_name": "T-FUND-TS",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "T-Hub Foundation, Govt of Telangana",
+    "level": "State",
+    "target_beneficiaries": "Early-stage tech startups in Telangana",
+    "description": "Co-investment fund providing ₹25L to ₹1 Cr for product development and scaling. T-Spark seed grants for prototype building and R&D.",
+    "benefits": "₹25L-₹1 Cr Investment + Incubation + Mentorship via T-Hub + Performance grants (5% turnover up to ₹10L).",
+    "max_project_cost": 10000000,
+    "max_loan_amount": 10000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tech Startup",
+        "IT/Software",
+        "AI/ML",
+        "Fintech",
+        "Healthtech",
+        "Deeptech"
+      ],
+      "states": [
+        "Telangana"
+      ],
+      "exclusions": "Non-Telangana registered"
+    },
+    "documents_required": [
+      "TS Startup Registration",
+      "Incorporation Certificate",
+      "Pitch Deck",
+      "Financial Statements"
+    ],
+    "application_process": "Apply via t-hub.co portal or T-Hub Hyderabad office.",
+    "official_url": "https://t-hub.co/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/tfund-ts",
+    "helpdesk_contact": "040-66304567"
+  },
+  {
+    "id": "ts-wehub",
+    "scheme_name": "WE-Hub Women Entrepreneurship Support (Telangana)",
+    "short_name": "WE-HUB-TS",
+    "category": "Women Empowerment",
+    "sponsoring_agency": "WE-Hub, Govt of Telangana",
+    "level": "State",
+    "target_beneficiaries": "Women entrepreneurs and women-led startups in Telangana",
+    "description": "India's first state-led incubator exclusively for women. Provides mentorship, market access, government scheme navigation, and connects women founders to investors and grants.",
+    "benefits": "Incubation + Mentorship + Market Access + Investor Connect + Government Scheme Navigation for Women.",
+    "max_project_cost": 5000000,
+    "max_loan_amount": 2500000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 6.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women",
+        "Minorities"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tech Startup",
+        "Social Enterprise",
+        "Handicrafts",
+        "Food Tech",
+        "Fashion",
+        "Service"
+      ],
+      "states": [
+        "Telangana"
+      ],
+      "exclusions": "Male-only founded ventures"
+    },
+    "documents_required": [
+      "Incorporation Certificate (women founder)",
+      "Pitch Deck",
+      "Aadhaar",
+      "Business Plan"
+    ],
+    "application_process": "Apply via we-hub.in portal.",
+    "official_url": "https://we-hub.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/wehub-ts",
+    "helpdesk_contact": "040-29801234"
+  },
+  {
+    "id": "pb-startup-seed",
+    "scheme_name": "Punjab Startup Seed Grant & Interest Subsidy",
+    "short_name": "STARTUP-PB",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Dept of Industries & Commerce, Govt of Punjab",
+    "level": "State",
+    "target_beneficiaries": "DPIIT-recognized startups in Punjab",
+    "description": "Seed grants up to ₹5L + 25% lease rental reimbursement (max ₹3L/yr for 1 yr) + 8% interest subsidy (max ₹5L/yr for 5 yrs) on bank loans.",
+    "benefits": "₹5L Seed Grant + 25% Lease Rental Subsidy + 8% Interest Subsidy for 5 years.",
+    "max_project_cost": 2000000,
+    "max_loan_amount": 500000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 4.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 55,
+      "project_types": [
+        "Tech Startup",
+        "IT",
+        "Agritech",
+        "Manufacturing",
+        "Edtech",
+        "Clean Tech"
+      ],
+      "states": [
+        "Punjab"
+      ],
+      "exclusions": "Non-Punjab registered"
+    },
+    "documents_required": [
+      "DPIIT Recognition",
+      "Punjab Address Proof",
+      "Incorporation Certificate",
+      "Pitch Deck"
+    ],
+    "application_process": "Apply via invest.punjab.gov.in (Business First Portal).",
+    "official_url": "https://invest.punjab.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/startup-pb",
+    "helpdesk_contact": "0172-2702612"
+  },
+  {
+    "id": "meghalaya-prime",
+    "scheme_name": "PRIME Hub Meghalaya (Promotion & Incubation of Market-driven Enterprises)",
+    "short_name": "PRIME-ML",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Meghalaya Basin Development Authority / Govt of Meghalaya",
+    "level": "State",
+    "target_beneficiaries": "Entrepreneurs and startups in Meghalaya across ideation to scaling stages",
+    "description": "Comprehensive enterprise incubation: Ideation grants, interest-free loans, mentorship, and market linkage. Includes CM's ELEVATE program and SEED scheme for small empowerment.",
+    "benefits": "Incubation + Interest-free Loans + Mentorship + Market Linkage + SEED grants.",
+    "max_project_cost": 2500000,
+    "max_loan_amount": 1500000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 5,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 50,
+      "project_types": [
+        "Agritech",
+        "Food Processing",
+        "Tourism",
+        "Handicrafts",
+        "IT",
+        "Service"
+      ],
+      "states": [
+        "Meghalaya"
+      ],
+      "exclusions": "Non-Meghalaya ventures"
+    },
+    "documents_required": [
+      "Meghalaya Domicile",
+      "Business Proposal",
+      "Aadhaar",
+      "Bank Details"
+    ],
+    "application_process": "Apply via primemeghalaya.com portal.",
+    "official_url": "https://primemeghalaya.com/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/prime-ml",
+    "helpdesk_contact": "0364-2226066"
+  },
+  {
+    "id": "nagaland-startup",
+    "scheme_name": "Nagaland Startup Incentives & Seed Grant",
+    "short_name": "STARTUP-NL",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Dept of IT & Communication, Govt of Nagaland",
+    "level": "State",
+    "target_beneficiaries": "Recognized startups in Nagaland",
+    "description": "Seed grants, GST reimbursement, digital upgradation subsidies, and power subsidies for Nagaland-registered innovative startups.",
+    "benefits": "Seed Grants + GST Reimbursement + Digital Upgradation Subsidy + Power Subsidy.",
+    "max_project_cost": 1000000,
+    "max_loan_amount": 500000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 50,
+      "project_types": [
+        "Tech Startup",
+        "IT",
+        "Agritech",
+        "Handicrafts",
+        "Tourism",
+        "Food Processing"
+      ],
+      "states": [
+        "Nagaland"
+      ],
+      "exclusions": "Non-Nagaland registered"
+    },
+    "documents_required": [
+      "Nagaland Startup Registration",
+      "Incorporation Certificate",
+      "Pitch Deck"
+    ],
+    "application_process": "Apply via startup.nagaland.gov.in.",
+    "official_url": "https://startup.nagaland.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/startup-nl",
+    "helpdesk_contact": "0370-2270568"
+  },
+  {
+    "id": "sikkim-syss",
+    "scheme_name": "Sikkim Skilled Youth Startup Scheme",
+    "short_name": "SYSS-SK",
+    "category": "Capital Subsidy",
+    "sponsoring_agency": "Commerce & Industries Dept, Govt of Sikkim",
+    "level": "State",
+    "target_beneficiaries": "Educated unemployed youth in Sikkim setting up enterprises",
+    "description": "Financial subsidy assistance for loans taken by skilled youth to establish new enterprises in manufacturing, service, and agriculture-allied sectors.",
+    "benefits": "Government subsidy on bank loans + Skill training support.",
+    "max_project_cost": 1000000,
+    "max_loan_amount": 800000,
+    "interest_rate_min": 6.0,
+    "interest_rate_max": 8.0,
+    "repayment_years": 5,
+    "moratorium_months": 6,
+    "nsfdc_share_percent": 25,
+    "beneficiary_share_percent": 10,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 45,
+      "project_types": [
+        "Manufacturing",
+        "Service",
+        "Tourism",
+        "Handicrafts",
+        "Agriculture-Allied"
+      ],
+      "states": [
+        "Sikkim"
+      ],
+      "exclusions": "Non-Sikkim residents"
+    },
+    "documents_required": [
+      "Sikkim Subject Certificate",
+      "Skill Training Certificate",
+      "Aadhaar",
+      "Project DPR",
+      "Bank Details"
+    ],
+    "application_process": "Apply via District Industries Centre, Sikkim.",
+    "official_url": "https://sikkim.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/syss-sk",
+    "helpdesk_contact": "03592-202218"
+  },
+  {
+    "id": "tripura-startup",
+    "scheme_name": "Tripura Startup Policy & Facilitation",
+    "short_name": "STARTUP-TR",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Dept of IT, Govt of Tripura",
+    "level": "State",
+    "target_beneficiaries": "Innovative startups registered in Tripura",
+    "description": "Sector-agnostic startup policy providing facilitation, seed support, and incubation for innovative products and processes. Aims to make Tripura a top startup destination by 2028.",
+    "benefits": "Seed Support + Incubation + Market Linkage + Government Facilitation.",
+    "max_project_cost": 1000000,
+    "max_loan_amount": 500000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 50,
+      "project_types": [
+        "Tech Startup",
+        "IT",
+        "Agritech",
+        "Bamboo Products",
+        "Handicrafts",
+        "Tourism"
+      ],
+      "states": [
+        "Tripura"
+      ],
+      "exclusions": "Non-Tripura registered"
+    },
+    "documents_required": [
+      "Tripura Startup Registration",
+      "Incorporation Certificate",
+      "Pitch Deck"
+    ],
+    "application_process": "Apply via startup.tripura.gov.in portal.",
+    "official_url": "https://startup.tripura.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/startup-tr",
+    "helpdesk_contact": "0381-2326789"
+  },
+  {
+    "id": "manipur-startup",
+    "scheme_name": "Startup Manipur Scheme",
+    "short_name": "STARTUP-MN",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Dept of IT, Govt of Manipur",
+    "level": "State",
+    "target_beneficiaries": "Innovative startups registered in Manipur",
+    "description": "Provides financial and operational support to turn innovative ideas into opportunities. Focuses on fostering entrepreneurial culture in Manipur.",
+    "benefits": "Financial Support + Operational Assistance + Mentorship + Market Access.",
+    "max_project_cost": 1000000,
+    "max_loan_amount": 500000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 50,
+      "project_types": [
+        "Tech Startup",
+        "Handloom",
+        "Handicrafts",
+        "Food Processing",
+        "Tourism",
+        "IT"
+      ],
+      "states": [
+        "Manipur"
+      ],
+      "exclusions": "Non-Manipur registered"
+    },
+    "documents_required": [
+      "Manipur Startup Registration",
+      "Incorporation Certificate",
+      "Pitch Deck"
+    ],
+    "application_process": "Apply via Startup Manipur portal.",
+    "official_url": "https://manipur.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/startup-mn",
+    "helpdesk_contact": "0385-2451789"
+  },
+  {
+    "id": "mizoram-startup",
+    "scheme_name": "Mizoram Entrepreneurship & Startup Policy",
+    "short_name": "STARTUP-MZ",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Entrepreneurship Development Centre, Govt of Mizoram",
+    "level": "State",
+    "target_beneficiaries": "Entrepreneurs and startups in Mizoram",
+    "description": "Focuses on awareness, capacity building, and outreach across districts. Provides seed support and incubation for innovative ventures.",
+    "benefits": "Seed Support + Capacity Building + District Outreach + Incubation.",
+    "max_project_cost": 1000000,
+    "max_loan_amount": 500000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 50,
+      "project_types": [
+        "Agritech",
+        "Bamboo Products",
+        "Tourism",
+        "IT",
+        "Handicrafts",
+        "Food Processing"
+      ],
+      "states": [
+        "Mizoram"
+      ],
+      "exclusions": "Non-Mizoram registered"
+    },
+    "documents_required": [
+      "Mizoram Domicile",
+      "Business Proposal",
+      "Aadhaar"
+    ],
+    "application_process": "Apply via Entrepreneurship Development Centre, Aizawl.",
+    "official_url": "https://mizoram.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/startup-mz",
+    "helpdesk_contact": "0389-2322789"
+  },
+  {
+    "id": "arunachal-apedp",
+    "scheme_name": "Arunachal Pradesh Entrepreneurship Development Programme (APEDP)",
+    "short_name": "APEDP-AR",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Dept of Industries, Govt of Arunachal Pradesh",
+    "level": "State",
+    "target_beneficiaries": "Aspiring entrepreneurs and startups in Arunachal Pradesh",
+    "description": "Seed funding, incubation support, and financial awards to top ventures. Recent APEDP 5.0 offered substantial grants for innovative ideas.",
+    "benefits": "Seed Funding + Incubation + Financial Awards for Top Ventures + Mentorship.",
+    "max_project_cost": 1000000,
+    "max_loan_amount": 500000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 0,
+    "moratorium_months": 0,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 50,
+      "project_types": [
+        "Agritech",
+        "Tourism",
+        "Handicrafts",
+        "IT",
+        "Food Processing",
+        "Bamboo/Cane"
+      ],
+      "states": [
+        "Arunachal Pradesh"
+      ],
+      "exclusions": "Non-Arunachal residents"
+    },
+    "documents_required": [
+      "Arunachal PRC/APST Certificate",
+      "Business Proposal",
+      "Aadhaar"
+    ],
+    "application_process": "Apply during APEDP cohort calls via state portal.",
+    "official_url": "https://arunachal.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/apedp-ar",
+    "helpdesk_contact": "0360-2212345"
+  },
+  {
+    "id": "bihar-startup-seed",
+    "scheme_name": "Bihar Startup Policy Seed Grant & Interest-Free Loan",
+    "short_name": "STARTUP-BR",
+    "category": "Startup Seed Grant",
+    "sponsoring_agency": "Dept of Industries, Govt of Bihar",
+    "level": "State",
+    "target_beneficiaries": "Recognized startups in Bihar",
+    "description": "Interest-free loan of up to ₹10L for 10 years + ₹3L training grant. Additional 5% incentive for Women/SC/ST, 15% for PwD entrepreneurs.",
+    "benefits": "₹10L Interest-Free Loan for 10 yrs + ₹3L Training Grant + 5% extra for Women/SC/ST + 15% extra for PwD.",
+    "max_project_cost": 1000000,
+    "max_loan_amount": 1000000,
+    "interest_rate_min": 0.0,
+    "interest_rate_max": 0.0,
+    "repayment_years": 10,
+    "moratorium_months": 12,
+    "nsfdc_share_percent": 100,
+    "beneficiary_share_percent": 0,
+    "eligibility_criteria": {
+      "social_category": [
+        "General",
+        "EWS",
+        "SC",
+        "ST",
+        "OBC",
+        "Women",
+        "PwD"
+      ],
+      "max_annual_income": 0,
+      "gender": [
+        "Male",
+        "Female"
+      ],
+      "min_age": 18,
+      "max_age": 50,
+      "project_types": [
+        "Tech Startup",
+        "IT",
+        "Agritech",
+        "Food Tech",
+        "Edtech",
+        "Manufacturing"
+      ],
+      "states": [
+        "Bihar"
+      ],
+      "exclusions": "Non-Bihar registered startups"
+    },
+    "documents_required": [
+      "Bihar Startup Recognition",
+      "DPIIT Certificate",
+      "Incorporation Certificate",
+      "Pitch Deck"
+    ],
+    "application_process": "Apply via startup.bihar.gov.in portal.",
+    "official_url": "https://startup.bihar.gov.in/",
+    "myscheme_url": "https://www.myscheme.gov.in/schemes/startup-br",
+    "helpdesk_contact": "1800-345-6214"
+  }
+]
