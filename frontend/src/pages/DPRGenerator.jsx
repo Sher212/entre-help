@@ -49,9 +49,17 @@ export default function DPRGenerator() {
 
   return (
     <div className="page-container animate-fade-in">
-      <div className="page-header" style={{ marginBottom: "20px" }}>
-        <h1 className="page-title"><FileText size={24} style={{ marginRight: '8px' }} /> DPR Generator</h1>
-        <p className="page-subtitle">Instantly generate a Bankable Detailed Project Report (DPR) for loan applications</p>
+      {/* Header */}
+      <div style={{ marginBottom: "20px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
+          <span className="badge" style={{ background: "#dbeafe", color: "#2563eb", border: "1px solid #93c5fd" }}>Financial Planning</span>
+        </div>
+        <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
+          Bankable DPR Generator
+        </h1>
+        <p style={{ fontSize: "13px", color: "#64748b", marginTop: "2px" }}>
+          Generate a detailed project report to apply for bank loans and subsidies
+        </p>
       </div>
 
       {!generated ? (

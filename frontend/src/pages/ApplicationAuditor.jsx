@@ -60,9 +60,17 @@ export default function ApplicationAuditor() {
 
   return (
     <div className="page-container animate-fade-in">
-      <div className="page-header" style={{ marginBottom: "24px" }}>
-        <h1 className="page-title"><ClipboardCheck size={24} style={{ marginRight: '8px' }} /> Application Readiness Auditor</h1>
-        <p className="page-subtitle">Verify your documents before applying to prevent rejection</p>
+      {/* Header */}
+      <div style={{ marginBottom: "20px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
+          <span className="badge" style={{ background: "#dbeafe", color: "#2563eb", border: "1px solid #93c5fd" }}>Compliance</span>
+        </div>
+        <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
+          Application Readiness Auditor
+        </h1>
+        <p style={{ fontSize: "13px", color: "#64748b", marginTop: "2px" }}>
+          Verify your documents before applying to prevent rejection
+        </p>
       </div>
 
       <div style={{ backgroundColor: '#ffffff', padding: '24px', borderRadius: '12px', border: '1px solid #e5e7eb', marginBottom: '24px', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)' }}>

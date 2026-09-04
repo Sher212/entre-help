@@ -64,9 +64,17 @@ export default function SchemeCompare() {
 
   return (
     <div className="page-container animate-fade-in">
-      <div className="page-header" style={{ marginBottom: "24px" }}>
-        <h1 className="page-title"><Scale size={24} style={{ marginRight: '8px' }} /> Scheme Comparison</h1>
-        <p className="page-subtitle">Compare schemes side-by-side to find the best match for your business</p>
+      {/* Header */}
+      <div style={{ marginBottom: "20px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
+          <span className="badge" style={{ background: "#dbeafe", color: "#2563eb", border: "1px solid #93c5fd" }}>Decision Tool</span>
+        </div>
+        <h1 style={{ fontSize: "24px", fontWeight: 800, color: "#0f172a", letterSpacing: "-0.02em", margin: 0 }}>
+          Scheme Comparison
+        </h1>
+        <p style={{ fontSize: "13px", color: "#64748b", marginTop: "2px" }}>
+          Compare schemes side-by-side to find the best match for your business
+        </p>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '24px' }}>
