@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FileText, Download, TrendingUp, Briefcase, Printer, CheckCircle } from 'lucide-react';
+import html2pdf from 'html2pdf.js';
 
 export default function DPRGenerator() {
   const [formData, setFormData] = useState({
@@ -29,6 +30,19 @@ export default function DPRGenerator() {
 
   const generateDPR = () => {
     setGenerated(true);
+  };
+
+  const handleExportPDF = () => {
+    const element = document.getElementById('dpr-report-content');
+    const opt = {
+      margin:       0.5,
+      filename:     `${formData.businessName.replace(/\s+/g, '_')}_DPR.pdf`,
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2 },
+      jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+
+    html2pdf().set(opt).from(element).save();
   };
 
   const promoterContribution = (formData.projectCost * formData.promoterContributionPct) / 100;
@@ -117,28 +131,28 @@ export default function DPRGenerator() {
           </button>
         </div>
       ) : (
-        <div style={{ backgroundColor: '#ffffff', color: '#1e293b', padding: '40px', borderRadius: '12px', border: '1px solid #e2e8f0', maxWidth: '800px', margin: '0 auto', boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', borderBottom: '2px solid #e2e8f0', paddingBottom: '20px', marginBottom: '30px' }}>
-            <div>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginBottom: '16px' }} className="dpr-no-print">
+            <button style={{ background: '#f1f5f9', border: '1px solid #cbd5e1', padding: '8px 16px', borderRadius: '6px', color: '#475569', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: '600' }} onClick={() => window.print()}>
+              <Printer size={16} /> Print
+            </button>
+            <button style={{ background: '#10b981', border: 'none', padding: '8px 16px', borderRadius: '6px', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: '600' }} onClick={handleExportPDF}>
+              <Download size={16} /> Export PDF
+            </button>
+            <button style={{ background: '#334155', border: 'none', padding: '8px 16px', borderRadius: '6px', color: '#fff', cursor: 'pointer', fontWeight: '600' }} onClick={() => setGenerated(false)}>
+              Edit
+            </button>
+          </div>
+
+          <div id="dpr-report-content" style={{ backgroundColor: '#ffffff', color: '#1e293b', padding: '40px', borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 10px 25px rgba(0,0,0,0.1)' }}>
+            <div style={{ borderBottom: '2px solid #e2e8f0', paddingBottom: '20px', marginBottom: '30px' }}>
               <h1 style={{ fontSize: '28px', fontWeight: '800', color: '#0f172a', margin: 0 }}>DETAILED PROJECT REPORT</h1>
               <p style={{ fontSize: '16px', color: '#64748b', marginTop: '4px' }}>Bankable DPR for Loan Processing</p>
             </div>
-            <div style={{ display: 'flex', gap: '10px' }}>
-              <button style={{ background: '#f1f5f9', border: '1px solid #cbd5e1', padding: '8px 16px', borderRadius: '6px', color: '#475569', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: '600' }} onClick={() => window.print()}>
-                <Printer size={16} /> Print
-              </button>
-              <button style={{ background: '#10b981', border: 'none', padding: '8px 16px', borderRadius: '6px', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: '600' }} onClick={() => window.print()}>
-                <Download size={16} /> Export PDF
-              </button>
-              <button style={{ background: '#334155', border: 'none', padding: '8px 16px', borderRadius: '6px', color: '#fff', cursor: 'pointer', fontWeight: '600' }} onClick={() => setGenerated(false)}>
-                Edit
-              </button>
-            </div>
-          </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', marginBottom: '30px' }}>
-            <div>
-              <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#334155', borderBottom: '1px solid #e2e8f0', paddingBottom: '8px', marginBottom: '12px' }}>1. Project Profile</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', marginBottom: '30px' }}>
+              <div>
+                <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#334155', borderBottom: '1px solid #e2e8f0', paddingBottom: '8px', marginBottom: '12px' }}>1. Project Profile</h3>
               <table style={{ width: '100%', fontSize: '14px' }}>
                 <tbody>
                   <tr><td style={{ padding: '6px 0', color: '#64748b' }}>Name of Enterprise:</td><td style={{ fontWeight: '600', textAlign: 'right' }}>{formData.businessName}</td></tr>
@@ -232,6 +246,7 @@ export default function DPRGenerator() {
           
           <div style={{ textAlign: 'center', marginTop: '40px', fontSize: '12px', color: '#94a3b8' }}>
             Report generated by Entre Help Platform
+            </div>
           </div>
         </div>
       )}
