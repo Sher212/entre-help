@@ -70,36 +70,36 @@ export default function SchemeCompare() {
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '24px' }}>
-        <div style={{ backgroundColor: '#1e293b', padding: '16px', borderRadius: '12px', border: '1px solid #334155' }}>
-          <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Scheme 1</label>
+        <div style={{ backgroundColor: '#ffffff', padding: '16px', borderRadius: '12px', border: '1px solid #e5e7eb', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)' }}>
+          <label style={{ display: 'block', fontSize: '13px', color: '#4b5563', marginBottom: '8px', fontWeight: '600' }}>Scheme 1</label>
           <select 
             value={selectedScheme1} 
             onChange={(e) => setSelectedScheme1(e.target.value)}
-            style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#0f172a', border: '1px solid #334155', color: '#f8fafc', fontSize: '14px' }}
+            style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#f9fafb', border: '1px solid #d1d5db', color: '#1f2937', fontSize: '14px' }}
           >
             {schemes.map(s => <option key={`1-${s.id}`} value={s.id}>{s.name}</option>)}
           </select>
         </div>
         
-        <div style={{ backgroundColor: '#1e293b', padding: '16px', borderRadius: '12px', border: '1px solid #334155' }}>
-          <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Scheme 2</label>
+        <div style={{ backgroundColor: '#ffffff', padding: '16px', borderRadius: '12px', border: '1px solid #e5e7eb', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)' }}>
+          <label style={{ display: 'block', fontSize: '13px', color: '#4b5563', marginBottom: '8px', fontWeight: '600' }}>Scheme 2</label>
           <select 
             value={selectedScheme2} 
             onChange={(e) => setSelectedScheme2(e.target.value)}
-            style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#0f172a', border: '1px solid #334155', color: '#f8fafc', fontSize: '14px' }}
+            style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#f9fafb', border: '1px solid #d1d5db', color: '#1f2937', fontSize: '14px' }}
           >
             {schemes.map(s => <option key={`2-${s.id}`} value={s.id}>{s.name}</option>)}
           </select>
         </div>
       </div>
 
-      <div style={{ backgroundColor: '#1e293b', borderRadius: '12px', border: '1px solid #334155', overflow: 'hidden' }}>
+      <div style={{ backgroundColor: '#ffffff', borderRadius: '12px', border: '1px solid #e5e7eb', overflow: 'hidden', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>
             <tr>
-              <th style={{ width: '20%', padding: '20px', textAlign: 'left', backgroundColor: '#0f172a', borderBottom: '1px solid #334155', borderRight: '1px solid #334155', color: '#94a3b8', fontWeight: '600' }}>Features</th>
-              <th style={{ width: '40%', padding: '20px', textAlign: 'left', backgroundColor: '#1e293b', borderBottom: '1px solid #334155', borderRight: '1px solid #334155', color: '#f8fafc', fontSize: '16px' }}>{scheme1.name}</th>
-              <th style={{ width: '40%', padding: '20px', textAlign: 'left', backgroundColor: '#1e293b', borderBottom: '1px solid #334155', color: '#f8fafc', fontSize: '16px' }}>{scheme2.name}</th>
+              <th style={{ width: '20%', padding: '20px', textAlign: 'left', backgroundColor: '#f9fafb', borderBottom: '1px solid #e5e7eb', borderRight: '1px solid #e5e7eb', color: '#4b5563', fontWeight: '700' }}>Features</th>
+              <th style={{ width: '40%', padding: '20px', textAlign: 'left', backgroundColor: '#ffffff', borderBottom: '1px solid #e5e7eb', borderRight: '1px solid #e5e7eb', color: '#1f2937', fontSize: '16px' }}>{scheme1.name}</th>
+              <th style={{ width: '40%', padding: '20px', textAlign: 'left', backgroundColor: '#ffffff', borderBottom: '1px solid #e5e7eb', color: '#1f2937', fontSize: '16px' }}>{scheme2.name}</th>
             </tr>
           </thead>
           <tbody>
@@ -113,14 +113,14 @@ export default function SchemeCompare() {
               { key: 'processingTime', label: 'Avg Processing Time' },
               { key: 'agency', label: 'Nodal Agency' }
             ].map((row, idx) => (
-              <tr key={idx} style={{ borderBottom: idx !== 7 ? '1px solid #334155' : 'none' }}>
-                <td style={{ padding: '16px 20px', backgroundColor: '#0f172a', borderRight: '1px solid #334155', color: '#cbd5e1', fontSize: '13px', fontWeight: '500' }}>
+              <tr key={idx} style={{ borderBottom: idx !== 7 ? '1px solid #e5e7eb' : 'none' }}>
+                <td style={{ padding: '16px 20px', backgroundColor: '#f9fafb', borderRight: '1px solid #e5e7eb', color: '#374151', fontSize: '13px', fontWeight: '600' }}>
                   {row.label}
                 </td>
-                <td style={{ padding: '16px 20px', borderRight: '1px solid #334155', color: '#94a3b8', fontSize: '14px', verticalAlign: 'top' }}>
+                <td style={{ padding: '16px 20px', borderRight: '1px solid #e5e7eb', color: '#4b5563', fontSize: '14px', verticalAlign: 'top' }}>
                   {scheme1[row.key]}
                 </td>
-                <td style={{ padding: '16px 20px', color: '#94a3b8', fontSize: '14px', verticalAlign: 'top' }}>
+                <td style={{ padding: '16px 20px', color: '#4b5563', fontSize: '14px', verticalAlign: 'top' }}>
                   {scheme2[row.key]}
                 </td>
               </tr>

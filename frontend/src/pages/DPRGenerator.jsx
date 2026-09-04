@@ -55,55 +55,55 @@ export default function DPRGenerator() {
       </div>
 
       {!generated ? (
-        <div style={{ backgroundColor: '#1e293b', padding: '24px', borderRadius: '12px', border: '1px solid #334155' }}>
-          <h2 style={{ fontSize: '18px', fontWeight: '600', color: '#f8fafc', marginBottom: '20px' }}>Project Parameters</h2>
+        <div style={{ backgroundColor: '#ffffff', padding: '24px', borderRadius: '12px', border: '1px solid #e5e7eb', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)' }}>
+          <h2 style={{ fontSize: '18px', fontWeight: '700', color: '#1f2937', marginBottom: '20px' }}>Project Parameters</h2>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '20px' }}>
             <div>
-              <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Business Name</label>
-              <input type="text" name="businessName" value={formData.businessName} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#0f172a', border: '1px solid #334155', color: '#f8fafc' }} />
+              <label style={{ display: 'block', fontSize: '13px', color: '#4b5563', fontWeight: '600', marginBottom: '8px' }}>Business Name</label>
+              <input type="text" name="businessName" value={formData.businessName} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#f9fafb', border: '1px solid #d1d5db', color: '#1f2937' }} />
             </div>
             <div>
-              <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Promoter Name</label>
-              <input type="text" name="promoterName" value={formData.promoterName} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#0f172a', border: '1px solid #334155', color: '#f8fafc' }} />
+              <label style={{ display: 'block', fontSize: '13px', color: '#4b5563', fontWeight: '600', marginBottom: '8px' }}>Promoter Name</label>
+              <input type="text" name="promoterName" value={formData.promoterName} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#f9fafb', border: '1px solid #d1d5db', color: '#1f2937' }} />
             </div>
             <div>
-              <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Industry / Sector</label>
-              <input type="text" name="industry" value={formData.industry} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#0f172a', border: '1px solid #334155', color: '#f8fafc' }} />
+              <label style={{ display: 'block', fontSize: '13px', color: '#4b5563', fontWeight: '600', marginBottom: '8px' }}>Industry / Sector</label>
+              <input type="text" name="industry" value={formData.industry} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#f9fafb', border: '1px solid #d1d5db', color: '#1f2937' }} />
             </div>
             <div>
-              <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Total Project Cost (₹)</label>
-              <input type="number" name="projectCost" value={formData.projectCost} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#0f172a', border: '1px solid #334155', color: '#f8fafc' }} />
+              <label style={{ display: 'block', fontSize: '13px', color: '#4b5563', fontWeight: '600', marginBottom: '8px' }}>Total Project Cost (₹)</label>
+              <input type="number" name="projectCost" value={formData.projectCost} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#f9fafb', border: '1px solid #d1d5db', color: '#1f2937' }} />
             </div>
             <div>
-              <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Machinery / Equipment Cost (₹)</label>
-              <input type="number" name="machineryCost" value={formData.machineryCost} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#0f172a', border: '1px solid #334155', color: '#f8fafc' }} />
+              <label style={{ display: 'block', fontSize: '13px', color: '#4b5563', fontWeight: '600', marginBottom: '8px' }}>Machinery / Equipment Cost (₹)</label>
+              <input type="number" name="machineryCost" value={formData.machineryCost} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#f9fafb', border: '1px solid #d1d5db', color: '#1f2937' }} />
             </div>
             <div>
-              <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Working Capital Required (₹)</label>
-              <input type="number" name="workingCapital" value={formData.workingCapital} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#0f172a', border: '1px solid #334155', color: '#f8fafc' }} />
+              <label style={{ display: 'block', fontSize: '13px', color: '#4b5563', fontWeight: '600', marginBottom: '8px' }}>Working Capital Required (₹)</label>
+              <input type="number" name="workingCapital" value={formData.workingCapital} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#f9fafb', border: '1px solid #d1d5db', color: '#1f2937' }} />
             </div>
             <div>
-              <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Promoter Contribution (%)</label>
-              <input type="number" name="promoterContributionPct" value={formData.promoterContributionPct} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#0f172a', border: '1px solid #334155', color: '#f8fafc' }} />
+              <label style={{ display: 'block', fontSize: '13px', color: '#4b5563', fontWeight: '600', marginBottom: '8px' }}>Promoter Contribution (%)</label>
+              <input type="number" name="promoterContributionPct" value={formData.promoterContributionPct} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#f9fafb', border: '1px solid #d1d5db', color: '#1f2937' }} />
             </div>
             <div>
-              <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Expected Subsidy (%)</label>
-              <input type="number" name="subsidyPct" value={formData.subsidyPct} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#0f172a', border: '1px solid #334155', color: '#f8fafc' }} />
+              <label style={{ display: 'block', fontSize: '13px', color: '#4b5563', fontWeight: '600', marginBottom: '8px' }}>Expected Subsidy (%)</label>
+              <input type="number" name="subsidyPct" value={formData.subsidyPct} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#f9fafb', border: '1px solid #d1d5db', color: '#1f2937' }} />
             </div>
             <div>
-              <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Loan Interest Rate (%)</label>
-              <input type="number" name="loanInterestRate" value={formData.loanInterestRate} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#0f172a', border: '1px solid #334155', color: '#f8fafc' }} />
+              <label style={{ display: 'block', fontSize: '13px', color: '#4b5563', fontWeight: '600', marginBottom: '8px' }}>Loan Interest Rate (%)</label>
+              <input type="number" name="loanInterestRate" value={formData.loanInterestRate} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#f9fafb', border: '1px solid #d1d5db', color: '#1f2937' }} />
             </div>
             <div>
-              <label style={{ display: 'block', fontSize: '13px', color: '#94a3b8', marginBottom: '8px' }}>Expected Year 1 Revenue (₹)</label>
-              <input type="number" name="expectedRevenueYear1" value={formData.expectedRevenueYear1} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#0f172a', border: '1px solid #334155', color: '#f8fafc' }} />
+              <label style={{ display: 'block', fontSize: '13px', color: '#4b5563', fontWeight: '600', marginBottom: '8px' }}>Expected Year 1 Revenue (₹)</label>
+              <input type="number" name="expectedRevenueYear1" value={formData.expectedRevenueYear1} onChange={handleInputChange} style={{ width: '100%', padding: '10px 12px', borderRadius: '8px', backgroundColor: '#f9fafb', border: '1px solid #d1d5db', color: '#1f2937' }} />
             </div>
           </div>
           
           <button 
             onClick={generateDPR}
-            style={{ marginTop: '24px', backgroundColor: '#10b981', color: '#fff', padding: '12px 24px', borderRadius: '8px', fontWeight: '600', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px' }}
+            style={{ marginTop: '24px', backgroundColor: '#10b981', color: '#fff', padding: '12px 24px', borderRadius: '8px', fontWeight: '600', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 4px 6px rgba(16, 185, 129, 0.2)' }}
           >
             <FileText size={18} /> Generate Detailed Project Report
           </button>
@@ -119,7 +119,7 @@ export default function DPRGenerator() {
               <button style={{ background: '#f1f5f9', border: '1px solid #cbd5e1', padding: '8px 16px', borderRadius: '6px', color: '#475569', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: '600' }} onClick={() => window.print()}>
                 <Printer size={16} /> Print
               </button>
-              <button style={{ background: '#10b981', border: 'none', padding: '8px 16px', borderRadius: '6px', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: '600' }}>
+              <button style={{ background: '#10b981', border: 'none', padding: '8px 16px', borderRadius: '6px', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: '600' }} onClick={() => window.print()}>
                 <Download size={16} /> Export PDF
               </button>
               <button style={{ background: '#334155', border: 'none', padding: '8px 16px', borderRadius: '6px', color: '#fff', cursor: 'pointer', fontWeight: '600' }} onClick={() => setGenerated(false)}>
