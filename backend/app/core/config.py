@@ -6,7 +6,7 @@ DATA_RAW = os.path.join(DATA_DIR, "raw")
 DATA_PROCESSED = os.path.join(DATA_DIR, "processed")
 DATA_SAMPLES = os.path.join(DATA_DIR, "samples")
 MODELS_DIR = os.path.join(BASE_DIR, "models")
-SQLITE_DB_PATH = os.path.join(DATA_DIR, "smartagri.db")
+SQLITE_DB_PATH = os.path.join(DATA_DIR, "entre_help.db")
 
 PROJECT_NAME = "Entre Help"
 VERSION = "1.0.0"

@@ -57,7 +57,7 @@ class WeatherService:
         """Reverse geocode lat/lon to a human-readable place name using Nominatim (OpenStreetMap)."""
         try:
             url = f"https://nominatim.openstreetmap.org/reverse?lat={lat}&lon={lon}&format=json&zoom=10&addressdetails=1&accept-language=en"
-            resp = self.client.get(url, headers={"User-Agent": "SmartAgriAI/1.0"})
+            resp = self.client.get(url, headers={"User-Agent": "EntreHelp/1.0"})
             if resp.status_code == 200:
                 data = resp.json()
                 addr = data.get("address", {})

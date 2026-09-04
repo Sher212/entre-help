@@ -1,10 +1,10 @@
 @echo off
-title SmartAgri AI - One Click Launcher
+title Entre Help - One Click Launcher
 color 0A
 
 echo ================================================================
-echo               SmartAgri AI (SmartAgri AI)
-echo      Production AI Decision Platform for Indian Farmers
+echo               Entre Help Platform
+echo      AI Entrepreneurship & Scheme Matching System
 echo ================================================================
 echo.
 
@@ -28,8 +28,8 @@ if not exist "backend\.venv\Scripts\uvicorn.exe" (
     python backend\scripts\setup_disease_model.py
 )
 
-if not exist "backend\data\smartagri.db" (
-    echo [*] Seeding SQLite database smartagri.db ...
+if not exist "backend\data\entre_help.db" (
+    echo [*] Seeding SQLite database entre_help.db ...
     call backend\.venv\Scripts\activate.bat
     python backend\scripts\download_and_process_data.py
     python backend\scripts\seed_sqlite_db.py
@@ -44,14 +44,14 @@ if not exist "frontend\node_modules" (
 )
 
 echo [3/4] Starting FastAPI Backend Server on 0.0.0.0:8000 (LAN Accessible)...
-start "SmartAgri AI - Backend Server (Port 8000)" cmd /k "cd /d %ROOT_DIR%backend && call .venv\Scripts\activate.bat && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+start "Entre Help - Backend Server (Port 8000)" cmd /k "cd /d %ROOT_DIR%backend && call .venv\Scripts\activate.bat && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
 
 echo [4/4] Starting React + Vite Frontend on 0.0.0.0:5173 (LAN Accessible)...
-start "SmartAgri AI - Frontend (Port 5173)" cmd /k "cd /d %ROOT_DIR%frontend && npm run dev -- --host 0.0.0.0 --port 5173"
+start "Entre Help - Frontend (Port 5173)" cmd /k "cd /d %ROOT_DIR%frontend && npm run dev -- --host 0.0.0.0 --port 5173"
 
 echo.
 echo ================================================================
-echo      SmartAgri AI is now running successfully!
+echo      Entre Help is now running successfully!
 echo.
 echo      - Web Application:  http://127.0.0.1:5173
 echo      - Backend API Docs: http://127.0.0.1:8000/docs
