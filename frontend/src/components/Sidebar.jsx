@@ -8,7 +8,10 @@ import {
   UserCheck,
   MapPin,
   Calculator,
-  Home
+  Home,
+  Scale,
+  ClipboardCheck,
+  FileText
 } from "lucide-react";
 
 export default function Sidebar() {
@@ -18,6 +21,9 @@ export default function Sidebar() {
     { id: "landing", label: "Overview", icon: Home },
     { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
     { id: "schemes", label: "Govt Schemes", icon: Landmark },
+    { id: "compare", label: "Compare Schemes", icon: Scale },
+    { id: "auditor", label: "App Auditor", icon: ClipboardCheck },
+    { id: "dpr", label: "DPR Generator", icon: FileText },
     { id: "loan-calculator", label: "Loan Calculator", icon: Calculator },
     { id: "channel-partners", label: "Channel Partners", icon: MapPin },
     { id: "assistant", label: "AI Assistant", icon: BotMessageSquare },

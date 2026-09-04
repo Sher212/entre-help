@@ -9,6 +9,9 @@ import MobileDrawer from "./components/MobileDrawer";
 import LandingPage from "./pages/LandingPage";
 import Dashboard from "./pages/Dashboard";
 import GovernmentSchemes from "./pages/GovernmentSchemes";
+import SchemeCompare from "./pages/SchemeCompare";
+import ApplicationAuditor from "./pages/ApplicationAuditor";
+import DPRGenerator from "./pages/DPRGenerator";
 import ChannelPartnerLocator from "./pages/ChannelPartnerLocator";
 import LoanCalculator from "./pages/LoanCalculator";
 import AIAssistant from "./pages/AIAssistant";
@@ -25,6 +28,12 @@ function MainApp() {
         return <Dashboard />;
       case "schemes":
         return <GovernmentSchemes />;
+      case "compare":
+        return <SchemeCompare />;
+      case "auditor":
+        return <ApplicationAuditor />;
+      case "dpr":
+        return <DPRGenerator />;
       case "channel-partners":
         return <ChannelPartnerLocator />;
       case "loan-calculator":

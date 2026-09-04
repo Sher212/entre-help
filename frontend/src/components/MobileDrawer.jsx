@@ -23,6 +23,9 @@ export default function MobileDrawer() {
   const navItems = [
     { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
     { id: "schemes", label: "Find Schemes", icon: Landmark },
+    { id: "compare", label: "Compare Schemes", icon: Map },
+    { id: "auditor", label: "App Auditor", icon: Landmark },
+    { id: "dpr", label: "DPR Generator", icon: Calculator },
     { id: "channel-partners", label: "Channel Partners", icon: MapPin },
     { id: "loan-calculator", label: "Loan Calculator", icon: Calculator },
     { id: "assistant", label: "AI Assistant", icon: BotMessageSquare },
