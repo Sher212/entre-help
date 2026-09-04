@@ -43,24 +43,24 @@ if not exist "frontend\node_modules" (
     cd /d "%ROOT_DIR%"
 )
 
-echo [3/4] Starting FastAPI Backend Server on 0.0.0.0:8000 (LAN Accessible)...
-start "Entre Help - Backend Server (Port 8000)" cmd /k "cd /d %ROOT_DIR%backend && call .venv\Scripts\activate.bat && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+echo [3/4] Starting FastAPI Backend Server on 0.0.0.0:8001 (LAN Accessible)...
+start "Entre Help - Backend Server (Port 8001)" cmd /k "cd /d %ROOT_DIR%backend && call .venv\Scripts\activate.bat && uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload"
 
-echo [4/4] Starting React + Vite Frontend on 0.0.0.0:5173 (LAN Accessible)...
-start "Entre Help - Frontend (Port 5173)" cmd /k "cd /d %ROOT_DIR%frontend && npm run dev -- --host 0.0.0.0 --port 5173"
+echo [4/4] Starting React + Vite Frontend on 0.0.0.0:5180 (LAN Accessible)...
+start "Entre Help - Frontend (Port 5180)" cmd /k "cd /d %ROOT_DIR%frontend && npm run dev -- --host 0.0.0.0 --port 5180"
 
 echo.
 echo ================================================================
 echo      Entre Help is now running successfully!
 echo.
-echo      - Web Application:  http://127.0.0.1:5173
-echo      - Backend API Docs: http://127.0.0.1:8000/docs
+echo      - Web Application:  http://127.0.0.1:5180
+echo      - Backend API Docs: http://127.0.0.1:8001/docs
 echo.
 echo      Opening browser in 3 seconds...
 echo ================================================================
 
 timeout /t 3 /nobreak >nul 2>&1
-start http://127.0.0.1:5173
+start http://127.0.0.1:5180
 
 echo.
 echo Press any key to exit this launcher window (servers will continue running in background).
