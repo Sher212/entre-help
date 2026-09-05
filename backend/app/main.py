@@ -34,6 +34,24 @@ app.include_router(ai_assistant.router, prefix=API_V1_STR)
 app.include_router(channel_partners.router, prefix=API_V1_STR)
 app.include_router(loan_calculator.router, prefix=API_V1_STR)
 
+# Mount Static Frontend
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
+frontend_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "static")
+if os.path.exists(frontend_path):
+    app.mount("/assets", StaticFiles(directory=os.path.join(frontend_path, "assets")), name="assets")
+    
+    @app.get("/{full_path:path}")
+    async def serve_frontend(full_path: str):
+        if full_path.startswith("api/"):
+            return {"error": "Not Found"}
+        file_path = os.path.join(frontend_path, full_path)
+        if os.path.isfile(file_path):
+            return FileResponse(file_path)
+        return FileResponse(os.path.join(frontend_path, "index.html"))
+
+
 @app.get("/health")
 def health_check():
     return {

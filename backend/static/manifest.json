@@ -1,0 +1,17 @@
+{
+  "short_name": "Entre Help",
+  "name": "Entre Help — Scheme Matching Engine for Entrepreneurs",
+  "description": "AI-Driven Scheme Matching Platform for Marginalized Entrepreneurs: Smart Scheme Recommender, Channel Partner Locator, Loan Eligibility Calculator, and Bankable DPR Generator.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#f8fafc",
+  "theme_color": "#059669",
+  "display": "standalone",
+  "orientation": "portrait"
+}
