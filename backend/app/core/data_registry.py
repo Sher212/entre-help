@@ -1,5 +1,5 @@
 """
-SmartAgri AI - Data Source & AI Registry
+Entre Help - Data Source & AI Registry
 Central repository of provenance, provider metadata, URLs, licenses, and module usage across all 11 datasets.
 """
 

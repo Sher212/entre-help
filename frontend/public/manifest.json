@@ -1,7 +1,7 @@
 {
-  "short_name": "SmartAgri AI",
-  "name": "SmartAgri AI - Farmer Decision Support Platform",
-  "description": "Production-quality AI agricultural platform for Indian farmers: Crop advisory, disease detection, weather-aware recommendations, market intelligence, and government schemes.",
+  "short_name": "Entre Help",
+  "name": "Entre Help — Scheme Matching Engine for Entrepreneurs",
+  "description": "AI-Driven Scheme Matching Platform for Marginalized Entrepreneurs: Smart Scheme Recommender, Channel Partner Locator, Loan Eligibility Calculator, and Bankable DPR Generator.",
   "icons": [
     {
       "src": "/favicon.svg",

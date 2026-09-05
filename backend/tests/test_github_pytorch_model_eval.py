@@ -1,5 +1,5 @@
 """
-SmartAgri AI - PyTorch ResNet Model Evaluation & Agreement Layer Tests
+Entre Help - PyTorch ResNet Model Evaluation & Agreement Layer Tests
 """
 
 import os

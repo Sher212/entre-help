@@ -1,88 +1,130 @@
-# 🎥 Hackathon Demo Video Script: SmartAgri AI
+# 🎥 Demo Video Script: Entre Help
 
-**Overall Tips for Recording:**
-*   **Use the Built-in Demo Tour:** The platform already has a built-in "Interactive Platform Walkthrough". We will use this to guide the presentation.
-*   **Pacing:** Spend about 30-40 seconds on each of the 9 steps to keep the video under 7 minutes.
-*   **Recording Tools:** Use **OBS Studio** or **Loom** to capture your screen and webcam at the same time.
+**Platform:** Entre Help — AI-Driven Scheme Matching & Bankable DPR Platform for Marginalized Entrepreneurs  
+**Repository:** [Sher212/entre-help](https://github.com/Sher212/entre-help)
 
 ---
 
-## 📝 The Script (Target: 6-7 Minutes)
+## 📝 Demo Video Script (Target: 6-7 Minutes)
 
-### ⏱️ 0:00 - 0:30 | Intro & Launching the Tour
-**[Visual: Start on the SmartAgri AI Landing Page. Click "Enter Dashboard". On the Dashboard Navbar, click the "Demo Tour" button to open the Interactive Walkthrough modal.]**
+### ⏱️ 0:00 - 0:45 | Intro & Problem Statement
+**[Visual: Start on the Entre Help Landing Page (`http://127.0.0.1:5180`). Show the Hero section and statistics.]**
 
 **Speaker:**
-> "Hello judges! Welcome to **SmartAgri AI**, a production-grade agricultural decision platform for Indian farmers. We've successfully integrated five real-world Kaggle datasets into a single, cohesive dashboard powered by FastAPI and React. To show you how it works, I'll be following our platform's built-in Interactive Demo Tour. Let's begin."
+> "Hello judges and mentors! Welcome to **Entre Help**, an end-to-end AI decision platform designed to empower marginalized entrepreneurs across India — specifically focusing on Scheduled Castes (**SC**), Scheduled Tribes (**ST**), Other Backward Classes (**OBC**), Persons with Disabilities (**PwD**), and **Women entrepreneurs**.
+> 
+> While the Government of India and the Ministry of Social Justice and Empowerment offer dozens of concessional loan schemes, subsidies, and credit guarantee programs, over 78% of eligible beneficiaries fail to access them due to informational asymmetry, complex eligibility criteria, missing documentation, and lack of bankable Detailed Project Reports. 
+> 
+> **Entre Help** solves this entire pipeline: from intelligent scheme discovery to bankable DPR generation and channel partner routing."
 
 ---
 
-### ⏱️ 0:30 - 1:00 | Step 1: Farmer Profile Setup
-**[Visual: Demo Tour shows Step 1. Click "Go to Profile". Show the Profile tab with the presets.]**
+### ⏱️ 0:45 - 1:30 | Step 1: Entrepreneur Profile Engine
+**[Visual: Click "Open Dashboard" or navigate to "My Profile" tab. Show the demo presets dropdown and form fields.]**
 
 **Speaker:**
-> "Step 1 is setting up the Farmer Profile. Our platform acts as a personalized assistant. By configuring landholding size, soil N-P-K nutrients, pH, and location down to the village level, every single recommendation in the app becomes hyper-personalized to the farmer's exact context."
+> "Let's start with the **Entrepreneur Profile Engine**. Our platform is built around personalization. Rather than forcing users to sift through hundreds of bureaucratic PDF circulars, Entre Help captures key attributes:
+> - Social Category (SC, ST, OBC, PwD, Women, General/EWS)
+> - Annual Family Income & BPL/DNT status
+> - Enterprise Sector (Manufacturing, Services, Trading, Transport, Agriculture, Tech)
+> - Project Cost & Desired Loan Amount
+> - State & District
+> 
+> We also offer instant **Demo Presets** — such as an SC Tech Startup, a Rural SHG Artisan, an OBC Transport Operator, and a Women Micro-Enterprise. Every single module across the platform automatically synchronizes with this profile context in real time."
 
 ---
 
-### ⏱️ 1:00 - 1:30 | Step 2 & 3: Soil Analysis & AI Crop Recommendation
-**[Visual: Open Demo Tour -> Step 3. Click "Evaluate Crops" to jump to the Crop Advisor tab. Tweak a soil slider.]**
+### ⏱️ 1:30 - 2:15 | Step 2: Smart Scheme Recommender
+**[Visual: Navigate to "Govt Schemes" tab. Show search, category filtering, match score badges, and expanded scheme card.]**
 
 **Speaker:**
-> "Moving to Steps 2 and 3: Soil Analysis and Crop Recommendation. Using **Dataset 1**, our Random Forest model analyzes the farmer's live soil nutrients, pH, and local rainfall to recommend the absolute best crops to plant. As we tweak the soil nitrogen levels here, you can see the AI instantly re-evaluates the top recommendations with 98% accuracy."
+> "Next, let's explore the **Smart Scheme Recommender**. Backed by our curated database of 44+ central and state schemes — including NSFDC, NBCFDC, NSTFDC, NHFDC, Stand-Up India, PMEGP, PM Mudra Yojana, and CGTMSE — our algorithm evaluates eligibility criteria against the user's active profile.
+> 
+> Each scheme card displays:
+> - **Match Score**: Quantifying eligibility compatibility.
+> - **Financial Benefits**: Subsidy rates (up to 35%), maximum loan limits, and interest concessions.
+> - **Nodal Corporation**: Sponsoring ministry or apex corporation.
+> - **Application Direct Links**: Direct routing to official portals like MyScheme, Stand-Up Mitra, and JanSamarth."
 
 ---
 
-### ⏱️ 1:30 - 2:00 | Step 4: Crop Yield Prediction
-**[Visual: Open Demo Tour -> Step 4. Click "Predict Yield". Show the Yield Predictor interface.]**
+### ⏱️ 2:15 - 3:00 | Step 3: Side-by-Side Scheme Comparison
+**[Visual: Navigate to "Compare Schemes" tab. Select two schemes (e.g. NSFDC Term Loan vs PMEGP).]**
 
 **Speaker:**
-> "Step 4 is Yield Prediction. Leveraging **Dataset 3 (Crop Yields)** combined with historical weather data, our machine learning pipeline estimates the expected yield in both Tons per Hectare and Quintals per Acre. This helps farmers set realistic harvest targets based on their specific acreage and fertilizer inputs before they even sow the seeds."
+> "Choosing between multiple viable government schemes is often confusing for first-generation entrepreneurs. Our **Scheme Compare Engine** allows entrepreneurs to place schemes side-by-side.
+> 
+> It provides immediate comparative analysis across:
+> - Maximum project cost ceiling
+> - Concessional interest rates (as low as 4% to 6%)
+> - Subsidy quantum and promoter margin money requirements
+> - Repayment tenures and moratorium periods
+> - Target beneficiary alignment
+> 
+> This transparency ensures entrepreneurs choose the highest-subsidy, lowest-cost financing option available to them."
 
 ---
 
-### ⏱️ 2:00 - 2:30 | Step 5: Weather-Aware Agro-Advisory
-**[Visual: Open Demo Tour -> Step 5. Click "Check Weather". Show the Weather tab with the 7-day forecast and alerts.]**
+### ⏱️ 3:00 - 3:45 | Step 4: Application Auditor & Readiness Score
+**[Visual: Navigate to "App Auditor" tab. Select a target scheme. Review the Readiness Score gauge, missing document warnings, and risk flags.]**
 
 **Speaker:**
-> "Step 5 brings in Weather Advisory. We don't just show the forecast; we provide actionable rules. By analyzing the upcoming 7-day weather, the platform generates alerts for irrigation timing, optimal pesticide spraying windows, heat stress, and fungal risks tailored to the farmer's current crop."
+> "One of the most common reasons bank managers reject concession applications is incomplete documentation or eligibility mismatches. 
+> 
+> Our **Application Auditor** runs a pre-submission diagnostic on the entrepreneur's dossier:
+> - It calculates an **Audit Readiness Score (0-100%)**.
+> - It cross-checks mandatory documents (Caste/Income Certificate, Udyam Aadhar, Project Quotations, Bank Statements).
+> - It highlights critical risk flags — for example, if project cost exceeds the scheme ceiling, or if promoter equity falls short of statutory norms.
+> - It gives clear, actionable remediation steps before the entrepreneur visits the bank or State Channelizing Agency."
 
 ---
 
-### ⏱️ 2:30 - 3:15 | Step 6: Plant Disease Detection
-**[Visual: Open Demo Tour -> Step 6. Click "Diagnose Leaf". Use the 'Load Sample Leaf' dropdown to run an instant diagnosis.]**
+### ⏱️ 3:45 - 4:45 | Step 5: Bankable DPR (Detailed Project Report) Generator
+**[Visual: Navigate to "DPR Generator" tab. Show auto-populated business details, financials, unit economics, and click "Export to PDF".]**
 
 **Speaker:**
-> "For Step 6, we tackle crop health using **Dataset 2 (PlantVillage)**. Farmers can upload photos of diseased leaves directly from their phones. Let's load a sample leaf here. The Convolutional Neural Network instantly identifies the condition out of 27 classes—like Potato Early Blight—and immediately prescribes biological, organic, and chemical remedies to save the crop."
+> "To secure any formal institutional loan or subsidy under schemes like NSFDC or PMEGP, banks mandate a **Detailed Project Report (DPR)**. Hiring private consultants for this can cost small entrepreneurs upwards of ₹10,000.
+> 
+> With Entre Help, our **DPR Generator** automatically synthesizes profile data and financial algorithms into a complete, professional, bankable project report. 
+> 
+> It includes:
+> - Executive Summary & Enterprise Overview
+> - Cost of Project & Capital Expenditure Breakdown
+> - Means of Finance (Promoter Equity, Bank Term Loan, Govt Subsidy)
+> - 3-Year Projected Profit & Loss, Cash Flow, and DSCR (Debt Service Coverage Ratio)
+> - Break-Even Analysis
+> 
+> Best of all, with a single click on **Export PDF**, it generates a beautifully formatted, print-ready document ready for immediate bank submission!"
 
 ---
 
-### ⏱️ 3:15 - 4:00 | Step 7: India Mandi Intelligence
-**[Visual: Open Demo Tour -> Step 7. Click "View Mandi Rates". Show the Market Intelligence tab, select a commodity, and show the 'Where to Sell' ranker.]**
+### ⏱️ 4:45 - 5:15 | Step 6: Loan & EMI Eligibility Calculator
+**[Visual: Navigate to "Loan Calculator" tab. Adjust project cost and tenure sliders; show the women interest rebate toggle.]**
 
 **Speaker:**
-> "Step 7 is all about post-harvest profitability. We integrated **Dataset 4**, encompassing over 57,000 real-world Mandi wholesale price records. We analyze historical trends and price volatility. Our 'Where to Sell' smart ranker actively calculates the price spread across nearby districts, advising farmers exactly which Mandi will yield the highest premium for their harvest."
+> "Our interactive **Loan & EMI Calculator** demystifies the financial numbers. It dynamically computes:
+> - Promoter Margin Money (e.g., 5% to 15%)
+> - Government Capital Subsidy deduction
+> - Net Bank Loan Principal
+> - Monthly EMI and total interest payable
+> - It includes built-in rebates, such as the 0.5% to 1% interest discount for women entrepreneurs under NSFDC/Stand-Up India schemes."
 
 ---
 
-### ⏱️ 4:00 - 4:45 | Step 8: Government Scheme Discovery
-**[Visual: Open Demo Tour -> Step 8. Click "Find Schemes". Show the Government Schemes tab, expanding one of the scheme cards.]**
+### ⏱️ 5:15 - 5:45 | Step 7: Channel Partner Locator & AI Assistant
+**[Visual: Quickly show "Channel Partners" tab (filtering by state) and then "AI Assistant" tab (typing a query).]**
 
 **Speaker:**
-> "Step 8 tackles financial support using **Dataset 5**. The platform filters through central and state welfare schemes. Because we saved the farmer's profile in Step 1, the system automatically calculates a 'Match Score' for each scheme, explaining exactly *why* the farmer is eligible based on their land size and category—saving them hours of bureaucratic research."
+> "Under the Channel Financing System, entrepreneurs must apply through authorized State Channelizing Agencies (SCAs) or partner banks. Our **Channel Partner Locator** maps authorized SCAs, Public Sector Banks, and Regional Rural Banks by state and district.
+> 
+> And for any personalized doubts, our **AI Scheme Assistant** is available 24/7 in English and Hinglish to explain documentation rules, eligibility criteria, and application stages in plain, accessible language."
 
 ---
 
-### ⏱️ 4:45 - 5:30 | Step 9: Central AI Assistant & Farm Action Plan
-**[Visual: Open Demo Tour -> Step 9. Click "Chat & Action Plan". Show the Chatbot, then click the "Generate Farm Action Plan" button to open the modal.]**
+### ⏱️ 5:45 - 6:15 | Conclusion
+**[Visual: Return to Dashboard with DPR summary and key metrics visible.]**
 
 **Speaker:**
-> "Finally, Step 9 ties it all together. We have a conversational AI assistant that understands the farmer's entire context. And with one click, the system compiles everything we just saw into a single, downloadable **8-Point Farm Action Plan**. It consolidates the soil analysis, yield targets, weather alerts, and market intelligence into one clear printout."
-
----
-
-### ⏱️ 5:30 - 6:00 | Conclusion
-**[Visual: Keep the Farm Action Plan modal open on screen.]**
-
-**Speaker:**
-> "By unifying five separate datasets into one intuitive, mobile-friendly platform, SmartAgri AI empowers Indian farmers to make data-driven decisions from pre-sowing to post-harvest. Thank you for your time, and we look forward to your feedback!"
+> "By consolidating personalized scheme recommendation, bankable DPR generation, application auditing, and channel partner discovery into one intuitive platform, **Entre Help** bridges the gap between affirmative government policy and grassroots entrepreneurs. 
+> 
+> Thank you for your time, and we invite you to test **Entre Help** today!"

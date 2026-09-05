@@ -91,8 +91,8 @@ def get_models_and_datasets_summary():
     ]
 
     return {
-        "platform_name": "SmartAgri AI",
-        "description": "Production-Quality AI Decision Support Platform for Indian Farmers",
+        "platform_name": "Entre Help",
+        "description": "AI-Driven Scheme Matching Platform for Marginalized Entrepreneurs",
         "datasets": datasets,
         "crop_recommendation_metrics": crop_metrics,
         "crop_yield_metrics": yield_metrics,

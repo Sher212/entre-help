@@ -1,5 +1,5 @@
 """
-SmartAgri AI - Canonical Disease & Plant Health Taxonomy
+Entre Help - Canonical Disease & Plant Health Taxonomy
 Structured mapping of Crop -> Condition ID -> Scientific Name, Synonyms, Disease/Pest Flag, Dataset Provenance, and Verified Remedial Actions.
 """
 
